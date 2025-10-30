@@ -103,10 +103,11 @@ namespace DAL
             List<BEpermisoComponente> lista = new List<BEpermisoComponente>();
             foreach (DataRow row in tabla.Rows)
             {
+                if (row["nombre"].ToString() != "sistema") { 
                 BErol rol = new BErol(row["nombre"].ToString());
                 rol.codigo = (int)(row["codigo"]);
                 rol.hijos = TraerArbolPermisos(rol.codigo);
-                lista.Add(rol);
+                lista.Add(rol); }
             }
             return lista;
 

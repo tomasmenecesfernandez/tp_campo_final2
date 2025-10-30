@@ -139,6 +139,7 @@ namespace sistema
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(12, 166);
             this.comboBox1.Name = "comboBox1";
@@ -178,6 +179,7 @@ namespace sistema
             // 
             // comboBox2
             // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(34, 564);
             this.comboBox2.Name = "comboBox2";
@@ -241,7 +243,7 @@ namespace sistema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(825, 812);
+            this.ClientSize = new System.Drawing.Size(925, 812);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.treeView1);

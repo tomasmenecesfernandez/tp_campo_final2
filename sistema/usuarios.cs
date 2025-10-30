@@ -100,16 +100,22 @@ namespace sistema
             {
                 try
                 {
-                    usuario.nombre = bllusuario.encrytar_nombre(textBox1.Text);
-                    usuario.contraseña = bllusuario.encrytar_contraseña(textBox2.Text);
-                    BErol rol_seleccionado = (BErol)comboBox1.SelectedItem;
-                    usuario.rol = rol_seleccionado;
-                    bllusuario.modificar(usuario);
-                    BEcontrolCambioUsuario controlusuario=new BEcontrolCambioUsuario(usuario);
-                    bllcontrolusuario.agregar_control_usuario(controlusuario);
-                    mostrar_data();
+                    if (textBox1.Text!="" && textBox2.Text!="") {
+                        usuario.nombre = bllusuario.encrytar_nombre(textBox1.Text);
+                        usuario.contraseña = bllusuario.encrytar_contraseña(textBox2.Text);
+                        BErol rol_seleccionado = (BErol)comboBox1.SelectedItem;
+                        usuario.rol = rol_seleccionado;
+                        bllusuario.modificar(usuario);
+                        BEcontrolCambioUsuario controlusuario = new BEcontrolCambioUsuario(usuario);
+                        bllcontrolusuario.agregar_control_usuario(controlusuario);
+                        mostrar_data();
+                    }
+                    else
+                    {
+                        throw new Exception("Complete los cuadros de nombre y contraseña.");
+                    }
                 }
-                catch { MessageBox.Show("error"); }
+                catch (Exception ex){ MessageBox.Show(ex.Message); }
             }
             else
             {
@@ -120,6 +126,7 @@ namespace sistema
         private void usuarios_Load(object sender, EventArgs e)
         {
             if(idiomas.lista_traducciones.Count>0 ) actualizar_idioma();
+            radioButton1.Checked = true;
             lista_permisos = bllpermiso.leer_permisos();
             añadir_roles_combobox();
             mostrar_data();
@@ -208,7 +215,6 @@ namespace sistema
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            comboBox2.DropDownStyle = ComboBoxStyle.DropDown;
             comboBox2.DataSource = bllrol.traer_todos_los_roles();
             comboBox2.DisplayMember = "nombre";
         }
@@ -300,7 +306,6 @@ namespace sistema
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             comboBox2.DataSource = lista_permisos;
-            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
