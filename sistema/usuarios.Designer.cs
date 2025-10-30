@@ -229,7 +229,7 @@ namespace sistema
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(215, 428);
+            this.button4.Location = new System.Drawing.Point(384, 428);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(116, 40);
             this.button4.TabIndex = 20;
