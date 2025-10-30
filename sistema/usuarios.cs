@@ -269,8 +269,7 @@ namespace sistema
         {
             if (controlusuario_select != null && usuario!=null)
             {
-                int hh =0;
-                hh++;
+                
                 try
                 {
                     controlusuario_select.usuario = bllusuario.encrytar_nombre(controlusuario_select.usuario);
