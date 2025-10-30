@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.35130.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sistema", "sistema\sistema.csproj", "{538CAE04-9131-4E60-B601-85C892F00212}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BE", "BE\BE.csproj", "{FD53A16E-DD8E-49B2-A600-5084299984FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{7DD4BCA1-A7E1-4DDC-8195-442E01A5C6B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{A5C430E3-8099-4D24-92C5-0C3606D72318}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servicios", "Servicios\Servicios.csproj", "{35BE67A8-A813-460F-A944-728297871E4A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F3152031-EAF9-46C9-B766-D81D0F92327C}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\LUD\TPN1_DAS_Meneces_Tomas\bll\BLL_cliente.cs = ..\..\LUD\TPN1_DAS_Meneces_Tomas\bll\BLL_cliente.cs
+		..\..\LUD\TPN1_DAS_Meneces_Tomas\MPP\MPPbuzos.cs = ..\..\LUD\TPN1_DAS_Meneces_Tomas\MPP\MPPbuzos.cs
+		..\..\LUD\TPN1_DAS_Meneces_Tomas\MPP\MPPcliente.cs = ..\..\LUD\TPN1_DAS_Meneces_Tomas\MPP\MPPcliente.cs
+		..\..\LUD\TPN1_DAS_Meneces_Tomas\MPP\MPPlocalidad.cs = ..\..\LUD\TPN1_DAS_Meneces_Tomas\MPP\MPPlocalidad.cs
+		..\..\LUD\TPN1_DAS_Meneces_Tomas\MPP\MPPpedido.cs = ..\..\LUD\TPN1_DAS_Meneces_Tomas\MPP\MPPpedido.cs
+		..\..\LUD\TPN1_DAS_Meneces_Tomas\MPP\MPPremeras.cs = ..\..\LUD\TPN1_DAS_Meneces_Tomas\MPP\MPPremeras.cs
+		..\..\LUD\TPN1_DAS_Meneces_Tomas\MPP\MPPusuario.cs = ..\..\LUD\TPN1_DAS_Meneces_Tomas\MPP\MPPusuario.cs
+		..\..\LUD\TPN1_DAS_Meneces_Tomas\sistema de ropa\sistema1.cs = ..\..\LUD\TPN1_DAS_Meneces_Tomas\sistema de ropa\sistema1.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{538CAE04-9131-4E60-B601-85C892F00212}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{538CAE04-9131-4E60-B601-85C892F00212}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{538CAE04-9131-4E60-B601-85C892F00212}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{538CAE04-9131-4E60-B601-85C892F00212}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD53A16E-DD8E-49B2-A600-5084299984FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD53A16E-DD8E-49B2-A600-5084299984FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD53A16E-DD8E-49B2-A600-5084299984FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD53A16E-DD8E-49B2-A600-5084299984FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DD4BCA1-A7E1-4DDC-8195-442E01A5C6B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DD4BCA1-A7E1-4DDC-8195-442E01A5C6B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DD4BCA1-A7E1-4DDC-8195-442E01A5C6B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DD4BCA1-A7E1-4DDC-8195-442E01A5C6B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5C430E3-8099-4D24-92C5-0C3606D72318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5C430E3-8099-4D24-92C5-0C3606D72318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5C430E3-8099-4D24-92C5-0C3606D72318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5C430E3-8099-4D24-92C5-0C3606D72318}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35BE67A8-A813-460F-A944-728297871E4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35BE67A8-A813-460F-A944-728297871E4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35BE67A8-A813-460F-A944-728297871E4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35BE67A8-A813-460F-A944-728297871E4A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D85CFEB2-DF70-41E3-A06B-80DA9C88DCF4}
+	EndGlobalSection
+EndGlobal
