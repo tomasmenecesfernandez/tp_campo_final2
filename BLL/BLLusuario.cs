@@ -54,6 +54,7 @@ namespace BLL
             usuario = verificar_usuario(usuario);
             usuario.rol.hijos = bllrol.traer_nodos_hijos(usuario.rol.codigo);
             usuario.permisos = bllrol.traer_todos_los_permisos(usuario.rol);
+
             sesion.Login(usuario);
             BEregistro registro = new BEregistro(get_nombre(usuario), "inicio de sesion");
             bllregistro.guardar_registro(registro);

@@ -15,16 +15,19 @@ namespace sistema
 {
     public partial class sesion1 : Form,Iobservertraduccion
     {
-        BLLusuario BLLusuario = new BLLusuario();
         public sesion1()
         {
             InitializeComponent();
         }
+        public sesion1(Form1 form)
+        {
+            InitializeComponent();
+            form_padre = form;
+        }
+        Form1 form_padre;
         public static BEusuario usuario;
         BLLusuario bllusuario = new BLLusuario();
         BLLtraducciones blltraducciones = new BLLtraducciones();
-        Form1 f = new Form1();
-        List<BEpermiso> lista_permisos = new List<BEpermiso>();
         idiomas idiomas = new idiomas();
         private void button1_Click(object sender, EventArgs e)
         {
@@ -35,7 +38,7 @@ namespace sistema
                     {
                         usuario = new BEusuario(textBox1.Text.Trim(), textBox2.Text.Trim());
                         bllusuario.login(usuario);
-                        f.Show();
+                        abrir_formulario();
                         this.Visible = false;
                     }
                     else
@@ -49,6 +52,15 @@ namespace sistema
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+        public void abrir_formulario()
+        {
+            if (form_padre == null)
+            {
+                Form1 f = new Form1();
+                f.Show();
+            }
+
         }
         public  void actualizar_idioma()
         {

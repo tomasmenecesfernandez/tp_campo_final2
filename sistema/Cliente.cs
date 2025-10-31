@@ -51,11 +51,15 @@ namespace sistema
         {
             try
             {
-                cliente = new BEcliente(textBox2.Text, Convert.ToInt32(textBox3.Text), comboBox3.Text, (BElocalidad)comboBox2.SelectedItem);
-                bll_cliente.alta(cliente);
-                cargar_grilla();
+                if (textBox2.Text!="" && textBox3.Text!="") {
+                    cliente = new BEcliente(textBox2.Text, Convert.ToInt32(textBox3.Text), comboBox3.Text, (BElocalidad)comboBox2.SelectedItem);
+                    bll_cliente.alta(cliente);
+                    cargar_grilla();
+                }
+                else { throw new Exception("complete los datos de los cuadros."); }
+
             }
-            catch { MessageBox.Show("error datos incorrectos."); }
+            catch (Exception ex){ MessageBox.Show(ex.Message); }
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -65,13 +69,18 @@ namespace sistema
             {
                 try
                 {
-                    int codigo_actual = cliente.codigo;
+                    if (textBox2.Text != "" && textBox3.Text != "")
+                    {
+                        int codigo_actual = cliente.codigo;
                     cliente = new BEcliente(textBox2.Text, Convert.ToInt32(textBox3.Text), comboBox3.Text, (BElocalidad)comboBox2.SelectedItem);
                     cliente.codigo = codigo_actual;
                     bll_cliente.modificar(cliente);
                     cargar_grilla();
+                    }
+                    else { throw new Exception("complete los datos de los cuadros."); }
+
                 }
-                catch { MessageBox.Show("error datos incorrectos."); }
+                catch (Exception ex) { MessageBox.Show(ex.Message); }
             }
             else { MessageBox.Show("seleccione algun cliente."); }
         }

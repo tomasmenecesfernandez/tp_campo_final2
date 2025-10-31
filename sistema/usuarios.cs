@@ -52,9 +52,9 @@ namespace sistema
                     mostrar_data();   
                 }
 
-                catch
+                catch(Exception ex)
                 {
-                    MessageBox.Show("error");
+                    MessageBox.Show(ex.Message);
                 }
             }
             else { MessageBox.Show("error"); }
@@ -139,7 +139,7 @@ namespace sistema
         }
         public void actualizar_idioma()
         {
-                usuario_label1.Text = traducciones.traducir(usuario_label1.Name);
+            usuario_label1.Text = traducciones.traducir(usuario_label1.Name);
                 contraceña_label1.Text = traducciones.traducir(contraceña_label1.Name);
                 rol_label1.Text = traducciones.traducir(rol_label1.Name);
                 agregar_boton1.Text = traducciones.traducir(agregar_boton1.Name);

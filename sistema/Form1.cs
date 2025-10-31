@@ -38,7 +38,7 @@ namespace sistema
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            s = new sesion1();
+            s = new sesion1(this);
             s.MdiParent = this;
             s.Show();
         }
@@ -57,6 +57,7 @@ namespace sistema
         private void Form1_Load(object sender, EventArgs e)
         {
             activar_permisos();
+            idiomas = new idiomas("Español");
         }
 
         public void activar_permisos()
