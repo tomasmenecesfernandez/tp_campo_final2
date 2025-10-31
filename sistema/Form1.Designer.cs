@@ -31,6 +31,7 @@ namespace sistema
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.usuarios_menu = new System.Windows.Forms.ToolStripMenuItem();
+            this.bitacoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.login_menu = new System.Windows.Forms.ToolStripMenuItem();
             this.reportes_menu = new System.Windows.Forms.ToolStripMenuItem();
             this.idioma_menu = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,7 +40,6 @@ namespace sistema
             this.sistema_menu = new System.Windows.Forms.ToolStripMenuItem();
             this.permisos_menu = new System.Windows.Forms.ToolStripMenuItem();
             this.CERRAR_SESION_MENU = new System.Windows.Forms.ToolStripMenuItem();
-            this.bitacoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,6 +72,13 @@ namespace sistema
             this.usuarios_menu.Size = new System.Drawing.Size(77, 24);
             this.usuarios_menu.Text = "usuarios";
             this.usuarios_menu.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
+            // 
+            // bitacoraToolStripMenuItem
+            // 
+            this.bitacoraToolStripMenuItem.Name = "bitacoraToolStripMenuItem";
+            this.bitacoraToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.bitacoraToolStripMenuItem.Text = "Bitacora";
+            this.bitacoraToolStripMenuItem.Click += new System.EventHandler(this.bitacoraToolStripMenuItem_Click);
             // 
             // login_menu
             // 
@@ -130,13 +137,6 @@ namespace sistema
             this.CERRAR_SESION_MENU.Size = new System.Drawing.Size(131, 24);
             this.CERRAR_SESION_MENU.Text = "CERRAR SESION";
             this.CERRAR_SESION_MENU.Click += new System.EventHandler(this.cERRARSESIONToolStripMenuItem_Click);
-            // 
-            // bitacoraToolStripMenuItem
-            // 
-            this.bitacoraToolStripMenuItem.Name = "bitacoraToolStripMenuItem";
-            this.bitacoraToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.bitacoraToolStripMenuItem.Text = "Bitacora";
-            this.bitacoraToolStripMenuItem.Click += new System.EventHandler(this.bitacoraToolStripMenuItem_Click);
             // 
             // Form1
             // 
