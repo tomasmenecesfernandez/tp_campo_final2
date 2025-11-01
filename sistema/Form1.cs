@@ -27,7 +27,7 @@ namespace sistema
         sistema sist;
         Cliente c;
         BLLtraducciones traducciones = new BLLtraducciones();
- idiomas idiomas = new idiomas();
+ public idiomas idiomas = new idiomas();
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {

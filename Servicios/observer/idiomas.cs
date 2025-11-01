@@ -42,16 +42,6 @@ namespace Servicios.observer
                 throw new Exception("ya la traduccion esta en el sistema");
             }
         }
-        public void cargar_listatraducciones(string idioma_actual)
-        {
-            lista_traducciones.Clear();
-            lista_traducciones=daltraducciones.leer_traducciones(idioma_actual);
-        }
-        public void notificar(string idioma_actual)
-        {
-            cargar_listatraducciones(idioma_actual);
-        }
-
         public void quitar_observer(BEtraducciones traduccion)
         {
             if (lista_traducciones.Contains(traduccion))
@@ -62,6 +52,19 @@ namespace Servicios.observer
             {
                 throw new Exception("la traduccion no estaba en el sistema.");
             }
+        }
+        public void notificar(string idioma_actual)
+        {
+            cargar_listatraducciones(idioma_actual);
+        }
+
+
+
+
+        public void cargar_listatraducciones(string idioma_actual)
+        {
+            lista_traducciones.Clear();
+            lista_traducciones=daltraducciones.leer_traducciones(idioma_actual);
         }
         public void agregar_idioma(idiomas idioma)
         {
