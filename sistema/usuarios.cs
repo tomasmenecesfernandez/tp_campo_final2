@@ -57,7 +57,7 @@ namespace sistema
                     MessageBox.Show(ex.Message);
                 }
             }
-            else { MessageBox.Show("error"); }
+            else { MessageBox.Show("complete los cuadros de texto."); }
         }
 #region funciones_para_mostrar
         public void mostrar_data()
@@ -258,6 +258,7 @@ namespace sistema
         {
             if (nodo_seleccionado != null)
             {
+                if (nodo_seleccionado.nombre == "sistema") throw new Exception("no se puede borrar el nodo sistema");
                 if (radioButton1.Checked)//rol
                 {
                     bllrol.borrar_rol((BErol)nodo_seleccionado);

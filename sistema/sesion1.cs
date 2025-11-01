@@ -82,10 +82,7 @@ namespace sistema
         }
         private void sesion1_Load(object sender, EventArgs e)
         {
-            if(idiomas.lista_traducciones.Count>0)
-            {
-                actualizar_idioma();
-            }
+            if (idiomas.lista_traducciones.Count > 0) { actualizar_idioma();}
             verificar_digito_verificador();
             textBox1.Text = "tomi";
             textBox2.Text = "1234";

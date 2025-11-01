@@ -62,12 +62,7 @@ namespace sistema
 
         public void activar_permisos()
         {
-
-            reportes_menu.Enabled = false;
-            idioma2_menu.Enabled = false;
-            sistema_menu.Enabled = false;
-            clientes_menu.Enabled = false;
-            usuarios_menu.Enabled = false;
+            desactivar_form();
             permisos_menu.DropDownItems.Clear();
             try
             {
@@ -154,14 +149,21 @@ namespace sistema
 
                 cerrar_formularios();
                 MessageBox.Show("Se cerro sesion con exito.");
-                
+                //desactivar_form();
             }
             else 
             {
                 MessageBox.Show("error, La sesion ya estaba cerrada.");
             }
         }
-
+        public void desactivar_form()
+        {
+            reportes_menu.Enabled = false;
+            idioma2_menu.Enabled = false;
+            sistema_menu.Enabled = false;
+            clientes_menu.Enabled = false;
+            usuarios_menu.Enabled = false;
+        }
         public void cerrar_formularios()
         {
             foreach (Form frm in this.MdiChildren)

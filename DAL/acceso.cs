@@ -11,8 +11,8 @@ namespace DAL
 {
     public class acceso
     {
-        //SqlConnection conexion = new SqlConnection(@"Data Source=.;Initial Catalog=base_3_año;Integrated Security=True");
-        SqlConnection conexion = new SqlConnection(@"Data Source=DESKTOP-4FV7E1T\SQLEXPRESS;Initial Catalog=base_3_año;Integrated Security=True");
+        SqlConnection conexion = new SqlConnection(@"Data Source=.;Initial Catalog=base_3_año;Integrated Security=True");
+        //SqlConnection conexion = new SqlConnection(@"Data Source=DESKTOP-4FV7E1T\SQLEXPRESS;Initial Catalog=base_3_año;Integrated Security=True");
         SqlCommand comando;
         SqlTransaction transaction;
         public void abrir()
