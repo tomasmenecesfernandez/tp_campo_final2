@@ -19,7 +19,6 @@ namespace DAL
             hash.Add("@usuario", controlUsuario.usuario);
             hash.Add("@contraseña", controlUsuario.contraseña);
             hash.Add("@fecha", controlUsuario.fecha);
-            hash.Add("@rol", controlUsuario.codigorol);
             acceso.escribir(consulta, hash);
         }
         public List<BEcontrolCambioUsuario> leer_Registros(int codigo_usuario)
@@ -40,7 +39,6 @@ namespace DAL
                         controlusuario.usuario = row["usuario"].ToString();
                         controlusuario.fecha = Convert.ToDateTime(row["fecha"]);
                         controlusuario.contraseña = row["contraseña"].ToString();
-                        controlusuario.codigorol= (int)row["rol"];
                     
                     Lista.Add(controlusuario);
                 }

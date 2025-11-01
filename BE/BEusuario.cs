@@ -11,7 +11,6 @@ namespace BE
         public string nombre { get; set; }
         public string contraseña { get; set; }
         public int codigo { get; set; }
-        public BErol rol { get; set; }
         public List<BEpermiso> permisos { get; set; }
         public BEusuario()
         {

@@ -83,19 +83,7 @@ namespace DAL
             }
             return lista_codigos_roleshijos;
         }
-        public List<int> traer_cod_todos_hijos(int cod_padre)
-        {
-            string comando = "traer_todos_hijos";
-            Hashtable hash = new Hashtable();
-            hash.Add("@codigoraiz", cod_padre);
-            DataTable tabla = acceso.leer_tabla(comando, hash);
-            List<int> lista_codigos_hijos = new List<int>();
-            foreach (DataRow row in tabla.Rows)
-            {
-                lista_codigos_hijos.Add(Convert.ToInt32(row["codigo_permiso"]));
-            }
-            return lista_codigos_hijos;
-        }
+
         public List<BEpermisoComponente> traer_todos_los_roles()
         {
             string consulta = "traer_rol";
@@ -125,6 +113,45 @@ namespace DAL
             }
             return lista;
         }
-
+        public List<BEpermisoComponente> traer_permisos_usuario(BEusuario usuario)
+        {
+            List<BEpermisoComponente> lista = new List<BEpermisoComponente>();
+            string consulta = "leer_permisos_y_rol_del_usuario";
+            Hashtable hdatos = new Hashtable();
+            hdatos.Add("@codigo_usuario",usuario.codigo);
+            DataTable tabla = acceso.leer_tabla(consulta, hdatos);
+            foreach (DataRow fila in tabla.Rows)
+            {
+                if (Convert.ToInt32(fila["tipocompuesto"])==1) {
+                    BErol rol = new BErol(fila["nombre"].ToString());
+                    rol.codigo = (int)(fila["codigo"]);
+                    rol.hijos = TraerArbolPermisos(rol.codigo);
+                    lista.Add(rol);
+                }
+                else
+                {
+                    BEpermiso permiso = new BEpermiso(fila["nombre"].ToString());
+                    permiso.codigo = (int)(fila["codigo"]);
+                    lista.Add(permiso);
+                }
+            }
+            return lista;
+        }
+        public void agregar_permiso_usuario(BEpermisoComponente permiso, int codigo_usuario)
+        {
+            string consulta = "agregar_permisos_usuario";
+            Hashtable hdatos = new Hashtable();
+            hdatos.Add("@codigo_usuario", codigo_usuario);
+            hdatos.Add("@codigo_permiso", permiso.codigo);
+            acceso.escribir(consulta, hdatos);
+        }
+        public void borrar_permiso_usuario(BEpermisoComponente permiso,int codigo_usuario)
+        {
+            string consulta = "borrar_usuario_permisos";
+            Hashtable hdatos = new Hashtable();
+            hdatos.Add("@codigo_usuario", codigo_usuario);
+            hdatos.Add("@codigo_permisos", permiso.codigo );
+            acceso.escribir(consulta, hdatos);
+        }
     }
 }

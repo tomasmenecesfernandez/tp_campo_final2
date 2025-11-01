@@ -135,10 +135,7 @@ namespace sistema
 
         private void Cliente_FormClosing(object sender, FormClosingEventArgs e)
         {
-            try {
-                form_padre.cargar_grilla();
-            }
-            catch { }
+                if(form_padre!=null)form_padre.cargar_grilla();
            }
     }
 }

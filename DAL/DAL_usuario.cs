@@ -17,7 +17,6 @@ namespace DAL
             Hashtable hdatos = new Hashtable();
             hdatos.Add("@nombre", usuario.nombre);
             hdatos.Add("@contraseña", usuario.contraseña);
-            hdatos.Add("@rol", usuario.rol.codigo);
 
             acceso.escribir(comando, hdatos);
         }
@@ -28,7 +27,6 @@ namespace DAL
             hdatos.Add("@nombre", u.nombre);
             hdatos.Add("@contraseña", u.contraseña);
             hdatos.Add("@codigo", u.codigo);
-            hdatos.Add("@rol", u.rol.codigo);
             acceso.escribir(comando, hdatos);
         }
         public void borrar(BEusuario u)
@@ -49,8 +47,6 @@ namespace DAL
             foreach (DataRow linea in tabla.Rows)
             {
                 usuario.codigo = Convert.ToInt32(linea["codigo"].ToString());
-                usuario.rol = new BErol(linea["nombrerol"].ToString());
-                usuario.rol.codigo = Convert.ToInt32(linea["codigo_rol"]);
                 return usuario;
             }
             throw new Exception("El usuario o contraseña incorrecta, vuelva a intentarlo.");
@@ -67,8 +63,6 @@ namespace DAL
                 usuario.nombre = fila["nombre"].ToString();
                 usuario.contraseña = fila["contraseña"].ToString();
                 usuario.codigo = Convert.ToInt32(fila["codigo"]);
-                usuario.rol = new BErol(fila["nombrerol"].ToString());
-                usuario.rol.codigo = Convert.ToInt32(fila["rol"]);
 
                 lista.Add(usuario);
             }

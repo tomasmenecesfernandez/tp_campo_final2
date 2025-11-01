@@ -23,6 +23,7 @@ namespace BLL
         }
         public void alta(BEusuario usuario)
         {
+            usuario = encrytar_usuario(usuario);
             dal_usuario.agregar_usuario(usuario);
         }
         public void modificar(BEusuario usuario)
@@ -39,12 +40,8 @@ namespace BLL
             lista_usuarios.Clear();
             foreach (BEusuario usuario in dal_usuario.leer_usuario())
             {
-                BEusuario usuario1 = new BEusuario();
-                usuario1.nombre =desencrytar_nombre(usuario.nombre);
-                usuario1.codigo = usuario.codigo;
-                usuario1.contraseña = usuario.contraseña;
-                usuario1.rol = usuario.rol;
-                lista_usuarios.Add(usuario1);
+                usuario.nombre =desencrytar_nombre(usuario.nombre);
+                lista_usuarios.Add(usuario);
             }
             return lista_usuarios;
         }
@@ -52,8 +49,7 @@ namespace BLL
         {
             usuario = encrytar_usuario(usuario);
             usuario = verificar_usuario(usuario);
-            usuario.rol.hijos = bllrol.traer_nodos_hijos(usuario.rol.codigo);
-            usuario.permisos = bllrol.traer_todos_los_permisos(usuario.rol);
+            usuario.permisos = bllrol.traer_todos_los_permisos_usuario(usuario);
 
             sesion.Login(usuario);
             BEregistro registro = new BEregistro(get_nombre(usuario), "inicio de sesion");

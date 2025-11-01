@@ -13,14 +13,12 @@ namespace BE
         public string usuario { get; set; }
         public string contraseña { get; set; }
         public DateTime fecha { get; set; }
-        public int codigorol { get; set; }
 
         public BEcontrolCambioUsuario(BEusuario usuario1)
         {
             codigo_usuario = usuario1.codigo;
             usuario = usuario1.nombre;
             contraseña = usuario1.contraseña;
-            codigorol = usuario1.rol.codigo;
             fecha = DateTime.Now;
 
         }

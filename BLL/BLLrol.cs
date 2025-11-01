@@ -17,19 +17,6 @@ namespace BLL
             lista = (dal.TraerArbolPermisos(cod));
             return lista;
         }
-        public List<int> traer_cod_roles_hijo(int cod_padre)
-        {
-            return dal.traer_cod_roles_hijo(cod_padre);
-        }
-        public List<int> traer_cod_todos_hijos(int cod_padre)
-        {
-            return dal.traer_cod_todos_hijos(cod_padre);
-
-        }
-        public void agregar_rol_nuevo(BErol rol, int codpadre)
-        {
-            dal.agregar_nodo(rol, codpadre, true);
-        }
         public void agregar_rol(BErol rol, int codpadre)
         {
             dal.agregar_nodo(rol, codpadre, true);
@@ -60,7 +47,21 @@ namespace BLL
             }
             return null;
         }
-        public List<BEpermiso> traer_todos_los_permisos(BErol rol, List<BEpermiso>lista=null )
+        public List<BEpermiso> traer_todos_los_permisos_usuario(BEusuario usuario)
+        {
+            List<BEpermiso> lista = new List<BEpermiso>();
+            foreach(BEpermisoComponente nodo in traer_permisos_usuario(usuario))
+            {
+                if (nodo is BErol) {
+                    lista.AddRange(traer_todos_los_permisos((BErol)nodo));
+                }else
+                {
+                    lista.Add((BEpermiso)nodo);
+                }
+            }
+            return lista;
+        }
+            public List<BEpermiso> traer_todos_los_permisos(BErol rol, List<BEpermiso>lista=null )
         {
             if (lista == null) lista = new List<BEpermiso>();
             foreach (BEpermisoComponente hijo in rol.hijos)
@@ -87,6 +88,23 @@ namespace BLL
             }
             return true;
         }
+        public void verificar_permiso_no_existente(List<BEpermisoComponente>lista,string nombre_permiso)
+        {
+            foreach ( BEpermisoComponente nodo in lista )
+            {
+                if (nodo is BErol)
+                {
+                    if (nodo.nombre == nombre_permiso) throw new Exception("error, el permiso ya se encuentra en la lista de permisos del usuario.");
+
+                    BErol rol = (BErol)nodo;
+                    verificar_permiso_no_existente(rol.hijos, nombre_permiso);
+                }
+                else
+                {
+                    if (nodo.nombre == nombre_permiso) throw new Exception("error, el permiso ya se encuentra en la lista de permisos del usuario.");
+                }
+            }
+        }
         public void verificar_rol_bucle(BErol rol_padre,string nombre_rol_hijo)
         {
             foreach (BEpermisoComponente hijo in rol_padre.hijos)
@@ -101,6 +119,19 @@ namespace BLL
                     verificar_rol_bucle(rol, nombre_rol_hijo);
                 }
             }
+        }
+        public List<BEpermisoComponente> traer_permisos_usuario(BEusuario usuario)
+        {
+            return dal.traer_permisos_usuario(usuario);
+        }
+        public void agregar_permiso_usuario(BEpermisoComponente rol, int codpadre)
+        {
+            dal.agregar_permiso_usuario(rol, codpadre);
+        }
+        public void borrar_permiso_usuario(BEpermisoComponente rol,int codigo_usuario)
+        {
+            dal.borrar_permiso_usuario(rol, codigo_usuario);
+
         }
     }
 }

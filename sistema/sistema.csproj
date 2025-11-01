@@ -58,6 +58,18 @@
     <Compile Include="Cliente.Designer.cs">
       <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="composite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="composite.Designer.cs">
+      <DependentUpon>composite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control_de_cambio_usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="control_de_cambio_usuario.Designer.cs">
+      <DependentUpon>control_de_cambio_usuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="detalle_pedido.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +125,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="composite.resx">
+      <DependentUpon>composite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control_de_cambio_usuario.resx">
+      <DependentUpon>control_de_cambio_usuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="detalle_pedido.resx">
       <DependentUpon>detalle_pedido.cs</DependentUpon>

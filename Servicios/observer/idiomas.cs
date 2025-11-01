@@ -102,5 +102,9 @@ namespace Servicios.observer
             
             return lista;
         }
+        public override string ToString()
+        {
+            return idioma;
+        }
     }
 }

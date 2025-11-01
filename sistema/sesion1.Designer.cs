@@ -34,6 +34,8 @@ namespace sistema
             this.usuario_label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.agregar_boton2 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.SESION1_IDIOMA_LABEL = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // contraseña_label2
@@ -81,11 +83,31 @@ namespace sistema
             this.agregar_boton2.UseVisualStyleBackColor = true;
             this.agregar_boton2.Click += new System.EventHandler(this.button1_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(285, 35);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(146, 24);
+            this.comboBox1.TabIndex = 13;
+            // 
+            // SESION1_IDIOMA_LABEL
+            // 
+            this.SESION1_IDIOMA_LABEL.AutoSize = true;
+            this.SESION1_IDIOMA_LABEL.Location = new System.Drawing.Point(307, 15);
+            this.SESION1_IDIOMA_LABEL.Name = "SESION1_IDIOMA_LABEL";
+            this.SESION1_IDIOMA_LABEL.Size = new System.Drawing.Size(55, 17);
+            this.SESION1_IDIOMA_LABEL.TabIndex = 14;
+            this.SESION1_IDIOMA_LABEL.Text = "IDIOMA";
+            // 
             // sesion1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(569, 216);
+            this.Controls.Add(this.SESION1_IDIOMA_LABEL);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.contraseña_label2);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.usuario_label2);
@@ -106,5 +128,7 @@ namespace sistema
         private System.Windows.Forms.Label usuario_label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button agregar_boton2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label SESION1_IDIOMA_LABEL;
     }
 }

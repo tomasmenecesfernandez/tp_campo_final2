@@ -43,9 +43,6 @@ namespace sistema
                 try
                 {
                     usuario = new BEusuario(textBox1.Text, textBox2.Text);
-                    BErol rol_seleccionado = (BErol)comboBox1.SelectedItem;
-                    usuario.rol = rol_seleccionado;
-                    usuario = bllusuario.encrytar_usuario(usuario);
                     bllusuario.alta(usuario);
                     BEcontrolCambioUsuario control = new BEcontrolCambioUsuario(usuario);
                     bllcontrolusuario.agregar_control_usuario(control);
@@ -68,15 +65,23 @@ namespace sistema
             }
             catch { }
         }
-        public void mostrar_treeview(BEpermisoComponente componenteraiz,TreeNodeCollection nodos)
+        public void mostrar_treeview(List<BEpermisoComponente> lista,TreeNodeCollection nodos)
         {
-            TreeNode nodo1 =new TreeNode(componenteraiz.nombre);
-            nodo1.Tag = componenteraiz;
-            nodos.Add(nodo1);
 
-            foreach (BEpermisoComponente hijos in componenteraiz.obtener_hijos())
+
+            foreach (BEpermisoComponente nodo in lista)
             {
-                mostrar_treeview(hijos,nodo1.Nodes);
+                TreeNode nodo1 = new TreeNode(nodo.nombre);
+                nodo1.Tag = nodo; // guardo el objeto en Tag para futuras referencias
+
+                nodos.Add(nodo1);
+
+                // Si tiene hijos, llamo recursivamente pasando los nodos hijos
+                if (nodo.obtener_hijos().Count > 0)
+                {
+                    mostrar_treeview(nodo.obtener_hijos(), nodo1.Nodes);
+                }
+
             }
         }
 #endregion
@@ -91,7 +96,10 @@ namespace sistema
             usuario = (BEusuario)dataGridView1.CurrentRow.DataBoundItem;
             textBox1.Text = usuario.nombre;
             textBox2.Text = string.Empty;
-            dataGridView2.DataSource = bllcontrolusuario.leer_Registros(usuario.codigo);
+            treeView1.Nodes.Clear();
+            mostrar_treeview(bllrol.traer_permisos_usuario(usuario), treeView1.Nodes);
+            treeView1.ExpandAll();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -101,10 +109,9 @@ namespace sistema
                 try
                 {
                     if (textBox1.Text!="" && textBox2.Text!="") {
-                        usuario.nombre = bllusuario.encrytar_nombre(textBox1.Text);
-                        usuario.contraseña = bllusuario.encrytar_contraseña(textBox2.Text);
-                        BErol rol_seleccionado = (BErol)comboBox1.SelectedItem;
-                        usuario.rol = rol_seleccionado;
+                        usuario.nombre = textBox1.Text;
+                        usuario.contraseña=textBox2.Text;
+                        usuario = bllusuario.encrytar_usuario(usuario);
                         bllusuario.modificar(usuario);
                         BEcontrolCambioUsuario controlusuario = new BEcontrolCambioUsuario(usuario);
                         bllcontrolusuario.agregar_control_usuario(controlusuario);
@@ -128,20 +135,12 @@ namespace sistema
             if(idiomas.lista_traducciones.Count>0 ) actualizar_idioma();
             radioButton1.Checked = true;
             lista_permisos = bllpermiso.leer_permisos();
-            añadir_roles_combobox();
             mostrar_data();
-            mostrar_treeview(bllrol.traer_nodos_hijos(0)[0],treeView1.Nodes);
-        }
-        public void añadir_roles_combobox()
-        { 
-        comboBox1.DataSource = bllrol.traer_todos_los_roles();
-        comboBox1.DisplayMember = "nombre";
         }
         public void actualizar_idioma()
         {
             usuario_label1.Text = traducciones.traducir(usuario_label1.Name);
                 contraceña_label1.Text = traducciones.traducir(contraceña_label1.Name);
-                rol_label1.Text = traducciones.traducir(rol_label1.Name);
                 agregar_boton1.Text = traducciones.traducir(agregar_boton1.Name);
                 modificar_boton1.Text = traducciones.traducir(modificar_boton1.Name);
                 borrar_boton1.Text = traducciones.traducir(borrar_boton1.Name);
@@ -171,43 +170,11 @@ namespace sistema
         {
             try
             {
-                if (nodo_seleccionado != null)
-                {
-                    if (nodo_seleccionado is BErol)
-                    {
-                        if (radioButton1.Checked)//rol
-                        {
-                            if (bllrol.esUnRolNuevo(comboBox2.Text))
-                            {
-                                BErol rol = new BErol(comboBox2.Text);
-                                bllrol.agregar_rol(rol, nodo_seleccionado.codigo);
-                                añadir_roles_combobox();
-                            }
-                            else
-                            {
-                                BErol rol = new BErol("");
-                                rol = (BErol)comboBox2.SelectedItem;
-                                bllrol.verificar_rol_bucle(rol,nodo_seleccionado.nombre);
-                                bllrol.agregar_rol(rol, nodo_seleccionado.codigo);
-                                añadir_roles_combobox();
-                            }
-
-                        }
-                        else if (radioButton2.Checked)
-                        {
-                            BEpermiso permiso = (BEpermiso)(comboBox2.SelectedItem);
-                            BErol rol_padre=(BErol) nodo_seleccionado;
-                            bllpermiso.verificar_si_existe_permiso(rol_padre, permiso.nombre);
-                            bllpermiso.agregar_permiso(permiso, nodo_seleccionado.codigo);
-                        }
-                        treeView1.Nodes.Clear();
-                        mostrar_treeview(bllrol.traer_nodos_hijos(0)[0], treeView1.Nodes);
-                    }
-                    else
-                    {
-                        throw new Exception("error no se puede agregar nodos a un permiso.");
-                    }
-                }
+                bllrol.verificar_permiso_no_existente(bllrol.traer_permisos_usuario(usuario), comboBox2.Text);
+              bllrol.agregar_permiso_usuario((BEpermisoComponente)comboBox2.SelectedItem, usuario.codigo);
+              treeView1.Nodes.Clear();
+                mostrar_treeview(bllrol.traer_permisos_usuario(usuario), treeView1.Nodes);
+                treeView1.ExpandAll();
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
@@ -235,41 +202,27 @@ namespace sistema
             }
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            if (nodo_seleccionado != null)
-            {
-                if (radioButton1.Checked)//rol
-                {
-                    bllrol.modificar_rol((BErol)nodo_seleccionado);
-                    añadir_roles_combobox();
-                }
-                else if (radioButton2.Checked)
-                { 
-                    bllpermiso.modificar_permiso((BEpermiso)nodo_seleccionado);
-                }
-                treeView1.Nodes.Clear();
-                mostrar_treeview(bllrol.traer_nodos_hijos(0)[0], treeView1.Nodes);
 
-            }
-        }
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            if (nodo_seleccionado != null)
+            try
             {
-                if (nodo_seleccionado.nombre == "sistema") throw new Exception("no se puede borrar el nodo sistema");
-                if (radioButton1.Checked)//rol
+                if (nodo_seleccionado != null)
                 {
-                    bllrol.borrar_rol((BErol)nodo_seleccionado);
+                    bllrol.borrar_permiso_usuario(nodo_seleccionado, usuario.codigo);
+                    treeView1.Nodes.Clear();
+                    mostrar_treeview(bllrol.traer_permisos_usuario(usuario), treeView1.Nodes);
+                    treeView1.ExpandAll();
+                    
                 }
-                else if (radioButton2.Checked)
+                else
                 {
-                    bllpermiso.borrar_permiso((BEpermiso)nodo_seleccionado);
+                    throw new Exception("no hay ningun nodo seleccionado.");
                 }
-                treeView1.Nodes.Clear();
-                mostrar_treeview(bllrol.traer_nodos_hijos(0)[0], treeView1.Nodes);
-
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -283,9 +236,6 @@ namespace sistema
                     controlusuario_select.usuario = bllusuario.encrytar_nombre(controlusuario_select.usuario);
                     usuario.nombre = controlusuario_select.usuario;
                     usuario.contraseña = controlusuario_select.contraseña;
-                    BErol rol = new BErol("");
-                    rol = bllrol.recuperar_rol(controlusuario_select.codigorol);
-                    usuario.rol = rol;
                     bllusuario.modificar(usuario);
                     mostrar_data();
                 }
@@ -298,11 +248,7 @@ namespace sistema
             
         }
 
-        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            controlusuario_select = (BEcontrolCambioUsuario)dataGridView2.CurrentRow.DataBoundItem;
 
-        }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
@@ -312,6 +258,31 @@ namespace sistema
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            if (usuario != null)
+            {
+                control_de_cambio_usuario c = new control_de_cambio_usuario(usuario,this);
+                c.MdiParent = this.MdiParent;
+                c.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("error, seleccione un usuario.");
+            }
         }
     }
 

@@ -38,8 +38,10 @@ namespace sistema
                     {
                         usuario = new BEusuario(textBox1.Text.Trim(), textBox2.Text.Trim());
                         bllusuario.login(usuario);
+                        idiomas = new idiomas(comboBox1.Text);
                         abrir_formulario();
                         this.Visible = false;
+
                     }
                     else
                     {
@@ -60,6 +62,12 @@ namespace sistema
                 Form1 f = new Form1();
                 f.Show();
             }
+            else
+            {
+                form_padre.activar_permisos();
+                form_padre.activar_y_desactivar_login_logout();
+                form_padre.poner_nombre_usuario_label();
+            }
 
         }
         public  void actualizar_idioma()
@@ -68,22 +76,12 @@ namespace sistema
             contraseña_label2.Text = blltraducciones.traducir(contraseña_label2.Name);
             agregar_boton2.Text = blltraducciones.traducir(agregar_boton2.Name);
         }
-        public void verificar_digito_verificador()
-        {
-            try
-            {
-                idiomas.leer_idiomas();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                this.Close();
-            }
-        }
+        
         private void sesion1_Load(object sender, EventArgs e)
         {
             if (idiomas.lista_traducciones.Count > 0) { actualizar_idioma();}
-            verificar_digito_verificador();
+            comboBox1.DataSource = null;
+            comboBox1.DataSource= idiomas.leer_idiomas();
             textBox1.Text = "tomi";
             textBox2.Text = "1234";
         }
