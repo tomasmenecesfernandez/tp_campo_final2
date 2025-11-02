@@ -29,79 +29,79 @@ namespace sistema
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.clientes_groupbox_cliente = new System.Windows.Forms.GroupBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btm_agregar = new System.Windows.Forms.Button();
+            this.btm_borrar = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.btm_modificar = new System.Windows.Forms.Button();
+            this.clientes_btm_form_localidad = new System.Windows.Forms.Button();
+            this.label_localidad = new System.Windows.Forms.Label();
+            this.clientes_provincia = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.clientes_nombre_completo = new System.Windows.Forms.Label();
+            this.clientes_DNI = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBox1.SuspendLayout();
+            this.clientes_groupbox_cliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // clientes_groupbox_cliente
             // 
-            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox1.Controls.Add(this.comboBox3);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.button7);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.button6);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Location = new System.Drawing.Point(27, 23);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(263, 190);
-            this.groupBox1.TabIndex = 24;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "CLIENTE";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.clientes_groupbox_cliente.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.clientes_groupbox_cliente.Controls.Add(this.comboBox3);
+            this.clientes_groupbox_cliente.Controls.Add(this.btm_agregar);
+            this.clientes_groupbox_cliente.Controls.Add(this.btm_borrar);
+            this.clientes_groupbox_cliente.Controls.Add(this.comboBox2);
+            this.clientes_groupbox_cliente.Controls.Add(this.btm_modificar);
+            this.clientes_groupbox_cliente.Controls.Add(this.clientes_btm_form_localidad);
+            this.clientes_groupbox_cliente.Controls.Add(this.label_localidad);
+            this.clientes_groupbox_cliente.Controls.Add(this.clientes_provincia);
+            this.clientes_groupbox_cliente.Controls.Add(this.textBox2);
+            this.clientes_groupbox_cliente.Controls.Add(this.clientes_nombre_completo);
+            this.clientes_groupbox_cliente.Controls.Add(this.clientes_DNI);
+            this.clientes_groupbox_cliente.Controls.Add(this.textBox3);
+            this.clientes_groupbox_cliente.Location = new System.Drawing.Point(36, 28);
+            this.clientes_groupbox_cliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.clientes_groupbox_cliente.Name = "clientes_groupbox_cliente";
+            this.clientes_groupbox_cliente.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.clientes_groupbox_cliente.Size = new System.Drawing.Size(351, 234);
+            this.clientes_groupbox_cliente.TabIndex = 24;
+            this.clientes_groupbox_cliente.TabStop = false;
+            this.clientes_groupbox_cliente.Text = "CLIENTE";
+            this.clientes_groupbox_cliente.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(14, 118);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox3.Location = new System.Drawing.Point(19, 145);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(106, 21);
+            this.comboBox3.Size = new System.Drawing.Size(140, 24);
             this.comboBox3.TabIndex = 16;
             // 
-            // button1
+            // btm_agregar
             // 
-            this.button1.Location = new System.Drawing.Point(176, 50);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(76, 28);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "AGREGAR";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btm_agregar.Location = new System.Drawing.Point(235, 62);
+            this.btm_agregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btm_agregar.Name = "btm_agregar";
+            this.btm_agregar.Size = new System.Drawing.Size(101, 34);
+            this.btm_agregar.TabIndex = 19;
+            this.btm_agregar.Text = "AGREGAR";
+            this.btm_agregar.UseVisualStyleBackColor = true;
+            this.btm_agregar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button7
+            // btm_borrar
             // 
-            this.button7.Location = new System.Drawing.Point(176, 119);
-            this.button7.Margin = new System.Windows.Forms.Padding(2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(76, 28);
-            this.button7.TabIndex = 21;
-            this.button7.Text = "BORRAR";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.btm_borrar.Location = new System.Drawing.Point(235, 146);
+            this.btm_borrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btm_borrar.Name = "btm_borrar";
+            this.btm_borrar.Size = new System.Drawing.Size(101, 34);
+            this.btm_borrar.TabIndex = 21;
+            this.btm_borrar.Text = "BORRAR";
+            this.btm_borrar.UseVisualStyleBackColor = true;
+            this.btm_borrar.Click += new System.EventHandler(this.button7_Click);
             // 
             // comboBox2
             // 
@@ -109,118 +109,115 @@ namespace sistema
             this.comboBox2.Items.AddRange(new object[] {
             "fgdgf",
             "fggf"});
-            this.comboBox2.Location = new System.Drawing.Point(14, 158);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox2.Location = new System.Drawing.Point(19, 194);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(106, 21);
+            this.comboBox2.Size = new System.Drawing.Size(140, 24);
             this.comboBox2.TabIndex = 18;
             // 
-            // button6
+            // btm_modificar
             // 
-            this.button6.Location = new System.Drawing.Point(176, 82);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(76, 28);
-            this.button6.TabIndex = 20;
-            this.button6.Text = "MODIFICAR";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btm_modificar.Location = new System.Drawing.Point(235, 101);
+            this.btm_modificar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btm_modificar.Name = "btm_modificar";
+            this.btm_modificar.Size = new System.Drawing.Size(101, 34);
+            this.btm_modificar.TabIndex = 20;
+            this.btm_modificar.Text = "MODIFICAR";
+            this.btm_modificar.UseVisualStyleBackColor = true;
+            this.btm_modificar.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button2
+            // clientes_btm_form_localidad
             // 
-            this.button2.Location = new System.Drawing.Point(126, 158);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(126, 21);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "formulario localidad";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.clientes_btm_form_localidad.Location = new System.Drawing.Point(168, 194);
+            this.clientes_btm_form_localidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.clientes_btm_form_localidad.Name = "clientes_btm_form_localidad";
+            this.clientes_btm_form_localidad.Size = new System.Drawing.Size(168, 26);
+            this.clientes_btm_form_localidad.TabIndex = 11;
+            this.clientes_btm_form_localidad.Text = "formulario localidad";
+            this.clientes_btm_form_localidad.UseVisualStyleBackColor = true;
+            this.clientes_btm_form_localidad.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label3
+            // label_localidad
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 140);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 13);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "LOCALIDAD";
+            this.label_localidad.AutoSize = true;
+            this.label_localidad.Location = new System.Drawing.Point(19, 172);
+            this.label_localidad.Name = "label_localidad";
+            this.label_localidad.Size = new System.Drawing.Size(85, 17);
+            this.label_localidad.TabIndex = 12;
+            this.label_localidad.Text = "LOCALIDAD";
             // 
-            // label6
+            // clientes_provincia
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 102);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 13);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "PROVINCIA";
+            this.clientes_provincia.AutoSize = true;
+            this.clientes_provincia.Location = new System.Drawing.Point(19, 126);
+            this.clientes_provincia.Name = "clientes_provincia";
+            this.clientes_provincia.Size = new System.Drawing.Size(81, 17);
+            this.clientes_provincia.TabIndex = 18;
+            this.clientes_provincia.Text = "PROVINCIA";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(14, 42);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Location = new System.Drawing.Point(19, 52);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(106, 20);
+            this.textBox2.Size = new System.Drawing.Size(140, 22);
             this.textBox2.TabIndex = 13;
             // 
-            // label4
+            // clientes_nombre_completo
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 24);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 13);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "NOMBRE COMPLETO";
+            this.clientes_nombre_completo.AutoSize = true;
+            this.clientes_nombre_completo.Location = new System.Drawing.Point(19, 30);
+            this.clientes_nombre_completo.Name = "clientes_nombre_completo";
+            this.clientes_nombre_completo.Size = new System.Drawing.Size(149, 17);
+            this.clientes_nombre_completo.TabIndex = 14;
+            this.clientes_nombre_completo.Text = "NOMBRE COMPLETO";
             // 
-            // label5
+            // clientes_DNI
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(14, 63);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(26, 13);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "DNI";
+            this.clientes_DNI.AutoSize = true;
+            this.clientes_DNI.Location = new System.Drawing.Point(19, 78);
+            this.clientes_DNI.Name = "clientes_DNI";
+            this.clientes_DNI.Size = new System.Drawing.Size(31, 17);
+            this.clientes_DNI.TabIndex = 16;
+            this.clientes_DNI.Text = "DNI";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(14, 82);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox3.Location = new System.Drawing.Point(19, 101);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(106, 20);
+            this.textBox3.Size = new System.Drawing.Size(140, 22);
             this.textBox3.TabIndex = 15;
             // 
             // dataGridView1
             // 
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dataGridView1.Location = new System.Drawing.Point(320, 23);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.ColumnHeadersHeight = 29;
+            this.dataGridView1.Location = new System.Drawing.Point(427, 28);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(544, 336);
+            this.dataGridView1.Size = new System.Drawing.Size(725, 414);
             this.dataGridView1.TabIndex = 23;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Cliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(873, 387);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(1164, 476);
+            this.Controls.Add(this.clientes_groupbox_cliente);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Cliente";
             this.Text = "Cliente";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Cliente_FormClosing);
             this.Load += new System.EventHandler(this.Cliente_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.clientes_groupbox_cliente.ResumeLayout(false);
+            this.clientes_groupbox_cliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -228,18 +225,18 @@ namespace sistema
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox clientes_groupbox_cliente;
         private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btm_agregar;
+        private System.Windows.Forms.Button btm_borrar;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btm_modificar;
+        private System.Windows.Forms.Button clientes_btm_form_localidad;
+        private System.Windows.Forms.Label label_localidad;
+        private System.Windows.Forms.Label clientes_provincia;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label clientes_nombre_completo;
+        private System.Windows.Forms.Label clientes_DNI;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.DataGridView dataGridView1;
     }

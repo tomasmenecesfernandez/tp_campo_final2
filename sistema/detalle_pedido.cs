@@ -10,18 +10,25 @@ using System.Windows.Forms;
 using BE;
 using BLL;
 using sistema_de_ropa;
+using Servicios.observer;
 namespace sistema
 {
-    public partial class detalle_pedido : Form
+    public partial class detalle_pedido : Form,Iobservertraduccion
     {
-        public detalle_pedido()
+        public detalle_pedido(idiomas idiomas)
         {
             InitializeComponent();
+            BLLtraducciones.cargar_listatraducciones(idiomas.Idioma);
+            idiomas.guardar_observer(this);
+            actualizar_idioma();
         }
-        public detalle_pedido(sistema1 s)
+        public detalle_pedido(sistema1 s,idiomas idiomas)
         {
             InitializeComponent();
             sistema_padre = s;
+            BLLtraducciones.cargar_listatraducciones(idiomas.Idioma);
+            idiomas.guardar_observer(this);
+            actualizar_idioma();
         }
         sistema1 sistema_padre;
 
@@ -93,11 +100,11 @@ namespace sistema
                 activar_checklistbox();
                 if (pedido_select.ropa is BEbuzos)
                 {
-                    radioButton1.Checked = true;
+                    detalle_rbtm_buzos.Checked = true;
                 }
                 else if (pedido_select.ropa is BEjogging)
                 {
-                    radioButton2.Checked = true;
+                    detalle_rbtm_jogging.Checked = true;
                 }
             }
         }
@@ -125,12 +132,12 @@ namespace sistema
             try
             {
                 BEpedidos_detalle pedido_detalle = new BEpedidos_detalle();
-                if (radioButton1.Checked) 
+                if (detalle_rbtm_buzos.Checked) 
                 {
                     BEbuzos buzos = new BEbuzos(get_iteam_marcado("caso1").ToString(), get_iteam_marcado("caso2").ToString(),comboBox1.Text);
                     pedido_detalle.ropa = buzos;
                 }
-                else if(radioButton2.Checked)
+                else if(detalle_rbtm_jogging.Checked)
                 {
                     BEjogging jogging = new BEjogging(get_iteam_marcado("caso1").ToString(), get_iteam_marcado("caso2").ToString());
                     pedido_detalle.ropa = jogging;
@@ -151,12 +158,12 @@ namespace sistema
                 BEpedidos_detalle pedido_detalle = new BEpedidos_detalle();
                 if (listBox1.SelectedItem != null)
                 {
-                    if (radioButton1.Checked)
+                    if (detalle_rbtm_buzos.Checked)
                     {
                         BEbuzos buzos = new BEbuzos(checkedListBox2.SelectedItem.ToString(), checkedListBox1.SelectedItem.ToString(), comboBox1.Text);
                         pedido_detalle.ropa = buzos;
                     }
-                    else if (radioButton2.Checked)
+                    else if (detalle_rbtm_jogging.Checked)
                     {
                         BEjogging jogging = new BEjogging(checkedListBox2.SelectedItem.ToString(), checkedListBox1.SelectedItem.ToString());
                         pedido_detalle.ropa = jogging;
@@ -238,15 +245,28 @@ namespace sistema
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            label2.Visible = true;
+            detalle_capucha.Visible = true;
                 comboBox1.Visible= true;
 
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            label2.Visible = false;
+            detalle_capucha.Visible = false;
             comboBox1.Visible = false;
+        }
+
+        public void actualizar_idioma()
+        {
+            detalle_rbtm_buzos.Text = BLLtraducciones.traducir(detalle_rbtm_buzos.Name);
+            detalle_rbtm_jogging.Text = BLLtraducciones.traducir(detalle_rbtm_jogging.Name);
+            detalle_colores.Text = BLLtraducciones.traducir(detalle_colores.Name);
+            detalle_talles.Text = BLLtraducciones.traducir(detalle_talles.Name);
+            detalle_cantidad.Text = BLLtraducciones.traducir(detalle_cantidad.Name);
+            detalle_capucha.Text = BLLtraducciones.traducir(detalle_capucha.Name);
+            btm_agregar.Text = BLLtraducciones.traducir(btm_agregar.Name);
+            btm_modificar.Text = BLLtraducciones.traducir(btm_modificar.Name);
+            btm_borrar.Text = BLLtraducciones.traducir(btm_borrar.Name);
         }
     }
 }

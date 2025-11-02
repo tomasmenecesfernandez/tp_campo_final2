@@ -10,18 +10,25 @@ using System.Windows.Forms;
 using BLL;
 using BE;
 using sistema_de_ropa;
+using Servicios.observer;
 namespace sistema
 {
-    public partial class Cliente : Form
+    public partial class Cliente : Form,Iobservertraduccion
     {
-        public Cliente()
+        public Cliente(idiomas idiomas)
         {
             InitializeComponent();
+            BLLtraducciones.cargar_listatraducciones(idiomas.Idioma);
+            idiomas.guardar_observer(this);
+            actualizar_idioma();
         }
-        public Cliente(sistema1 s)
+        public Cliente(sistema1 s,idiomas idiomas)
         {
             InitializeComponent();
             form_padre = s;
+            BLLtraducciones.cargar_listatraducciones(idiomas.Idioma);
+            idiomas.guardar_observer(this);
+            actualizar_idioma();
         }
         sistema1 form_padre;
         BLL_Localidad bll_localidad = new BLL_Localidad();
@@ -137,5 +144,19 @@ namespace sistema
         {
                 if(form_padre!=null)form_padre.cargar_grilla();
            }
+
+        public void actualizar_idioma()
+        {
+            clientes_groupbox_cliente.Text = BLLtraducciones.traducir(clientes_groupbox_cliente.Name);
+            clientes_nombre_completo.Text = BLLtraducciones.traducir(clientes_nombre_completo.Name);
+            clientes_DNI.Text = BLLtraducciones.traducir(clientes_DNI.Name);
+            clientes_provincia.Text = BLLtraducciones.traducir(clientes_provincia.Name);
+            label_localidad.Text = BLLtraducciones.traducir(label_localidad.Name);
+            clientes_btm_form_localidad.Text = BLLtraducciones.traducir(clientes_btm_form_localidad.Name);
+            btm_agregar.Text = BLLtraducciones.traducir(btm_agregar.Name);
+            btm_modificar.Text = BLLtraducciones.traducir(btm_modificar.Name);
+            btm_borrar.Text = BLLtraducciones.traducir(btm_borrar.Name);
+
+        }
     }
 }

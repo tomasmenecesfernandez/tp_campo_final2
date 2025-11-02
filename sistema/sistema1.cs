@@ -19,16 +19,19 @@ namespace sistema_de_ropa
 {
     public partial class sistema1 : Form,Iobservertraduccion
     {
-        public sistema1()
+        public sistema1(idiomas idiomas)
         {
             InitializeComponent();
+            idioma = idiomas;
+            idiomas.guardar_observer(this);
+            actualizar_idioma();
         }
         public static BEpedidos pedido_select { get; set; }
         public static List<BEcliente> lista_cliente { get; set; }
         BLL_cliente bll_cliente = new BLL_cliente();
         BEcliente cliente = new BEcliente();
         BLLPedido bllpedido = new BLLPedido();
-
+        idiomas idioma;
         enum filtro
         { Nombre,DNI }
         enum provincias
@@ -45,10 +48,10 @@ namespace sistema_de_ropa
         }
         private void verificar_permiso_cliente()
         {
-            button_form_cliente.Enabled = false;
+            sistema_btm_ir_form_cliente.Enabled = false;
             foreach (BEpermiso permiso in sesion.instancia.usuario.permisos)
             {
-                if (permiso.nombre == "ABM_clientes")button_form_cliente.Enabled = true;
+                if (permiso.nombre == "ABM_clientes")sistema_btm_ir_form_cliente.Enabled = true;
             }
         }
         public void cargar_grilla()
@@ -222,7 +225,7 @@ namespace sistema_de_ropa
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            Cliente c = new Cliente(this);
+            Cliente c = new Cliente(this,idioma);
             c.MdiParent = this.MdiParent;
             c.Show();
         }
@@ -230,7 +233,7 @@ namespace sistema_de_ropa
         private void button6_Click(object sender, EventArgs e)
         {
             if (pedido_select!=null) {
-                detalle_pedido d = new detalle_pedido(this);
+                detalle_pedido d = new detalle_pedido(this,idioma);
                 d.MdiParent = this.MdiParent;
                 d.Show();
             }
@@ -241,7 +244,7 @@ namespace sistema_de_ropa
         {
             if (pedido_select != null)
             {
-                detalle_pedido d = new detalle_pedido(this);
+                detalle_pedido d = new detalle_pedido(this,idioma);
                 d.MdiParent = this.MdiParent;
                 d.Show();
             }
@@ -260,7 +263,21 @@ namespace sistema_de_ropa
 
         public void actualizar_idioma()
         {
-            
+            sistema_label_buscar_cliente.Text = BLLtraducciones.traducir(sistema_label_buscar_cliente.Name);
+            sistema_filtro.Text = BLLtraducciones.traducir(sistema_filtro.Name);
+            sistema_btm_ir_form_cliente.Text = BLLtraducciones.traducir(sistema_btm_ir_form_cliente.Name);
+            sistema_groupbox_pedidos.Text = BLLtraducciones.traducir(sistema_groupbox_pedidos.Name);
+            sistema_total.Text = BLLtraducciones.traducir(sistema_total.Name);
+            sistema_total1.Text = BLLtraducciones.traducir(sistema_total1.Name);
+            sistema_fecha.Text = BLLtraducciones.traducir(sistema_fecha.Name);
+            sistema_fecha1.Text = BLLtraducciones.traducir(sistema_fecha1.Name);
+            sistema_descuento.Text = BLLtraducciones.traducir(sistema_descuento.Name);
+            sistema_descuento1.Text = BLLtraducciones.traducir(sistema_descuento1.Name);
+            sistema_cantidad_ropa.Text = BLLtraducciones.traducir(sistema_cantidad_ropa.Name);
+            btm_agregar.Text = BLLtraducciones.traducir(btm_agregar.Name);
+            btm_borrar.Text = BLLtraducciones.traducir(btm_borrar.Name);
+            sistema_btm_personalizar_pedido.Text = BLLtraducciones.traducir(sistema_btm_personalizar_pedido.Name);
+
         }
     }
 }

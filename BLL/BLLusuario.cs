@@ -15,7 +15,6 @@ namespace BLL
     {
         DAL_usuario dal_usuario=new DAL_usuario();
         BLLrol bllrol = new BLLrol();
-        BLLpermiso bllpermiso = new BLLpermiso();
         bllregistro bllregistro = new bllregistro();
         public string get_nombre(BEusuario usuario)
         {

@@ -19,7 +19,14 @@ namespace sistema
         {
             InitializeComponent();
         }
-
+        public usuarios(idiomas idiomas)
+        {
+            InitializeComponent();
+            idioma = idiomas;
+            idiomas.guardar_observer(this);
+            actualizar_idioma();
+        }
+        idiomas idioma;
         List<BEusuario> lista_usuarios = new List<BEusuario>();
         List<BEpermiso> lista_permisos = new List<BEpermiso>();
         BEusuario usuario;
@@ -131,7 +138,7 @@ namespace sistema
 
         private void usuarios_Load(object sender, EventArgs e)
         {
-            radioButton1.Checked = true;
+            usuario_rbtm_rol.Checked = true;
             lista_permisos = bllpermiso.leer_permisos();
             mostrar_data();
 
@@ -140,10 +147,15 @@ namespace sistema
         {
                 usuario_label1.Text = BLLtraducciones.traducir(usuario_label1.Name);
                 contraceña_label1.Text = BLLtraducciones.traducir(contraceña_label1.Name);
-                agregar_boton1.Text = BLLtraducciones.traducir(agregar_boton1.Name);
-                modificar_boton1.Text = BLLtraducciones.traducir(modificar_boton1.Name);
-                borrar_boton1.Text = BLLtraducciones.traducir(borrar_boton1.Name);
-            
+                btm_agregar.Text = BLLtraducciones.traducir(btm_agregar.Name);
+                btm_modificar.Text = BLLtraducciones.traducir(btm_modificar.Name);
+                btm_borrar.Text = BLLtraducciones.traducir(btm_borrar.Name);
+                usuario_btm_ir_historlal.Text = BLLtraducciones.traducir(usuario_btm_ir_historlal.Name);
+                btm_borrar1.Text = BLLtraducciones.traducir(btm_borrar1.Name);
+                btm_agregar1.Text = BLLtraducciones.traducir(btm_agregar.Name);
+                usuario_rbtm_permiso.Text = BLLtraducciones.traducir(usuario_rbtm_permiso.Name);
+                usuario_rbtm_rol.Text = BLLtraducciones.traducir(usuario_rbtm_rol.Name);
+
         }
         private void button3_Click(object sender, EventArgs e)
         {
@@ -192,11 +204,11 @@ namespace sistema
                 nodo_seleccionado = (BEpermisoComponente)treeView1.SelectedNode.Tag;
                 if (nodo_seleccionado is BEpermiso)
                 {
-                    radioButton2.Checked = true;
+                    usuario_rbtm_permiso.Checked = true;
                 }
                 else if (nodo_seleccionado is BErol)
                 {
-                    radioButton1.Checked = true;
+                    usuario_rbtm_rol.Checked = true;
                 }
             }
         }
@@ -273,7 +285,7 @@ namespace sistema
         {
             if (usuario != null)
             {
-                control_de_cambio_usuario c = new control_de_cambio_usuario(usuario,this);
+                control_de_cambio_usuario c = new control_de_cambio_usuario(usuario,this,idioma);
                 c.MdiParent = this.MdiParent;
                 c.Show();
 

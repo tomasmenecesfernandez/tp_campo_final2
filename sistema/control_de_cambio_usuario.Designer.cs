@@ -29,20 +29,20 @@ namespace sistema
         /// </summary>
         private void InitializeComponent()
         {
-            this.button4 = new System.Windows.Forms.Button();
+            this.control_btm_revertir = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
-            // button4
+            // control_btm_revertir
             // 
-            this.button4.Location = new System.Drawing.Point(290, 204);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(116, 40);
-            this.button4.TabIndex = 22;
-            this.button4.Text = "REVERTIR";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.control_btm_revertir.Location = new System.Drawing.Point(290, 204);
+            this.control_btm_revertir.Name = "control_btm_revertir";
+            this.control_btm_revertir.Size = new System.Drawing.Size(116, 40);
+            this.control_btm_revertir.TabIndex = 22;
+            this.control_btm_revertir.Text = "REVERTIR";
+            this.control_btm_revertir.UseVisualStyleBackColor = true;
+            this.control_btm_revertir.Click += new System.EventHandler(this.button4_Click);
             // 
             // dataGridView2
             // 
@@ -60,7 +60,7 @@ namespace sistema
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.control_btm_revertir);
             this.Controls.Add(this.dataGridView2);
             this.Name = "control_de_cambio_usuario";
             this.Text = "control_de_cambio_usuario";
@@ -73,7 +73,7 @@ namespace sistema
 
         #endregion
 
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button control_btm_revertir;
         private System.Windows.Forms.DataGridView dataGridView2;
     }
 }

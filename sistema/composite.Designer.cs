@@ -30,12 +30,12 @@ namespace sistema
         private void InitializeComponent()
         {
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.composite_rbtm_permiso = new System.Windows.Forms.RadioButton();
+            this.composite_rbtm_rol = new System.Windows.Forms.RadioButton();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btm_agregar = new System.Windows.Forms.Button();
+            this.btm_modificar = new System.Windows.Forms.Button();
+            this.btm_borrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // treeView1
@@ -46,29 +46,29 @@ namespace sistema
             this.treeView1.TabIndex = 25;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
-            // radioButton2
+            // composite_rbtm_permiso
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(33, 67);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(80, 21);
-            this.radioButton2.TabIndex = 24;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Permiso";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.composite_rbtm_permiso.AutoSize = true;
+            this.composite_rbtm_permiso.Location = new System.Drawing.Point(33, 67);
+            this.composite_rbtm_permiso.Name = "composite_rbtm_permiso";
+            this.composite_rbtm_permiso.Size = new System.Drawing.Size(80, 21);
+            this.composite_rbtm_permiso.TabIndex = 24;
+            this.composite_rbtm_permiso.TabStop = true;
+            this.composite_rbtm_permiso.Text = "Permiso";
+            this.composite_rbtm_permiso.UseVisualStyleBackColor = true;
+            this.composite_rbtm_permiso.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
-            // radioButton1
+            // composite_rbtm_rol
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(33, 40);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(50, 21);
-            this.radioButton1.TabIndex = 23;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Rol";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.composite_rbtm_rol.AutoSize = true;
+            this.composite_rbtm_rol.Location = new System.Drawing.Point(33, 40);
+            this.composite_rbtm_rol.Name = "composite_rbtm_rol";
+            this.composite_rbtm_rol.Size = new System.Drawing.Size(50, 21);
+            this.composite_rbtm_rol.TabIndex = 23;
+            this.composite_rbtm_rol.TabStop = true;
+            this.composite_rbtm_rol.Text = "Rol";
+            this.composite_rbtm_rol.UseVisualStyleBackColor = true;
+            this.composite_rbtm_rol.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // comboBox2
             // 
@@ -79,35 +79,35 @@ namespace sistema
             this.comboBox2.Size = new System.Drawing.Size(162, 24);
             this.comboBox2.TabIndex = 22;
             // 
-            // button1
+            // btm_agregar
             // 
-            this.button1.Location = new System.Drawing.Point(33, 130);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 40);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "AGREGAR";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btm_agregar.Location = new System.Drawing.Point(33, 130);
+            this.btm_agregar.Name = "btm_agregar";
+            this.btm_agregar.Size = new System.Drawing.Size(116, 40);
+            this.btm_agregar.TabIndex = 21;
+            this.btm_agregar.Text = "AGREGAR";
+            this.btm_agregar.UseVisualStyleBackColor = true;
+            this.btm_agregar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btm_modificar
             // 
-            this.button2.Location = new System.Drawing.Point(33, 176);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(116, 40);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "MODIFICAR";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btm_modificar.Location = new System.Drawing.Point(33, 176);
+            this.btm_modificar.Name = "btm_modificar";
+            this.btm_modificar.Size = new System.Drawing.Size(116, 40);
+            this.btm_modificar.TabIndex = 20;
+            this.btm_modificar.Text = "MODIFICAR";
+            this.btm_modificar.UseVisualStyleBackColor = true;
+            this.btm_modificar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btm_borrar
             // 
-            this.button3.Location = new System.Drawing.Point(33, 222);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(116, 40);
-            this.button3.TabIndex = 19;
-            this.button3.Text = "BORRAR";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btm_borrar.Location = new System.Drawing.Point(33, 222);
+            this.btm_borrar.Name = "btm_borrar";
+            this.btm_borrar.Size = new System.Drawing.Size(116, 40);
+            this.btm_borrar.TabIndex = 19;
+            this.btm_borrar.Text = "BORRAR";
+            this.btm_borrar.UseVisualStyleBackColor = true;
+            this.btm_borrar.Click += new System.EventHandler(this.button3_Click);
             // 
             // composite
             // 
@@ -115,12 +115,12 @@ namespace sistema
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 307);
             this.Controls.Add(this.treeView1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.composite_rbtm_permiso);
+            this.Controls.Add(this.composite_rbtm_rol);
             this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btm_agregar);
+            this.Controls.Add(this.btm_modificar);
+            this.Controls.Add(this.btm_borrar);
             this.Name = "composite";
             this.Text = "composite";
             this.Load += new System.EventHandler(this.composite_Load);
@@ -132,11 +132,11 @@ namespace sistema
         #endregion
 
         private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton composite_rbtm_permiso;
+        private System.Windows.Forms.RadioButton composite_rbtm_rol;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btm_agregar;
+        private System.Windows.Forms.Button btm_modificar;
+        private System.Windows.Forms.Button btm_borrar;
     }
 }

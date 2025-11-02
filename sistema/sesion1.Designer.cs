@@ -33,9 +33,9 @@ namespace sistema
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.usuario_label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.agregar_boton2 = new System.Windows.Forms.Button();
+            this.sesion_ingresar = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.SESION1_IDIOMA_LABEL = new System.Windows.Forms.Label();
+            this.label_idioma = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // contraseña_label2
@@ -73,15 +73,15 @@ namespace sistema
             this.textBox1.Size = new System.Drawing.Size(184, 28);
             this.textBox1.TabIndex = 9;
             // 
-            // agregar_boton2
+            // sesion_ingresar
             // 
-            this.agregar_boton2.Location = new System.Drawing.Point(35, 153);
-            this.agregar_boton2.Name = "agregar_boton2";
-            this.agregar_boton2.Size = new System.Drawing.Size(116, 40);
-            this.agregar_boton2.TabIndex = 8;
-            this.agregar_boton2.Text = "INGRESAR";
-            this.agregar_boton2.UseVisualStyleBackColor = true;
-            this.agregar_boton2.Click += new System.EventHandler(this.button1_Click);
+            this.sesion_ingresar.Location = new System.Drawing.Point(35, 153);
+            this.sesion_ingresar.Name = "sesion_ingresar";
+            this.sesion_ingresar.Size = new System.Drawing.Size(116, 40);
+            this.sesion_ingresar.TabIndex = 8;
+            this.sesion_ingresar.Text = "INGRESAR";
+            this.sesion_ingresar.UseVisualStyleBackColor = true;
+            this.sesion_ingresar.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox1
             // 
@@ -92,27 +92,27 @@ namespace sistema
             this.comboBox1.Size = new System.Drawing.Size(146, 24);
             this.comboBox1.TabIndex = 13;
             // 
-            // SESION1_IDIOMA_LABEL
+            // label_idioma
             // 
-            this.SESION1_IDIOMA_LABEL.AutoSize = true;
-            this.SESION1_IDIOMA_LABEL.Location = new System.Drawing.Point(307, 15);
-            this.SESION1_IDIOMA_LABEL.Name = "SESION1_IDIOMA_LABEL";
-            this.SESION1_IDIOMA_LABEL.Size = new System.Drawing.Size(55, 17);
-            this.SESION1_IDIOMA_LABEL.TabIndex = 14;
-            this.SESION1_IDIOMA_LABEL.Text = "IDIOMA";
+            this.label_idioma.AutoSize = true;
+            this.label_idioma.Location = new System.Drawing.Point(282, 12);
+            this.label_idioma.Name = "label_idioma";
+            this.label_idioma.Size = new System.Drawing.Size(55, 17);
+            this.label_idioma.TabIndex = 14;
+            this.label_idioma.Text = "IDIOMA";
             // 
             // sesion1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(569, 216);
-            this.Controls.Add(this.SESION1_IDIOMA_LABEL);
+            this.Controls.Add(this.label_idioma);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.contraseña_label2);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.usuario_label2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.agregar_boton2);
+            this.Controls.Add(this.sesion_ingresar);
             this.Name = "sesion1";
             this.Text = "sesion";
             this.Load += new System.EventHandler(this.sesion1_Load);
@@ -127,8 +127,8 @@ namespace sistema
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label usuario_label2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button agregar_boton2;
+        private System.Windows.Forms.Button sesion_ingresar;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label SESION1_IDIOMA_LABEL;
+        private System.Windows.Forms.Label label_idioma;
     }
 }

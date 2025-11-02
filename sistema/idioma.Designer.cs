@@ -33,10 +33,11 @@ namespace sistema
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnModificar_idioma = new System.Windows.Forms.Button();
-            this.btnAgregar_idioma = new System.Windows.Forms.Button();
+            this.btm_modificar = new System.Windows.Forms.Button();
+            this.btm_agregar = new System.Windows.Forms.Button();
             this.label_idioma_idioma = new System.Windows.Forms.Label();
             this.label_traduccion_idioma = new System.Windows.Forms.Label();
+            this.btm_borrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -79,29 +80,29 @@ namespace sistema
             this.textBox1.Size = new System.Drawing.Size(169, 22);
             this.textBox1.TabIndex = 8;
             // 
-            // btnModificar_idioma
+            // btm_modificar
             // 
-            this.btnModificar_idioma.Location = new System.Drawing.Point(659, 225);
-            this.btnModificar_idioma.Margin = new System.Windows.Forms.Padding(4);
-            this.btnModificar_idioma.Name = "btnModificar_idioma";
-            this.btnModificar_idioma.Size = new System.Drawing.Size(212, 42);
-            this.btnModificar_idioma.TabIndex = 7;
-            this.btnModificar_idioma.Tag = "btnCreate";
-            this.btnModificar_idioma.Text = "Modificar";
-            this.btnModificar_idioma.UseVisualStyleBackColor = true;
-            this.btnModificar_idioma.Click += new System.EventHandler(this.btnModificar1_Click);
+            this.btm_modificar.Location = new System.Drawing.Point(659, 225);
+            this.btm_modificar.Margin = new System.Windows.Forms.Padding(4);
+            this.btm_modificar.Name = "btm_modificar";
+            this.btm_modificar.Size = new System.Drawing.Size(212, 42);
+            this.btm_modificar.TabIndex = 7;
+            this.btm_modificar.Tag = "btnCreate";
+            this.btm_modificar.Text = "Modificar";
+            this.btm_modificar.UseVisualStyleBackColor = true;
+            this.btm_modificar.Click += new System.EventHandler(this.btnModificar1_Click);
             // 
-            // btnAgregar_idioma
+            // btm_agregar
             // 
-            this.btnAgregar_idioma.Location = new System.Drawing.Point(568, 72);
-            this.btnAgregar_idioma.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAgregar_idioma.Name = "btnAgregar_idioma";
-            this.btnAgregar_idioma.Size = new System.Drawing.Size(171, 42);
-            this.btnAgregar_idioma.TabIndex = 6;
-            this.btnAgregar_idioma.Tag = "btnAdd";
-            this.btnAgregar_idioma.Text = "Agregar";
-            this.btnAgregar_idioma.UseVisualStyleBackColor = true;
-            this.btnAgregar_idioma.Click += new System.EventHandler(this.btnAgregar1_Click);
+            this.btm_agregar.Location = new System.Drawing.Point(568, 72);
+            this.btm_agregar.Margin = new System.Windows.Forms.Padding(4);
+            this.btm_agregar.Name = "btm_agregar";
+            this.btm_agregar.Size = new System.Drawing.Size(171, 42);
+            this.btm_agregar.TabIndex = 6;
+            this.btm_agregar.Tag = "btnAdd";
+            this.btm_agregar.Text = "Agregar";
+            this.btm_agregar.UseVisualStyleBackColor = true;
+            this.btm_agregar.Click += new System.EventHandler(this.btnAgregar1_Click);
             // 
             // label_idioma_idioma
             // 
@@ -122,19 +123,32 @@ namespace sistema
             this.label_traduccion_idioma.Text = "TRADUCCION";
             this.label_traduccion_idioma.Click += new System.EventHandler(this.label2_Click);
             // 
+            // btm_borrar
+            // 
+            this.btm_borrar.Location = new System.Drawing.Point(568, 122);
+            this.btm_borrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btm_borrar.Name = "btm_borrar";
+            this.btm_borrar.Size = new System.Drawing.Size(171, 42);
+            this.btm_borrar.TabIndex = 14;
+            this.btm_borrar.Tag = "btnAdd";
+            this.btm_borrar.Text = "Borrar";
+            this.btm_borrar.UseVisualStyleBackColor = true;
+            this.btm_borrar.Click += new System.EventHandler(this.btm_borrar_Click);
+            // 
             // idioma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1030, 484);
+            this.Controls.Add(this.btm_borrar);
             this.Controls.Add(this.label_traduccion_idioma);
             this.Controls.Add(this.label_idioma_idioma);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.btnModificar_idioma);
-            this.Controls.Add(this.btnAgregar_idioma);
+            this.Controls.Add(this.btm_modificar);
+            this.Controls.Add(this.btm_agregar);
             this.Name = "idioma";
             this.Text = "idioma";
             this.Load += new System.EventHandler(this.idioma_Load);
@@ -151,9 +165,10 @@ namespace sistema
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnModificar_idioma;
-        private System.Windows.Forms.Button btnAgregar_idioma;
+        private System.Windows.Forms.Button btm_modificar;
+        private System.Windows.Forms.Button btm_agregar;
         private System.Windows.Forms.Label label_idioma_idioma;
         private System.Windows.Forms.Label label_traduccion_idioma;
+        private System.Windows.Forms.Button btm_borrar;
     }
 }

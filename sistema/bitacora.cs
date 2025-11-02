@@ -8,13 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
+using Servicios.observer;
 namespace sistema
 {
-    public partial class bitacora : Form
+    public partial class bitacora : Form,Iobservertraduccion
     {
-        public bitacora()
+        public bitacora(idiomas idiomas)
         {
             InitializeComponent();
+            BLLtraducciones.cargar_listatraducciones(idiomas.Idioma);
+            idiomas.guardar_observer(this);
+            actualizar_idioma();
         }
         bllregistro bllregistro = new bllregistro();
         private void bitacora_Load(object sender, EventArgs e)
@@ -25,6 +29,12 @@ namespace sistema
         {
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = bllregistro.leer_registros();
+        }
+
+        public void actualizar_idioma()
+        {
+            bitacora_label_bitacora.Text = BLLtraducciones.traducir(bitacora_label_bitacora.Name);
+
         }
     }
 }

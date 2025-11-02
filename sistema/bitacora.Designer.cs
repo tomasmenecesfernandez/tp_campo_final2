@@ -30,7 +30,7 @@ namespace sistema
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
+            this.bitacora_label_bitacora = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,22 +44,22 @@ namespace sistema
             this.dataGridView1.Size = new System.Drawing.Size(757, 611);
             this.dataGridView1.TabIndex = 0;
             // 
-            // label1
+            // bitacora_label_bitacora
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(90, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 29);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "BITACORA";
+            this.bitacora_label_bitacora.AutoSize = true;
+            this.bitacora_label_bitacora.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bitacora_label_bitacora.Location = new System.Drawing.Point(90, 25);
+            this.bitacora_label_bitacora.Name = "bitacora_label_bitacora";
+            this.bitacora_label_bitacora.Size = new System.Drawing.Size(142, 29);
+            this.bitacora_label_bitacora.TabIndex = 1;
+            this.bitacora_label_bitacora.Text = "BITACORA";
             // 
             // bitacora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1009, 797);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.bitacora_label_bitacora);
             this.Controls.Add(this.dataGridView1);
             this.Name = "bitacora";
             this.Text = "bitacora";
@@ -73,6 +73,6 @@ namespace sistema
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label bitacora_label_bitacora;
     }
 }

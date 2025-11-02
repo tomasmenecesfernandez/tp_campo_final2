@@ -33,15 +33,16 @@ namespace sistema
             this.usuarios_menu = new System.Windows.Forms.ToolStripMenuItem();
             this.login_menu = new System.Windows.Forms.ToolStripMenuItem();
             this.reportes_menu = new System.Windows.Forms.ToolStripMenuItem();
-            this.idioma_menu = new System.Windows.Forms.ToolStripMenuItem();
             this.idioma2_menu = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientes_menu = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_clientes = new System.Windows.Forms.ToolStripMenuItem();
             this.sistema_menu = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_bitacora = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_ABMPermisos = new System.Windows.Forms.ToolStripMenuItem();
             this.permisos_menu = new System.Windows.Forms.ToolStripMenuItem();
             this.CERRAR_SESION_MENU = new System.Windows.Forms.ToolStripMenuItem();
-            this.aBMPermisosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.form1_bitacora_menu = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_label_usuario = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,11 +54,10 @@ namespace sistema
             this.login_menu,
             this.reportes_menu,
             this.idioma2_menu,
-            this.clientes_menu,
+            this.menu_clientes,
             this.sistema_menu,
-            this.form1_bitacora_menu,
-            this.aBMPermisosToolStripMenuItem,
-            this.idioma_menu,
+            this.menu_bitacora,
+            this.menu_ABMPermisos,
             this.permisos_menu,
             this.CERRAR_SESION_MENU});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -91,13 +91,6 @@ namespace sistema
             this.reportes_menu.Text = "reportes";
             this.reportes_menu.Click += new System.EventHandler(this.reportes_menu_Click);
             // 
-            // idioma_menu
-            // 
-            this.idioma_menu.Name = "idioma_menu";
-            this.idioma_menu.Size = new System.Drawing.Size(76, 24);
-            this.idioma_menu.Text = "IDIOMA";
-            this.idioma_menu.Click += new System.EventHandler(this.idioma_menu_Click);
-            // 
             // idioma2_menu
             // 
             this.idioma2_menu.Enabled = false;
@@ -106,13 +99,13 @@ namespace sistema
             this.idioma2_menu.Text = "ABM_idioma";
             this.idioma2_menu.Click += new System.EventHandler(this.idiomaToolStripMenuItem_Click);
             // 
-            // clientes_menu
+            // menu_clientes
             // 
-            this.clientes_menu.Enabled = false;
-            this.clientes_menu.Name = "clientes_menu";
-            this.clientes_menu.Size = new System.Drawing.Size(75, 24);
-            this.clientes_menu.Text = "Clientes";
-            this.clientes_menu.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
+            this.menu_clientes.Enabled = false;
+            this.menu_clientes.Name = "menu_clientes";
+            this.menu_clientes.Size = new System.Drawing.Size(75, 24);
+            this.menu_clientes.Text = "Clientes";
+            this.menu_clientes.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // sistema_menu
             // 
@@ -121,6 +114,21 @@ namespace sistema
             this.sistema_menu.Size = new System.Drawing.Size(73, 24);
             this.sistema_menu.Text = "sistema";
             this.sistema_menu.Click += new System.EventHandler(this.sistemaToolStripMenuItem_Click);
+            // 
+            // menu_bitacora
+            // 
+            this.menu_bitacora.Enabled = false;
+            this.menu_bitacora.Name = "menu_bitacora";
+            this.menu_bitacora.Size = new System.Drawing.Size(78, 24);
+            this.menu_bitacora.Text = "Bitacora";
+            this.menu_bitacora.Click += new System.EventHandler(this.bitacoraToolStripMenuItem_Click_1);
+            // 
+            // menu_ABMPermisos
+            // 
+            this.menu_ABMPermisos.Name = "menu_ABMPermisos";
+            this.menu_ABMPermisos.Size = new System.Drawing.Size(119, 24);
+            this.menu_ABMPermisos.Text = "ABM_Permisos";
+            this.menu_ABMPermisos.Click += new System.EventHandler(this.aBMPermisosToolStripMenuItem_Click);
             // 
             // permisos_menu
             // 
@@ -135,39 +143,48 @@ namespace sistema
             this.CERRAR_SESION_MENU.Text = "CERRAR SESION";
             this.CERRAR_SESION_MENU.Click += new System.EventHandler(this.cERRARSESIONToolStripMenuItem_Click);
             // 
-            // aBMPermisosToolStripMenuItem
+            // menu_label_usuario
             // 
-            this.aBMPermisosToolStripMenuItem.Name = "aBMPermisosToolStripMenuItem";
-            this.aBMPermisosToolStripMenuItem.Size = new System.Drawing.Size(119, 24);
-            this.aBMPermisosToolStripMenuItem.Text = "ABM_Permisos";
-            this.aBMPermisosToolStripMenuItem.Click += new System.EventHandler(this.aBMPermisosToolStripMenuItem_Click);
+            this.menu_label_usuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.menu_label_usuario.AutoSize = true;
+            this.menu_label_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menu_label_usuario.Location = new System.Drawing.Point(1328, 4);
+            this.menu_label_usuario.Name = "menu_label_usuario";
+            this.menu_label_usuario.Size = new System.Drawing.Size(53, 20);
+            this.menu_label_usuario.TabIndex = 3;
+            this.menu_label_usuario.Text = "label1";
             // 
-            // label1
+            // comboBox1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1339, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "label1";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(1178, 0);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(135, 24);
+            this.comboBox1.TabIndex = 5;
+            this.comboBox1.Text = "IDIOMAS";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
             // 
-            // form1_bitacora_menu
+            // label2
             // 
-            this.form1_bitacora_menu.Enabled = false;
-            this.form1_bitacora_menu.Name = "form1_bitacora_menu";
-            this.form1_bitacora_menu.Size = new System.Drawing.Size(78, 24);
-            this.form1_bitacora_menu.Text = "Bitacora";
-            this.form1_bitacora_menu.Click += new System.EventHandler(this.bitacoraToolStripMenuItem_Click_1);
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(1406, 4);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 20);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "label2";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1471, 703);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.menu_label_usuario);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -186,15 +203,16 @@ namespace sistema
         private System.Windows.Forms.ToolStripMenuItem usuarios_menu;
         private System.Windows.Forms.ToolStripMenuItem login_menu;
         private System.Windows.Forms.ToolStripMenuItem reportes_menu;
-        private System.Windows.Forms.ToolStripMenuItem idioma_menu;
         private System.Windows.Forms.ToolStripMenuItem CERRAR_SESION_MENU;
         private System.Windows.Forms.ToolStripMenuItem idioma2_menu;
         private System.Windows.Forms.ToolStripMenuItem permisos_menu;
         private System.Windows.Forms.ToolStripMenuItem sistema_menu;
-        private System.Windows.Forms.ToolStripMenuItem clientes_menu;
-        private System.Windows.Forms.ToolStripMenuItem aBMPermisosToolStripMenuItem;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolStripMenuItem form1_bitacora_menu;
+        private System.Windows.Forms.ToolStripMenuItem menu_clientes;
+        private System.Windows.Forms.ToolStripMenuItem menu_ABMPermisos;
+        private System.Windows.Forms.Label menu_label_usuario;
+        private System.Windows.Forms.ToolStripMenuItem menu_bitacora;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

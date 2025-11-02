@@ -32,97 +32,95 @@ namespace sistema
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.localidad_codigo = new System.Windows.Forms.Label();
+            this.label_localidad = new System.Windows.Forms.Label();
+            this.btm_agregar = new System.Windows.Forms.Button();
+            this.btm_borrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(182, 10);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(243, 12);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(220, 346);
+            this.dataGridView1.Size = new System.Drawing.Size(293, 426);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(16, 45);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Location = new System.Drawing.Point(21, 55);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(123, 20);
+            this.textBox1.Size = new System.Drawing.Size(163, 22);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(16, 100);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Location = new System.Drawing.Point(21, 123);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(123, 20);
+            this.textBox2.Size = new System.Drawing.Size(163, 22);
             this.textBox2.TabIndex = 2;
             // 
-            // label1
+            // localidad_codigo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 26);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "CODIGO";
+            this.localidad_codigo.AutoSize = true;
+            this.localidad_codigo.Location = new System.Drawing.Point(21, 32);
+            this.localidad_codigo.Name = "localidad_codigo";
+            this.localidad_codigo.Size = new System.Drawing.Size(63, 17);
+            this.localidad_codigo.TabIndex = 3;
+            this.localidad_codigo.Text = "CODIGO";
             // 
-            // label2
+            // label_localidad
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 84);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "LOCALIDAD";
+            this.label_localidad.AutoSize = true;
+            this.label_localidad.Location = new System.Drawing.Point(21, 103);
+            this.label_localidad.Name = "label_localidad";
+            this.label_localidad.Size = new System.Drawing.Size(85, 17);
+            this.label_localidad.TabIndex = 4;
+            this.label_localidad.Text = "LOCALIDAD";
             // 
-            // button1
+            // btm_agregar
             // 
-            this.button1.Location = new System.Drawing.Point(41, 141);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 30);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "AGREGAR";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btm_agregar.Location = new System.Drawing.Point(55, 174);
+            this.btm_agregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btm_agregar.Name = "btm_agregar";
+            this.btm_agregar.Size = new System.Drawing.Size(107, 37);
+            this.btm_agregar.TabIndex = 5;
+            this.btm_agregar.Text = "AGREGAR";
+            this.btm_agregar.UseVisualStyleBackColor = true;
+            this.btm_agregar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btm_borrar
             // 
-            this.button2.Location = new System.Drawing.Point(41, 182);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(80, 30);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "ELIMINAR";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btm_borrar.Location = new System.Drawing.Point(55, 224);
+            this.btm_borrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btm_borrar.Name = "btm_borrar";
+            this.btm_borrar.Size = new System.Drawing.Size(107, 37);
+            this.btm_borrar.TabIndex = 6;
+            this.btm_borrar.Text = "ELIMINAR";
+            this.btm_borrar.UseVisualStyleBackColor = true;
+            this.btm_borrar.Click += new System.EventHandler(this.button2_Click);
             // 
             // localidad
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(428, 366);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(571, 450);
+            this.Controls.Add(this.btm_borrar);
+            this.Controls.Add(this.btm_agregar);
+            this.Controls.Add(this.label_localidad);
+            this.Controls.Add(this.localidad_codigo);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "localidad";
             this.Text = "localidad";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.localidad_FormClosing);
@@ -138,9 +136,9 @@ namespace sistema
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label localidad_codigo;
+        private System.Windows.Forms.Label label_localidad;
+        private System.Windows.Forms.Button btm_agregar;
+        private System.Windows.Forms.Button btm_borrar;
     }
 }

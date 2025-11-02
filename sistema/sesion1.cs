@@ -19,15 +19,18 @@ namespace sistema
         {
             InitializeComponent();
         }
-        public sesion1(Form1 form)
+        public sesion1(Form1 form, idiomas idiomas1)
         {
             InitializeComponent();
             form_padre = form;
+            idiomas = idiomas1;
+            idiomas.guardar_observer(this);
+            actualizar_idioma();
         }
         Form1 form_padre;
         public static BEusuario usuario;
         BLLusuario bllusuario = new BLLusuario();
-        idiomas idiomas = new idiomas();
+        idiomas idiomas;
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -37,7 +40,9 @@ namespace sistema
                     {
                         usuario = new BEusuario(textBox1.Text.Trim(), textBox2.Text.Trim());
                         bllusuario.login(usuario);
-                        idiomas = new idiomas(comboBox1.Text);
+                        BLLtraducciones.cargar_listatraducciones(comboBox1.Text);
+                        idiomas = new idiomas();
+                        idiomas.Idioma = comboBox1.Text;
                         abrir_formulario();
                         this.Visible = false;
 
@@ -58,12 +63,13 @@ namespace sistema
         {
             if (form_padre == null)
             {
-                Form1 f = new Form1();
+                Form1 f = new Form1(idiomas);
                 f.Show();
             }
             else
             {
                 form_padre.activar_permisos();
+                form_padre.cargar_idiomas_combobox(idiomas.idioma);
                 form_padre.activar_y_desactivar_login_logout();
                 form_padre.poner_nombre_usuario_label();
             }
@@ -73,7 +79,8 @@ namespace sistema
         {
             usuario_label2.Text = BLLtraducciones.traducir(usuario_label2.Name);
             contraseña_label2.Text = BLLtraducciones.traducir(contraseña_label2.Name);
-            agregar_boton2.Text = BLLtraducciones.traducir(agregar_boton2.Name);
+            sesion_ingresar.Text = BLLtraducciones.traducir(sesion_ingresar.Name);
+            label_idioma.Text = BLLtraducciones.traducir(label_idioma.Name);
         }
         
         private void sesion1_Load(object sender, EventArgs e)

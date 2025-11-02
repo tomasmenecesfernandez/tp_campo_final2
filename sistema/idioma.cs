@@ -14,13 +14,15 @@ namespace sistema
 {
     public partial class idioma : Form,Iobservertraduccion
     {
-        public idioma()
+        public idioma(idiomas idioma)
         {
             InitializeComponent();
+            idioma.guardar_observer(this);
+            actualizar_idioma();
         }
         
         BEtraducciones traduccion = new BEtraducciones();
-        idiomas idiomas1;
+        idiomas idiomas1 = new idiomas();
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -28,10 +30,22 @@ namespace sistema
 
         private void btnAgregar1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text!="") {
-                idiomas1 = new idiomas(textBox1.Text);
-                idiomas1.agregar_idioma(idiomas1);
-                cargar_data1();
+            try
+            {
+                if (textBox1.Text != "")
+                {
+                    idiomas1 = new idiomas(textBox1.Text);
+                    idiomas1.agregar_idioma(idiomas1);
+                    cargar_data1();
+                }
+                else
+                {
+                    throw new Exception("error, complete el cuadro idioma.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
         public void cargar_data1()
@@ -87,8 +101,20 @@ namespace sistema
         {
             label_idioma_idioma.Text = BLLtraducciones.traducir(label_idioma_idioma.Name);
             label_traduccion_idioma.Text = BLLtraducciones.traducir(label_traduccion_idioma.Name);
-            btnAgregar_idioma.Text = BLLtraducciones.traducir(btnAgregar_idioma.Name);
-            btnModificar_idioma.Text = BLLtraducciones.traducir(btnModificar_idioma.Name);
+            btm_agregar.Text = BLLtraducciones.traducir(btm_agregar.Name);
+            btm_modificar.Text = BLLtraducciones.traducir(btm_modificar.Name);
+            btm_borrar.Text = BLLtraducciones.traducir(btm_borrar.Name);
+        }
+
+        private void btm_borrar_Click(object sender, EventArgs e)
+        {
+            if (idiomas1!=null)
+            {
+                idiomas1.borrar_idioma(idiomas1.codigo);
+                cargar_data1();
+                dataGridView2.DataSource = null;
+            }
+            else { MessageBox.Show("error, seleccione un idioma."); }
         }
     }
 }

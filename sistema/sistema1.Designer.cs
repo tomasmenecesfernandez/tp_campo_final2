@@ -29,47 +29,47 @@ namespace sistema_de_ropa
         /// </summary>
         private void InitializeComponent()
         {
-            this.button3 = new System.Windows.Forms.Button();
+            this.btm_borrar = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.sistema_groupbox_pedidos = new System.Windows.Forms.GroupBox();
+            this.sistema_cantidad_ropa = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.sistema_descuento = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.sistema_fecha = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.sistema_total = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
+            this.sistema_btm_personalizar_pedido = new System.Windows.Forms.Button();
+            this.btm_agregar = new System.Windows.Forms.Button();
+            this.sistema_total1 = new System.Windows.Forms.Label();
             this.TEXTO_TOTAL_ROPA = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.sistema_descuento1 = new System.Windows.Forms.Label();
             this.TEXTO_DESCUENTO = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.sistema_filtro = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.sistema_label_buscar_cliente = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.TEXTO_FECHA_PEDIDO = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.button_form_cliente = new System.Windows.Forms.Button();
-            this.groupBox2.SuspendLayout();
+            this.sistema_fecha1 = new System.Windows.Forms.Label();
+            this.sistema_btm_ir_form_cliente = new System.Windows.Forms.Button();
+            this.sistema_groupbox_pedidos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button3
+            // btm_borrar
             // 
-            this.button3.Location = new System.Drawing.Point(201, 111);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 42);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "BORRAR";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btm_borrar.Location = new System.Drawing.Point(201, 111);
+            this.btm_borrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btm_borrar.Name = "btm_borrar";
+            this.btm_borrar.Size = new System.Drawing.Size(100, 42);
+            this.btm_borrar.TabIndex = 12;
+            this.btm_borrar.Text = "BORRAR";
+            this.btm_borrar.UseVisualStyleBackColor = true;
+            this.btm_borrar.Click += new System.EventHandler(this.button3_Click);
             // 
             // listBox1
             // 
@@ -83,136 +83,136 @@ namespace sistema_de_ropa
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
             // 
-            // groupBox2
+            // sistema_groupbox_pedidos
             // 
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.textBox5);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.button6);
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Location = new System.Drawing.Point(27, 238);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(307, 335);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "pedidos";
+            this.sistema_groupbox_pedidos.Controls.Add(this.sistema_cantidad_ropa);
+            this.sistema_groupbox_pedidos.Controls.Add(this.textBox5);
+            this.sistema_groupbox_pedidos.Controls.Add(this.sistema_descuento);
+            this.sistema_groupbox_pedidos.Controls.Add(this.textBox4);
+            this.sistema_groupbox_pedidos.Controls.Add(this.sistema_fecha);
+            this.sistema_groupbox_pedidos.Controls.Add(this.textBox3);
+            this.sistema_groupbox_pedidos.Controls.Add(this.sistema_total);
+            this.sistema_groupbox_pedidos.Controls.Add(this.textBox1);
+            this.sistema_groupbox_pedidos.Controls.Add(this.sistema_btm_personalizar_pedido);
+            this.sistema_groupbox_pedidos.Controls.Add(this.btm_borrar);
+            this.sistema_groupbox_pedidos.Controls.Add(this.btm_agregar);
+            this.sistema_groupbox_pedidos.Location = new System.Drawing.Point(27, 238);
+            this.sistema_groupbox_pedidos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.sistema_groupbox_pedidos.Name = "sistema_groupbox_pedidos";
+            this.sistema_groupbox_pedidos.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.sistema_groupbox_pedidos.Size = new System.Drawing.Size(307, 335);
+            this.sistema_groupbox_pedidos.TabIndex = 4;
+            this.sistema_groupbox_pedidos.TabStop = false;
+            this.sistema_groupbox_pedidos.Text = "pedidos";
             // 
-            // label6
+            // sistema_cantidad_ropa
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(19, 197);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(143, 17);
-            this.label6.TabIndex = 33;
-            this.label6.Text = "CANTIDAD DE ROPA";
+            this.sistema_cantidad_ropa.AutoSize = true;
+            this.sistema_cantidad_ropa.Location = new System.Drawing.Point(19, 197);
+            this.sistema_cantidad_ropa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.sistema_cantidad_ropa.Name = "sistema_cantidad_ropa";
+            this.sistema_cantidad_ropa.Size = new System.Drawing.Size(143, 17);
+            this.sistema_cantidad_ropa.TabIndex = 33;
+            this.sistema_cantidad_ropa.Text = "CANTIDAD DE ROPA";
             // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(23, 217);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(152, 22);
             this.textBox5.TabIndex = 32;
             // 
-            // label5
+            // sistema_descuento
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 148);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 17);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "DESCUENTO";
+            this.sistema_descuento.AutoSize = true;
+            this.sistema_descuento.Location = new System.Drawing.Point(19, 148);
+            this.sistema_descuento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.sistema_descuento.Name = "sistema_descuento";
+            this.sistema_descuento.Size = new System.Drawing.Size(94, 17);
+            this.sistema_descuento.TabIndex = 31;
+            this.sistema_descuento.Text = "DESCUENTO";
             // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(23, 167);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(152, 22);
             this.textBox4.TabIndex = 30;
             // 
-            // label2
+            // sistema_fecha
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 91);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 17);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "FECHA";
+            this.sistema_fecha.AutoSize = true;
+            this.sistema_fecha.Location = new System.Drawing.Point(19, 91);
+            this.sistema_fecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.sistema_fecha.Name = "sistema_fecha";
+            this.sistema_fecha.Size = new System.Drawing.Size(53, 17);
+            this.sistema_fecha.TabIndex = 29;
+            this.sistema_fecha.Text = "FECHA";
             // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(23, 111);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(152, 22);
             this.textBox3.TabIndex = 28;
             // 
-            // label1
+            // sistema_total
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 37);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 17);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "TOTAL";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.sistema_total.AutoSize = true;
+            this.sistema_total.Location = new System.Drawing.Point(19, 37);
+            this.sistema_total.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.sistema_total.Name = "sistema_total";
+            this.sistema_total.Size = new System.Drawing.Size(54, 17);
+            this.sistema_total.TabIndex = 27;
+            this.sistema_total.Text = "TOTAL";
+            this.sistema_total.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(23, 57);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(152, 22);
             this.textBox1.TabIndex = 26;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // button6
+            // sistema_btm_personalizar_pedido
             // 
-            this.button6.Location = new System.Drawing.Point(37, 247);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(235, 62);
-            this.button6.TabIndex = 25;
-            this.button6.Text = "Personalizar Pedido";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.sistema_btm_personalizar_pedido.Location = new System.Drawing.Point(37, 247);
+            this.sistema_btm_personalizar_pedido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.sistema_btm_personalizar_pedido.Name = "sistema_btm_personalizar_pedido";
+            this.sistema_btm_personalizar_pedido.Size = new System.Drawing.Size(235, 62);
+            this.sistema_btm_personalizar_pedido.TabIndex = 25;
+            this.sistema_btm_personalizar_pedido.Text = "Personalizar Pedido";
+            this.sistema_btm_personalizar_pedido.UseVisualStyleBackColor = true;
+            this.sistema_btm_personalizar_pedido.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button4
+            // btm_agregar
             // 
-            this.button4.Location = new System.Drawing.Point(201, 47);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 42);
-            this.button4.TabIndex = 13;
-            this.button4.Text = "AGREGAR";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btm_agregar.Location = new System.Drawing.Point(201, 47);
+            this.btm_agregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btm_agregar.Name = "btm_agregar";
+            this.btm_agregar.Size = new System.Drawing.Size(100, 42);
+            this.btm_agregar.TabIndex = 13;
+            this.btm_agregar.Text = "AGREGAR";
+            this.btm_agregar.UseVisualStyleBackColor = true;
+            this.btm_agregar.Click += new System.EventHandler(this.button4_Click);
             // 
-            // label13
+            // sistema_total1
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(425, 556);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(58, 17);
-            this.label13.TabIndex = 5;
-            this.label13.Text = "TOTAL:";
+            this.sistema_total1.AutoSize = true;
+            this.sistema_total1.Location = new System.Drawing.Point(425, 556);
+            this.sistema_total1.Name = "sistema_total1";
+            this.sistema_total1.Size = new System.Drawing.Size(58, 17);
+            this.sistema_total1.TabIndex = 5;
+            this.sistema_total1.Text = "TOTAL:";
             // 
             // TEXTO_TOTAL_ROPA
             // 
@@ -223,14 +223,14 @@ namespace sistema_de_ropa
             this.TEXTO_TOTAL_ROPA.TabIndex = 5;
             this.TEXTO_TOTAL_ROPA.Text = ".";
             // 
-            // label14
+            // sistema_descuento1
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(425, 612);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(98, 17);
-            this.label14.TabIndex = 6;
-            this.label14.Text = "DESCUENTO:";
+            this.sistema_descuento1.AutoSize = true;
+            this.sistema_descuento1.Location = new System.Drawing.Point(425, 612);
+            this.sistema_descuento1.Name = "sistema_descuento1";
+            this.sistema_descuento1.Size = new System.Drawing.Size(98, 17);
+            this.sistema_descuento1.TabIndex = 6;
+            this.sistema_descuento1.Text = "DESCUENTO:";
             // 
             // TEXTO_DESCUENTO
             // 
@@ -256,9 +256,9 @@ namespace sistema_de_ropa
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.sistema_filtro);
             this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.sistema_label_buscar_cliente);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -269,15 +269,15 @@ namespace sistema_de_ropa
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CLIENTE";
             // 
-            // label4
+            // sistema_filtro
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(288, 36);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 24);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Filtro:";
+            this.sistema_filtro.AutoSize = true;
+            this.sistema_filtro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sistema_filtro.Location = new System.Drawing.Point(288, 36);
+            this.sistema_filtro.Name = "sistema_filtro";
+            this.sistema_filtro.Size = new System.Drawing.Size(56, 24);
+            this.sistema_filtro.TabIndex = 3;
+            this.sistema_filtro.Text = "Filtro:";
             // 
             // comboBox2
             // 
@@ -288,15 +288,15 @@ namespace sistema_de_ropa
             this.comboBox2.Size = new System.Drawing.Size(89, 24);
             this.comboBox2.TabIndex = 2;
             // 
-            // label3
+            // sistema_label_buscar_cliente
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(21, 36);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 24);
-            this.label3.TabIndex = 1;
-            this.label3.Text = " Buscar Cliente:";
+            this.sistema_label_buscar_cliente.AutoSize = true;
+            this.sistema_label_buscar_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sistema_label_buscar_cliente.Location = new System.Drawing.Point(21, 36);
+            this.sistema_label_buscar_cliente.Name = "sistema_label_buscar_cliente";
+            this.sistema_label_buscar_cliente.Size = new System.Drawing.Size(141, 24);
+            this.sistema_label_buscar_cliente.TabIndex = 1;
+            this.sistema_label_buscar_cliente.Text = " Buscar Cliente:";
             // 
             // textBox2
             // 
@@ -317,49 +317,49 @@ namespace sistema_de_ropa
             this.TEXTO_FECHA_PEDIDO.TabIndex = 24;
             this.TEXTO_FECHA_PEDIDO.Text = ".";
             // 
-            // label10
+            // sistema_fecha1
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(425, 583);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(57, 17);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "FECHA:";
+            this.sistema_fecha1.AutoSize = true;
+            this.sistema_fecha1.Location = new System.Drawing.Point(425, 583);
+            this.sistema_fecha1.Name = "sistema_fecha1";
+            this.sistema_fecha1.Size = new System.Drawing.Size(57, 17);
+            this.sistema_fecha1.TabIndex = 23;
+            this.sistema_fecha1.Text = "FECHA:";
             // 
-            // button_form_cliente
+            // sistema_btm_ir_form_cliente
             // 
-            this.button_form_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_form_cliente.Location = new System.Drawing.Point(40, 130);
-            this.button_form_cliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_form_cliente.Name = "button_form_cliente";
-            this.button_form_cliente.Size = new System.Drawing.Size(259, 37);
-            this.button_form_cliente.TabIndex = 5;
-            this.button_form_cliente.Text = "Ir al formulario cliente";
-            this.button_form_cliente.UseVisualStyleBackColor = true;
-            this.button_form_cliente.Click += new System.EventHandler(this.button2_Click);
+            this.sistema_btm_ir_form_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sistema_btm_ir_form_cliente.Location = new System.Drawing.Point(40, 130);
+            this.sistema_btm_ir_form_cliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.sistema_btm_ir_form_cliente.Name = "sistema_btm_ir_form_cliente";
+            this.sistema_btm_ir_form_cliente.Size = new System.Drawing.Size(259, 37);
+            this.sistema_btm_ir_form_cliente.TabIndex = 5;
+            this.sistema_btm_ir_form_cliente.Text = "Ir al formulario cliente";
+            this.sistema_btm_ir_form_cliente.UseVisualStyleBackColor = true;
+            this.sistema_btm_ir_form_cliente.Click += new System.EventHandler(this.button2_Click);
             // 
             // sistema1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1327, 689);
-            this.Controls.Add(this.button_form_cliente);
+            this.Controls.Add(this.sistema_btm_ir_form_cliente);
             this.Controls.Add(this.TEXTO_FECHA_PEDIDO);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.sistema_fecha1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.TEXTO_DESCUENTO);
-            this.Controls.Add(this.label14);
+            this.Controls.Add(this.sistema_descuento1);
             this.Controls.Add(this.TEXTO_TOTAL_ROPA);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.sistema_total1);
+            this.Controls.Add(this.sistema_groupbox_pedidos);
             this.Controls.Add(this.listBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "sistema1";
             this.Text = "sistema";
             this.Load += new System.EventHandler(this.sistema_Load);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.sistema_groupbox_pedidos.ResumeLayout(false);
+            this.sistema_groupbox_pedidos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -369,31 +369,31 @@ namespace sistema_de_ropa
         }
 
         #endregion
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btm_borrar;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.GroupBox sistema_groupbox_pedidos;
+        private System.Windows.Forms.Button btm_agregar;
+        private System.Windows.Forms.Label sistema_total1;
         private System.Windows.Forms.Label TEXTO_TOTAL_ROPA;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label sistema_descuento1;
         private System.Windows.Forms.Label TEXTO_DESCUENTO;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label TEXTO_FECHA_PEDIDO;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label sistema_fecha1;
+        private System.Windows.Forms.Label sistema_filtro;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label sistema_label_buscar_cliente;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button_form_cliente;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button sistema_btm_ir_form_cliente;
+        private System.Windows.Forms.Button sistema_btm_personalizar_pedido;
+        private System.Windows.Forms.Label sistema_total;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label sistema_descuento;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label sistema_fecha;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label sistema_cantidad_ropa;
         private System.Windows.Forms.TextBox textBox5;
     }
 }

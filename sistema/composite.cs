@@ -9,24 +9,22 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BE;
 using BLL;
+using Servicios.observer;
 namespace sistema
 {
-    public partial class composite : Form
+    public partial class composite : Form,Iobservertraduccion
     {
-        public composite()
+        public composite(idiomas idiomas)
         {
             InitializeComponent();
+            BLLtraducciones.cargar_listatraducciones(idiomas.Idioma);
+            idiomas.guardar_observer(this);
+            actualizar_idioma();
         }
-        List<BEusuario> lista_usuarios = new List<BEusuario>();
         List<BEpermiso> lista_permisos = new List<BEpermiso>();
-        BEusuario usuario;
-        BLLusuario bllusuario = new BLLusuario();
         BLLrol bllrol = new BLLrol();
-        BLLtraducciones traducciones = new BLLtraducciones();
         BEpermisoComponente nodo_seleccionado;
-        BEcontrolCambioUsuario controlusuario_select = new BEcontrolCambioUsuario();
         BLLpermiso bllpermiso = new BLLpermiso();
-        BLLcontrolUsuario bllcontrolusuario = new BLLcontrolUsuario();
         private void composite_Load(object sender, EventArgs e)
         {
             mostrar_treeview(bllrol.traer_nodos_hijos(0)[0], treeView1.Nodes);
@@ -51,11 +49,11 @@ namespace sistema
                 nodo_seleccionado = (BEpermisoComponente)treeView1.SelectedNode.Tag;
                 if (nodo_seleccionado is BEpermiso)
                 {
-                    radioButton2.Checked = true;
+                    composite_rbtm_permiso.Checked = true;
                 }
                 else if (nodo_seleccionado is BErol)
                 {
-                    radioButton1.Checked = true;
+                    composite_rbtm_rol.Checked = true;
                 }
             }
         }
@@ -69,7 +67,7 @@ namespace sistema
                 {
                     if (nodo_seleccionado is BErol)
                     {
-                        if (radioButton1.Checked)//rol
+                        if (composite_rbtm_rol.Checked)//rol
                         {
                             if (bllrol.esUnRolNuevo(comboBox2.Text))
                             {
@@ -85,7 +83,7 @@ namespace sistema
                             }
 
                         }
-                        else if (radioButton2.Checked)
+                        else if (composite_rbtm_permiso.Checked)
                         {
                             BEpermiso permiso = (BEpermiso)(comboBox2.SelectedItem);
                             BErol rol_padre = (BErol)nodo_seleccionado;
@@ -112,11 +110,11 @@ namespace sistema
             if (nodo_seleccionado != null)
             {
                 if (nodo_seleccionado.nombre == "sistema") throw new Exception("no se puede borrar el nodo sistema");
-                if (radioButton1.Checked)//rol
+                if (composite_rbtm_rol.Checked)//rol
                 {
                     bllrol.borrar_rol((BErol)nodo_seleccionado);
                 }
-                else if (radioButton2.Checked)
+                else if (composite_rbtm_permiso.Checked)
                 {
                     bllpermiso.borrar_permiso((BEpermiso)nodo_seleccionado);
                 }
@@ -132,11 +130,11 @@ namespace sistema
 
             if (nodo_seleccionado != null)
             {
-                if (radioButton1.Checked)//rol
+                if (composite_rbtm_rol.Checked)//rol
                 {
                     bllrol.modificar_rol((BErol)nodo_seleccionado);
                 }
-                else if (radioButton2.Checked)
+                else if (composite_rbtm_permiso.Checked)
                 {
                     bllpermiso.modificar_permiso((BEpermiso)nodo_seleccionado);
                 }
@@ -155,6 +153,16 @@ namespace sistema
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             comboBox2.DataSource = lista_permisos;
+        }
+
+        public void actualizar_idioma()
+        {
+            composite_rbtm_rol.Text = BLLtraducciones.traducir(composite_rbtm_rol.Name);
+            composite_rbtm_permiso.Text = BLLtraducciones.traducir(composite_rbtm_permiso.Name);
+            btm_agregar.Text = BLLtraducciones.traducir(btm_agregar.Name);
+            btm_modificar.Text = BLLtraducciones.traducir(btm_modificar.Name);
+            btm_borrar.Text = BLLtraducciones.traducir(btm_borrar.Name);
+
         }
     }
 }

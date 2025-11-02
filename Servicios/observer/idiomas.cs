@@ -17,14 +17,19 @@ namespace Servicios.observer
         public string idioma{get;set;}
 
         public idiomas() { }
+        public idiomas(string idioma1) { idioma = idioma1; }
         DALidioma DALidioma = new DALidioma();
-        DALtraducciones daltraducciones = new DALtraducciones();
         static acceso acceso = new acceso();
         public static List<Iobservertraduccion> lista_observer = new List<Iobservertraduccion>();
 
-        public idiomas(string idiom)
+        public string Idioma
         {
-            idioma = idiom;
+            get { return idioma; }
+            set
+            {
+                idioma = value;
+                notificar_a_todos(value);
+            }
         }
 
         public void notificar_a_todos(string idioma_actual)
@@ -37,6 +42,10 @@ namespace Servicios.observer
         public void agregar_idioma(idiomas idioma)
         {
             DALidioma.agregar_idioma(idioma.idioma,CalcularDigitoVerificadorDesdeTexto(idioma.idioma));
+        }
+        public void borrar_idioma(int cod_idioma)
+        {
+            DALidioma.borrar_idioma(cod_idioma);
         }
         public static int CalcularDigitoVerificadorDesdeTexto(string texto)
         {

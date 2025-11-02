@@ -9,15 +9,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BE;
 using BLL;
+using Servicios.observer;
 namespace sistema
 {
-    public partial class control_de_cambio_usuario : Form
+    public partial class control_de_cambio_usuario : Form,Iobservertraduccion
     {
-        public control_de_cambio_usuario(BEusuario usuario1, usuarios form1)
+        public control_de_cambio_usuario(BEusuario usuario1, usuarios form1,idiomas idiomas)
         {
             InitializeComponent();
             form_padre = form1;
             usuario=usuario1;
+            BLLtraducciones.cargar_listatraducciones(idiomas.Idioma);
+            idiomas.guardar_observer(this);
+            actualizar_idioma();
         }
         usuarios form_padre;
         BEusuario usuario;
@@ -58,6 +62,12 @@ namespace sistema
         private void control_de_cambio_usuario_FormClosing(object sender, FormClosingEventArgs e)
         {
             form_padre.mostrar_data();
+        }
+
+        public void actualizar_idioma()
+        {
+            control_btm_revertir.Text = BLLtraducciones.traducir(control_btm_revertir.Name);
+
         }
     }
 }

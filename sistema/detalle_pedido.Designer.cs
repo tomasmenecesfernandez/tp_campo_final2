@@ -31,18 +31,18 @@ namespace sistema
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.detalle_capucha = new System.Windows.Forms.Label();
             this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.detalle_cantidad = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.btm_modificar = new System.Windows.Forms.Button();
+            this.detalle_rbtm_buzos = new System.Windows.Forms.RadioButton();
+            this.btm_borrar = new System.Windows.Forms.Button();
+            this.detalle_colores = new System.Windows.Forms.Label();
+            this.detalle_talles = new System.Windows.Forms.Label();
+            this.btm_agregar = new System.Windows.Forms.Button();
+            this.detalle_rbtm_jogging = new System.Windows.Forms.RadioButton();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -51,23 +51,23 @@ namespace sistema
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.detalle_capucha);
             this.groupBox2.Controls.Add(this.checkedListBox2);
             this.groupBox2.Controls.Add(this.checkedListBox1);
-            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.detalle_cantidad);
             this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.button5);
-            this.groupBox2.Controls.Add(this.radioButton1);
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.radioButton2);
-            this.groupBox2.Location = new System.Drawing.Point(11, 49);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Controls.Add(this.btm_modificar);
+            this.groupBox2.Controls.Add(this.detalle_rbtm_buzos);
+            this.groupBox2.Controls.Add(this.btm_borrar);
+            this.groupBox2.Controls.Add(this.detalle_colores);
+            this.groupBox2.Controls.Add(this.detalle_talles);
+            this.groupBox2.Controls.Add(this.btm_agregar);
+            this.groupBox2.Controls.Add(this.detalle_rbtm_jogging);
+            this.groupBox2.Location = new System.Drawing.Point(15, 60);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox2.Size = new System.Drawing.Size(232, 338);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(309, 416);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "pedidos";
@@ -76,23 +76,22 @@ namespace sistema
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(5, 310);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Location = new System.Drawing.Point(7, 382);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(108, 21);
+            this.comboBox1.Size = new System.Drawing.Size(143, 24);
             this.comboBox1.TabIndex = 29;
             this.comboBox1.Visible = false;
             // 
-            // label2
+            // detalle_capucha
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(2, 293);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "CAPUCHA";
-            this.label2.Visible = false;
+            this.detalle_capucha.AutoSize = true;
+            this.detalle_capucha.Location = new System.Drawing.Point(3, 361);
+            this.detalle_capucha.Name = "detalle_capucha";
+            this.detalle_capucha.Size = new System.Drawing.Size(73, 17);
+            this.detalle_capucha.TabIndex = 28;
+            this.detalle_capucha.Text = "CAPUCHA";
+            this.detalle_capucha.Visible = false;
             // 
             // checkedListBox2
             // 
@@ -105,10 +104,10 @@ namespace sistema
             "MARRON",
             "VERDE",
             "BEIGE"});
-            this.checkedListBox2.Location = new System.Drawing.Point(4, 65);
-            this.checkedListBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkedListBox2.Location = new System.Drawing.Point(5, 80);
+            this.checkedListBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(110, 79);
+            this.checkedListBox2.Size = new System.Drawing.Size(145, 89);
             this.checkedListBox2.TabIndex = 26;
             this.checkedListBox2.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBox2_ItemCheck);
             // 
@@ -122,130 +121,128 @@ namespace sistema
             "XL",
             "XXL",
             "XXXL"});
-            this.checkedListBox1.Location = new System.Drawing.Point(4, 174);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkedListBox1.Location = new System.Drawing.Point(5, 214);
+            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(110, 64);
+            this.checkedListBox1.Size = new System.Drawing.Size(145, 72);
             this.checkedListBox1.TabIndex = 25;
             this.checkedListBox1.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBox1_ItemCheck);
             this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
-            // label1
+            // detalle_cantidad
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(2, 253);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 13);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "CANTIDAD";
+            this.detalle_cantidad.AutoSize = true;
+            this.detalle_cantidad.Location = new System.Drawing.Point(3, 311);
+            this.detalle_cantidad.Name = "detalle_cantidad";
+            this.detalle_cantidad.Size = new System.Drawing.Size(77, 17);
+            this.detalle_cantidad.TabIndex = 24;
+            this.detalle_cantidad.Text = "CANTIDAD";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(4, 270);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Location = new System.Drawing.Point(5, 332);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(110, 20);
+            this.textBox1.Size = new System.Drawing.Size(145, 22);
             this.textBox1.TabIndex = 23;
             // 
-            // button5
+            // btm_modificar
             // 
-            this.button5.Location = new System.Drawing.Point(119, 114);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 34);
-            this.button5.TabIndex = 21;
-            this.button5.Text = "modificar";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btm_modificar.Location = new System.Drawing.Point(159, 140);
+            this.btm_modificar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btm_modificar.Name = "btm_modificar";
+            this.btm_modificar.Size = new System.Drawing.Size(100, 42);
+            this.btm_modificar.TabIndex = 21;
+            this.btm_modificar.Text = "modificar";
+            this.btm_modificar.UseVisualStyleBackColor = true;
+            this.btm_modificar.Click += new System.EventHandler(this.button5_Click);
             // 
-            // radioButton1
+            // detalle_rbtm_buzos
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(9, 21);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(62, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "BUZOS";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.detalle_rbtm_buzos.AutoSize = true;
+            this.detalle_rbtm_buzos.Location = new System.Drawing.Point(12, 26);
+            this.detalle_rbtm_buzos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.detalle_rbtm_buzos.Name = "detalle_rbtm_buzos";
+            this.detalle_rbtm_buzos.Size = new System.Drawing.Size(77, 21);
+            this.detalle_rbtm_buzos.TabIndex = 0;
+            this.detalle_rbtm_buzos.TabStop = true;
+            this.detalle_rbtm_buzos.Text = "BUZOS";
+            this.detalle_rbtm_buzos.UseVisualStyleBackColor = true;
+            this.detalle_rbtm_buzos.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // button3
+            // btm_borrar
             // 
-            this.button3.Location = new System.Drawing.Point(119, 165);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 34);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "BORRAR";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btm_borrar.Location = new System.Drawing.Point(159, 203);
+            this.btm_borrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btm_borrar.Name = "btm_borrar";
+            this.btm_borrar.Size = new System.Drawing.Size(100, 42);
+            this.btm_borrar.TabIndex = 12;
+            this.btm_borrar.Text = "BORRAR";
+            this.btm_borrar.UseVisualStyleBackColor = true;
+            this.btm_borrar.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label7
+            // detalle_colores
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 49);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 13);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "COLORES";
+            this.detalle_colores.AutoSize = true;
+            this.detalle_colores.Location = new System.Drawing.Point(4, 60);
+            this.detalle_colores.Name = "detalle_colores";
+            this.detalle_colores.Size = new System.Drawing.Size(75, 17);
+            this.detalle_colores.TabIndex = 13;
+            this.detalle_colores.Text = "COLORES";
             // 
-            // label9
+            // detalle_talles
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 158);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(47, 13);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "TALLES";
+            this.detalle_talles.AutoSize = true;
+            this.detalle_talles.Location = new System.Drawing.Point(4, 194);
+            this.detalle_talles.Name = "detalle_talles";
+            this.detalle_talles.Size = new System.Drawing.Size(60, 17);
+            this.detalle_talles.TabIndex = 17;
+            this.detalle_talles.Text = "TALLES";
             // 
-            // button4
+            // btm_agregar
             // 
-            this.button4.Location = new System.Drawing.Point(119, 67);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 34);
-            this.button4.TabIndex = 13;
-            this.button4.Text = "AGREGAR";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btm_agregar.Location = new System.Drawing.Point(159, 82);
+            this.btm_agregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btm_agregar.Name = "btm_agregar";
+            this.btm_agregar.Size = new System.Drawing.Size(100, 42);
+            this.btm_agregar.TabIndex = 13;
+            this.btm_agregar.Text = "AGREGAR";
+            this.btm_agregar.UseVisualStyleBackColor = true;
+            this.btm_agregar.Click += new System.EventHandler(this.button4_Click);
             // 
-            // radioButton2
+            // detalle_rbtm_jogging
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(71, 21);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(73, 17);
-            this.radioButton2.TabIndex = 0;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "JOGGING";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.detalle_rbtm_jogging.AutoSize = true;
+            this.detalle_rbtm_jogging.Location = new System.Drawing.Point(95, 26);
+            this.detalle_rbtm_jogging.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.detalle_rbtm_jogging.Name = "detalle_rbtm_jogging";
+            this.detalle_rbtm_jogging.Size = new System.Drawing.Size(93, 21);
+            this.detalle_rbtm_jogging.TabIndex = 0;
+            this.detalle_rbtm_jogging.TabStop = true;
+            this.detalle_rbtm_jogging.Text = "JOGGING";
+            this.detalle_rbtm_jogging.UseVisualStyleBackColor = true;
+            this.detalle_rbtm_jogging.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // listBox1
             // 
             this.listBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(314, 49);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(419, 60);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(495, 251);
+            this.listBox1.Size = new System.Drawing.Size(659, 308);
             this.listBox1.TabIndex = 5;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // detalle_pedido
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(818, 492);
+            this.ClientSize = new System.Drawing.Size(1091, 606);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.listBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "detalle_pedido";
             this.Text = "detalle_pedido";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.detalle_pedido_FormClosing);
@@ -260,18 +257,18 @@ namespace sistema
 
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label detalle_capucha;
         private System.Windows.Forms.CheckedListBox checkedListBox2;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label detalle_cantidad;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.Button btm_modificar;
+        private System.Windows.Forms.RadioButton detalle_rbtm_buzos;
+        private System.Windows.Forms.Button btm_borrar;
+        private System.Windows.Forms.Label detalle_colores;
+        private System.Windows.Forms.Label detalle_talles;
+        private System.Windows.Forms.Button btm_agregar;
+        private System.Windows.Forms.RadioButton detalle_rbtm_jogging;
         private System.Windows.Forms.ListBox listBox1;
     }
 }

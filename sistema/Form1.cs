@@ -11,26 +11,32 @@ using BE;
 using BLL;
 using Servicios;
 using Servicios.observer;
+using sistema_de_ropa;
 namespace sistema
 {
     public partial class Form1 : Form,Iobservertraduccion
     {
-        public Form1()
+        public Form1(idiomas idiomas)
         {
             InitializeComponent();
+            BLLtraducciones.cargar_listatraducciones(idiomas.Idioma);
+            idioma = idiomas;
+            idiomas.guardar_observer(this);
+            actualizar_idioma();
         }
+        idiomas idioma;
         BLLusuario bllusuario = new BLLusuario();
         bllregistro bllregistro = new bllregistro();
         usuarios u;
         sesion1 s;
         idioma idi;
-        sistema sist;
+        sistema1 sist;
         Cliente c;
         
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            u = new usuarios();
+            u = new usuarios(idioma);
             cerrar_formularios();
             u.MdiParent = this;
             u.Dock = DockStyle.Fill;
@@ -40,7 +46,7 @@ namespace sistema
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            s = new sesion1(this);
+            s = new sesion1(this,idioma);
             cerrar_formularios();
             s.MdiParent = this;
             s.Dock = DockStyle.Fill;
@@ -50,7 +56,7 @@ namespace sistema
         private void idiomaToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            idi = new idioma();
+            idi = new idioma(idioma);
             cerrar_formularios();
             idi.MdiParent = this;
             idi.Dock = DockStyle.Fill;
@@ -66,14 +72,21 @@ namespace sistema
         {
             poner_nombre_usuario_label();
             activar_permisos();
+            cargar_idiomas_combobox(idioma.idioma);
             if (sesion.instancia != null)
             {
                 activar_y_desactivar_login_logout();
             }
         }
+        public void cargar_idiomas_combobox(string idioma_actual)
+        {
+            comboBox1.DataSource = null;
+            comboBox1.DataSource = idiomas.leer_idiomas();
+            comboBox1.Text = idioma_actual;
+        }
         public void poner_nombre_usuario_label()
         {
-            label1.Text = "USER: " + bllusuario.desencrytar_nombre(sesion.instancia.usuario.nombre);
+            label2.Text =bllusuario.desencrytar_nombre(sesion.instancia.usuario.nombre);
         }
         public void activar_permisos()
         {
@@ -105,11 +118,11 @@ namespace sistema
                                 permisos_menu.DropDownItems.Add("ABM_usuario");
                                 break;
                             case "ABM_clientes":
-                                clientes_menu.Enabled = true;
+                                menu_clientes.Enabled = true;
                                 permisos_menu.DropDownItems.Add("ABM_clientes");
                                 break;
                             case "Ver_Bitacora":
-                                form1_bitacora_menu.Enabled = true;
+                                menu_bitacora.Enabled = true;
                                 permisos_menu.DropDownItems.Add("Ver_Bitacora");
                                 break;
                             default:
@@ -134,11 +147,12 @@ namespace sistema
             usuarios_menu.Text = BLLtraducciones.traducir(usuarios_menu.Name);
             login_menu.Text = BLLtraducciones.traducir(login_menu.Name);
             reportes_menu.Text = BLLtraducciones.traducir(reportes_menu.Name);
-            idioma_menu.Text = BLLtraducciones.traducir(idioma_menu.Name);
             sistema_menu.Text = BLLtraducciones.traducir(sistema_menu.Name);
             CERRAR_SESION_MENU.Text = BLLtraducciones.traducir(CERRAR_SESION_MENU.Name);
             permisos_menu.Text = BLLtraducciones.traducir(permisos_menu.Name);
             idioma2_menu.Text = BLLtraducciones.traducir(idioma2_menu.Name);
+            menu_label_usuario.Text = BLLtraducciones.traducir(menu_label_usuario.Name);
+            menu_clientes.Text = BLLtraducciones.traducir(menu_clientes.Name);
         }
         private void españolToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -169,7 +183,7 @@ namespace sistema
                 login_menu.Enabled = true;
                 CERRAR_SESION_MENU.Enabled = false;
                 desactivar_form();
-                label1.Text = "";// label de usuario
+                menu_label_usuario.Text = "";// label de usuario
                 MessageBox.Show("Se cerro sesion con exito.");
                 
             }
@@ -185,11 +199,11 @@ namespace sistema
         }
         public void desactivar_form()
         {
-            form1_bitacora_menu.Enabled = false;
+            menu_bitacora.Enabled = false;
             reportes_menu.Enabled = false;
             idioma2_menu.Enabled = false;
             sistema_menu.Enabled = false;
-            clientes_menu.Enabled = false;
+            menu_clientes.Enabled = false;
             usuarios_menu.Enabled = false;
         }
         public void cerrar_formularios()
@@ -197,19 +211,6 @@ namespace sistema
             foreach (Form frm in this.MdiChildren)
             {
                 frm.Close();
-            }
-        }
-        private void idioma_menu_Click(object sender, EventArgs e)
-        {
-            mostrar_idiomas(idiomas.leer_idiomas());
-        }
-        public void mostrar_idiomas(List<idiomas> lista)
-        {
-            idioma_menu.DropDownItems.Clear();
-            foreach (idiomas idioma in lista) {
-                ToolStripMenuItem idiomaItem = new ToolStripMenuItem(idioma.idioma);
-
-                idioma_menu.DropDownItems.Add(idiomaItem);
             }
         }
 
@@ -220,7 +221,7 @@ namespace sistema
 
         private void sistemaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            sist = new sistema();
+            sist = new sistema1(idioma);
             cerrar_formularios();
             sist.MdiParent = this;
             sist.Dock = DockStyle.Fill;
@@ -230,7 +231,7 @@ namespace sistema
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            c = new Cliente();
+            c = new Cliente(idioma);
             cerrar_formularios();
             c.MdiParent = this;
             c.Dock = DockStyle.Fill;
@@ -246,7 +247,7 @@ namespace sistema
 
         private void aBMPermisosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            composite c = new composite();
+            composite c = new composite(idioma);
             cerrar_formularios();
             c.MdiParent = this;
             c.Dock = DockStyle.Fill;
@@ -256,12 +257,18 @@ namespace sistema
 
         private void bitacoraToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            bitacora b = new bitacora();
+            bitacora b = new bitacora(idioma);
             cerrar_formularios();
             b.MdiParent = this;
             b.Dock = DockStyle.Fill;
             b.FormBorderStyle = FormBorderStyle.None;
             b.Show();
+        }
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            BLLtraducciones.cargar_listatraducciones(comboBox1.Text);
+            idioma.Idioma=comboBox1.Text;
         }
     }
 }

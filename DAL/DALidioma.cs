@@ -19,6 +19,12 @@ namespace DAL
             hash.Add("@dv", dv);
             acceso.escribir(comando, hash);
         }
-
+        public void borrar_idioma(int codigo)
+        {
+            string comando = "borrar_idioma";
+            Hashtable hash = new Hashtable();
+            hash.Add("@codigo_idioma", codigo);
+            acceso.escribir(comando, hash);
+        }
     }
 }
