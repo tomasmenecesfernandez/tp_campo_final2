@@ -18,9 +18,9 @@ namespace sistema
         {
             InitializeComponent();
         }
-        idiomas idiomas1;
-        BLLtraducciones blltraducciones = new BLLtraducciones();
+        
         BEtraducciones traduccion = new BEtraducciones();
+        idiomas idiomas1;
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -39,7 +39,7 @@ namespace sistema
             try
             {
                 dataGridView1.DataSource = null;
-                dataGridView1.DataSource = idiomas1.leer_idiomas();
+                dataGridView1.DataSource = idiomas.leer_idiomas();
             }
             catch(Exception ex)
             {
@@ -48,10 +48,6 @@ namespace sistema
             }
         private void idioma_Load(object sender, EventArgs e)
         {
-            if (idiomas.lista_traducciones.Count > 0)
-            {
-                actualizar_idioma();
-            }
             idiomas1 = new idiomas();
             cargar_data1();
         }
@@ -59,14 +55,14 @@ namespace sistema
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             idiomas1 = (idiomas)dataGridView1.CurrentRow.DataBoundItem;
-            textBox1.Text = idiomas1.Idioma;
+            textBox1.Text = idiomas1.idioma;
             mostrar_data2();
         }
         
         public void mostrar_data2()
         {
             dataGridView2.DataSource = null;
-            dataGridView2.DataSource = blltraducciones.leer_traducciones(idiomas1.Idioma);
+            dataGridView2.DataSource = BLLtraducciones.leer_traducciones(idiomas1.idioma);
 
         }
 
@@ -75,7 +71,7 @@ namespace sistema
             if (textBox2.Text != "" && traduccion!=null)
             {
                 traduccion.valor = textBox2.Text;
-                blltraducciones.modificar_traduccion(traduccion);
+                BLLtraducciones.modificar_traduccion(traduccion);
                 mostrar_data2();
             }
         }
@@ -89,10 +85,10 @@ namespace sistema
 
         public void actualizar_idioma()
         {
-            label_idioma_idioma.Text = blltraducciones.traducir(label_idioma_idioma.Name);
-            label_traduccion_idioma.Text = blltraducciones.traducir(label_traduccion_idioma.Name);
-            btnAgregar_idioma.Text = blltraducciones.traducir(btnAgregar_idioma.Name);
-            btnModificar_idioma.Text = blltraducciones.traducir(btnModificar_idioma.Name);
+            label_idioma_idioma.Text = BLLtraducciones.traducir(label_idioma_idioma.Name);
+            label_traduccion_idioma.Text = BLLtraducciones.traducir(label_traduccion_idioma.Name);
+            btnAgregar_idioma.Text = BLLtraducciones.traducir(btnAgregar_idioma.Name);
+            btnModificar_idioma.Text = BLLtraducciones.traducir(btnModificar_idioma.Name);
         }
     }
 }

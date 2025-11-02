@@ -14,9 +14,10 @@ using System.Xml;
 using System.Xml.Linq;
 using sistema;
 using Servicios;
+using Servicios.observer;
 namespace sistema_de_ropa
 {
-    public partial class sistema1 : Form
+    public partial class sistema1 : Form,Iobservertraduccion
     {
         public sistema1()
         {
@@ -26,11 +27,7 @@ namespace sistema_de_ropa
         public static List<BEcliente> lista_cliente { get; set; }
         BLL_cliente bll_cliente = new BLL_cliente();
         BEcliente cliente = new BEcliente();
-        BEusuario usuario = new BEusuario();
-        BLLusuario bllusuario = new BLLusuario();
-        List<BEusuario> lista_usuarios = new List<BEusuario>();
         BLLPedido bllpedido = new BLLPedido();
-        BLL_Localidad blllocalidad = new BLL_Localidad();
 
         enum filtro
         { Nombre,DNI }
@@ -259,6 +256,11 @@ namespace sistema_de_ropa
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        public void actualizar_idioma()
+        {
+            
         }
     }
 }

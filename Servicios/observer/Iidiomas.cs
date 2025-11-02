@@ -10,7 +10,7 @@ namespace Servicios.observer
    public interface Iidiomas
     {
 
-        void guardar_observer(BEtraducciones traduccion);
-        void notificar(string idioma_actual);
+        void guardar_observer(Iobservertraduccion observer);
+        void notificar_a_todos(string idioma_actual);
     }
 }

@@ -20,7 +20,6 @@ namespace sistema
         {
             InitializeComponent();
         }
-        BLLtraducciones blltraducciones = new BLLtraducciones();
         public void activar_permisos_interfaz(BEpermiso permiso)
         {
             if (permiso.nombre=="hacer_pedido")
@@ -32,7 +31,7 @@ namespace sistema
 
         public void actualizar_idioma()
         {
-            btm_comprar_sistema.Text = blltraducciones.traducir(btm_comprar_sistema.Name);
+            btm_comprar_sistema.Text = BLLtraducciones.traducir(btm_comprar_sistema.Name);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -48,7 +47,7 @@ namespace sistema
 
         private void sistema_Load(object sender, EventArgs e)
         {
-            if (idiomas.lista_traducciones.Count > 0) actualizar_idioma();
+            if (BLLtraducciones.lista_traducciones.Count > 0) actualizar_idioma();
         }
     }
 }

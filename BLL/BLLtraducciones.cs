@@ -10,10 +10,12 @@ namespace BLL
 {
     public class BLLtraducciones 
     {
-        DALtraducciones dal = new DALtraducciones();
-        public string traducir(string clave)
+        static DALtraducciones dal = new DALtraducciones();
+        public static List<BEtraducciones> lista_traducciones = new List<BEtraducciones>();
+
+        public static string traducir(string clave)
         {
-            foreach (BEtraducciones traduccion in idiomas.lista_traducciones)
+            foreach (BEtraducciones traduccion in lista_traducciones)
             {
                 if (traduccion.clave==clave)
                 {
@@ -22,11 +24,16 @@ namespace BLL
             }
             return "no encontrado" + clave;
         }
-        public List<BEtraducciones> leer_traducciones(string idioma_actual)
+        public static void cargar_listatraducciones(string idioma_actual)
+        {
+            lista_traducciones.Clear();
+            lista_traducciones = dal.leer_traducciones(idioma_actual);
+        }
+        public static List<BEtraducciones> leer_traducciones(string idioma_actual)
         {
            return dal.leer_traducciones(idioma_actual);
         }
-        public void modificar_traduccion(BEtraducciones traduccion)
+        public static void modificar_traduccion(BEtraducciones traduccion)
         {
             dal.modificar_traduccion(traduccion);
         }

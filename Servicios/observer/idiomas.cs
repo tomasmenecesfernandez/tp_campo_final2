@@ -13,58 +13,26 @@ namespace Servicios.observer
     {
         public int codigo { get; set; }
         public int digito_varificador { get; set; }
-        
-        string idioma;
-        public string Idioma {
-            get { return idioma; }
-            set {
-                this.idioma = value;
-                this.notificar(this.idioma); }
-        }
-        public idiomas(string idiom)
-        {
-            Idioma = idiom;
-        }
+
+        public string idioma{get;set;}
+
         public idiomas() { }
         DALidioma DALidioma = new DALidioma();
         DALtraducciones daltraducciones = new DALtraducciones();
-         acceso acceso = new acceso();
-        public static List<BEtraducciones> lista_traducciones = new List<BEtraducciones>();
+        static acceso acceso = new acceso();
+        public static List<Iobservertraduccion> lista_observer = new List<Iobservertraduccion>();
 
-        public void guardar_observer(BEtraducciones traduccion)
+        public idiomas(string idiom)
         {
-            if (!lista_traducciones.Contains(traduccion))
-            {
-                lista_traducciones.Add(traduccion);
-            }
-            else
-            {
-                throw new Exception("ya la traduccion esta en el sistema");
-            }
-        }
-        public void quitar_observer(BEtraducciones traduccion)
-        {
-            if (lista_traducciones.Contains(traduccion))
-            {
-                lista_traducciones.Remove(traduccion);
-            }
-            else
-            {
-                throw new Exception("la traduccion no estaba en el sistema.");
-            }
-        }
-        public void notificar(string idioma_actual)
-        {
-            cargar_listatraducciones(idioma_actual);
+            idioma = idiom;
         }
 
-
-
-
-        public void cargar_listatraducciones(string idioma_actual)
+        public void notificar_a_todos(string idioma_actual)
         {
-            lista_traducciones.Clear();
-            lista_traducciones=daltraducciones.leer_traducciones(idioma_actual);
+            foreach (var observer in lista_observer)
+            {
+                observer.actualizar_idioma();
+            }
         }
         public void agregar_idioma(idiomas idioma)
         {
@@ -76,14 +44,13 @@ namespace Servicios.observer
             int v = 0;
             foreach (char c in texto)
             {
-
                 suma += (int)c * v;
                 v+=2;
             }
 
             return suma;
         }
-        public  List<idiomas> leer_idiomas()
+        public static List<idiomas> leer_idiomas()
         {
                 string comando = "leer_idiomas";
                 DataTable tabla = acceso.leer_tabla(comando, null);
@@ -102,9 +69,21 @@ namespace Servicios.observer
             
             return lista;
         }
+        public void guardar_observer(Iobservertraduccion observer)
+        {
+            if (!lista_observer.Contains(observer))
+            {
+                lista_observer.Add(observer);
+            }
+            else
+            {
+                throw new Exception("ya la traduccion esta en el sistema");
+            }
+        }
         public override string ToString()
         {
             return idioma;
         }
+
     }
 }

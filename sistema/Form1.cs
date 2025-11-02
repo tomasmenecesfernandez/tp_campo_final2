@@ -26,8 +26,7 @@ namespace sistema
         idioma idi;
         sistema sist;
         Cliente c;
-        BLLtraducciones traducciones = new BLLtraducciones();
-         public idiomas idiomas = new idiomas();
+        
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -67,7 +66,6 @@ namespace sistema
         {
             poner_nombre_usuario_label();
             activar_permisos();
-            idiomas = new idiomas("Español");
             if (sesion.instancia != null)
             {
                 activar_y_desactivar_login_logout();
@@ -133,14 +131,14 @@ namespace sistema
         }
         public void actualizar_idioma()
         {
-            usuarios_menu.Text = traducciones.traducir(usuarios_menu.Name);
-            login_menu.Text = traducciones.traducir(login_menu.Name);
-            reportes_menu.Text = traducciones.traducir(reportes_menu.Name);
-            idioma_menu.Text = traducciones.traducir(idioma_menu.Name);
-            sistema_menu.Text = traducciones.traducir(sistema_menu.Name);
-            CERRAR_SESION_MENU.Text = traducciones.traducir(CERRAR_SESION_MENU.Name);
-            permisos_menu.Text = traducciones.traducir(permisos_menu.Name);
-            idioma2_menu.Text = traducciones.traducir(idioma2_menu.Name);
+            usuarios_menu.Text = BLLtraducciones.traducir(usuarios_menu.Name);
+            login_menu.Text = BLLtraducciones.traducir(login_menu.Name);
+            reportes_menu.Text = BLLtraducciones.traducir(reportes_menu.Name);
+            idioma_menu.Text = BLLtraducciones.traducir(idioma_menu.Name);
+            sistema_menu.Text = BLLtraducciones.traducir(sistema_menu.Name);
+            CERRAR_SESION_MENU.Text = BLLtraducciones.traducir(CERRAR_SESION_MENU.Name);
+            permisos_menu.Text = BLLtraducciones.traducir(permisos_menu.Name);
+            idioma2_menu.Text = BLLtraducciones.traducir(idioma2_menu.Name);
         }
         private void españolToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -209,31 +207,10 @@ namespace sistema
         {
             idioma_menu.DropDownItems.Clear();
             foreach (idiomas idioma in lista) {
-                ToolStripMenuItem idiomaItem = new ToolStripMenuItem(idioma.Idioma);
+                ToolStripMenuItem idiomaItem = new ToolStripMenuItem(idioma.idioma);
 
-                idiomaItem.Click += (x, e) =>
-                {
-                    idiomas = new idiomas(idioma.Idioma);
-                    actualizar_idioma();
-                    if (u != null)
-                    {
-                        u.actualizar_idioma();
-                    }
-                    if (s != null)
-                    {
-                        s.actualizar_idioma();
-                    }
-                    if (idi!=null)
-                    {
-                        idi.actualizar_idioma();
-                    }
-                    if(sist!=null){
-                        sist.actualizar_idioma();
-                    }
-                };
                 idioma_menu.DropDownItems.Add(idiomaItem);
             }
-
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)

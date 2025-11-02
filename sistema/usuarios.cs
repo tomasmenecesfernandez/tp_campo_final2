@@ -25,7 +25,6 @@ namespace sistema
         BEusuario usuario;
         BLLusuario bllusuario = new BLLusuario();
         BLLrol bllrol = new BLLrol();
-        BLLtraducciones traducciones = new BLLtraducciones();
         BEpermisoComponente nodo_seleccionado;
         BEcontrolCambioUsuario controlusuario_select = new BEcontrolCambioUsuario();
         BLLpermiso bllpermiso = new BLLpermiso();
@@ -132,18 +131,18 @@ namespace sistema
 
         private void usuarios_Load(object sender, EventArgs e)
         {
-            if(idiomas.lista_traducciones.Count>0 ) actualizar_idioma();
             radioButton1.Checked = true;
             lista_permisos = bllpermiso.leer_permisos();
             mostrar_data();
+
         }
         public void actualizar_idioma()
         {
-            usuario_label1.Text = traducciones.traducir(usuario_label1.Name);
-                contraceña_label1.Text = traducciones.traducir(contraceña_label1.Name);
-                agregar_boton1.Text = traducciones.traducir(agregar_boton1.Name);
-                modificar_boton1.Text = traducciones.traducir(modificar_boton1.Name);
-                borrar_boton1.Text = traducciones.traducir(borrar_boton1.Name);
+                usuario_label1.Text = BLLtraducciones.traducir(usuario_label1.Name);
+                contraceña_label1.Text = BLLtraducciones.traducir(contraceña_label1.Name);
+                agregar_boton1.Text = BLLtraducciones.traducir(agregar_boton1.Name);
+                modificar_boton1.Text = BLLtraducciones.traducir(modificar_boton1.Name);
+                borrar_boton1.Text = BLLtraducciones.traducir(borrar_boton1.Name);
             
         }
         private void button3_Click(object sender, EventArgs e)

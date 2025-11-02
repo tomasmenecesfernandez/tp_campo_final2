@@ -27,7 +27,6 @@ namespace sistema
         Form1 form_padre;
         public static BEusuario usuario;
         BLLusuario bllusuario = new BLLusuario();
-        BLLtraducciones blltraducciones = new BLLtraducciones();
         idiomas idiomas = new idiomas();
         private void button1_Click(object sender, EventArgs e)
         {
@@ -72,14 +71,13 @@ namespace sistema
         }
         public  void actualizar_idioma()
         {
-            usuario_label2.Text = blltraducciones.traducir(usuario_label2.Name);
-            contraseña_label2.Text = blltraducciones.traducir(contraseña_label2.Name);
-            agregar_boton2.Text = blltraducciones.traducir(agregar_boton2.Name);
+            usuario_label2.Text = BLLtraducciones.traducir(usuario_label2.Name);
+            contraseña_label2.Text = BLLtraducciones.traducir(contraseña_label2.Name);
+            agregar_boton2.Text = BLLtraducciones.traducir(agregar_boton2.Name);
         }
         
         private void sesion1_Load(object sender, EventArgs e)
         {
-            if (idiomas.lista_traducciones.Count > 0) { actualizar_idioma();}
             comboBox1.DataSource = null;
             comboBox1.DataSource= idiomas.leer_idiomas();
             textBox1.Text = "tomi";
