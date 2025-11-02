@@ -140,7 +140,7 @@ namespace sistema
         {
             usuario_rbtm_rol.Checked = true;
             lista_permisos = bllpermiso.leer_permisos();
-            mostrar_data();
+            mostrar_data(); 
 
         }
         public void actualizar_idioma()

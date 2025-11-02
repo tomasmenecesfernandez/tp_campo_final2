@@ -72,7 +72,7 @@ namespace sistema
         {
             poner_nombre_usuario_label();
             activar_permisos();
-            cargar_idiomas_combobox(idioma.idioma);
+            cargar_idiomas_combobox(idioma.Idioma);
             if (sesion.instancia != null)
             {
                 activar_y_desactivar_login_logout();

@@ -69,7 +69,7 @@ namespace sistema
             else
             {
                 form_padre.activar_permisos();
-                form_padre.cargar_idiomas_combobox(idiomas.idioma);
+                form_padre.cargar_idiomas_combobox(idiomas.Idioma);
                 form_padre.activar_y_desactivar_login_logout();
                 form_padre.poner_nombre_usuario_label();
             }

@@ -17,10 +17,12 @@ namespace sistema
         public idioma(idiomas idioma)
         {
             InitializeComponent();
+            idiomas = idioma;
             idioma.guardar_observer(this);
             actualizar_idioma();
         }
-        
+
+        idiomas idiomas;
         BEtraducciones traduccion = new BEtraducciones();
         idiomas idiomas1 = new idiomas();
         private void label2_Click(object sender, EventArgs e)
@@ -69,14 +71,14 @@ namespace sistema
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             idiomas1 = (idiomas)dataGridView1.CurrentRow.DataBoundItem;
-            textBox1.Text = idiomas1.idioma;
+            textBox1.Text = idiomas1.Idioma;
             mostrar_data2();
         }
         
         public void mostrar_data2()
         {
             dataGridView2.DataSource = null;
-            dataGridView2.DataSource = BLLtraducciones.leer_traducciones(idiomas1.idioma);
+            dataGridView2.DataSource = BLLtraducciones.leer_traducciones(idiomas1.Idioma);
 
         }
 

@@ -14,7 +14,7 @@ namespace Servicios.observer
         public int codigo { get; set; }
         public int digito_varificador { get; set; }
 
-        public string idioma{get;set;}
+         string idioma{get;set;}
 
         public idiomas() { }
         public idiomas(string idioma1) { idioma = idioma1; }
@@ -53,10 +53,10 @@ namespace Servicios.observer
             int v = 0;
             foreach (char c in texto)
             {
-                suma += (int)c * v;
-                v+=2;
+                v += 2;
+                suma += (int)c*c * 17*v;
             }
-
+            suma=suma % 10007;
             return suma;
         }
         public static List<idiomas> leer_idiomas()
