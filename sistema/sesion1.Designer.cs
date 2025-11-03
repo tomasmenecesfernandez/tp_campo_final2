@@ -115,6 +115,7 @@ namespace sistema
             this.Controls.Add(this.sesion_ingresar);
             this.Name = "sesion1";
             this.Text = "sesion";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.sesion1_FormClosing);
             this.Load += new System.EventHandler(this.sesion1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

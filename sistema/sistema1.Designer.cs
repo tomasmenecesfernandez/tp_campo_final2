@@ -104,6 +104,7 @@ namespace sistema_de_ropa
             this.sistema_groupbox_pedidos.TabIndex = 4;
             this.sistema_groupbox_pedidos.TabStop = false;
             this.sistema_groupbox_pedidos.Text = "pedidos";
+            this.sistema_groupbox_pedidos.Enter += new System.EventHandler(this.sistema_groupbox_pedidos_Enter);
             // 
             // sistema_cantidad_ropa
             // 
@@ -117,6 +118,7 @@ namespace sistema_de_ropa
             // 
             // textBox5
             // 
+            this.textBox5.Enabled = false;
             this.textBox5.Location = new System.Drawing.Point(23, 217);
             this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Name = "textBox5";
@@ -136,6 +138,7 @@ namespace sistema_de_ropa
             // 
             // textBox4
             // 
+            this.textBox4.Enabled = false;
             this.textBox4.Location = new System.Drawing.Point(23, 167);
             this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
@@ -155,6 +158,7 @@ namespace sistema_de_ropa
             // 
             // textBox3
             // 
+            this.textBox3.Enabled = false;
             this.textBox3.Location = new System.Drawing.Point(23, 111);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
@@ -175,6 +179,7 @@ namespace sistema_de_ropa
             // 
             // textBox1
             // 
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(23, 57);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
@@ -357,6 +362,7 @@ namespace sistema_de_ropa
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "sistema1";
             this.Text = "sistema";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.sistema1_FormClosing);
             this.Load += new System.EventHandler(this.sistema_Load);
             this.sistema_groupbox_pedidos.ResumeLayout(false);
             this.sistema_groupbox_pedidos.PerformLayout();

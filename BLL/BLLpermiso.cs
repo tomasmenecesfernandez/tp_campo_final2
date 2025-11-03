@@ -16,16 +16,6 @@ namespace BLL
         {
             dal.agregar_nodo(permiso, codpadre, false);
         }
-        public void modificar_permiso(BEpermiso rol)
-        {
-            dal.modificar_nodo(rol,false);
-
-        }
-        public void borrar_permiso(BEpermiso rol)
-        {
-            dal.borrar_rol(rol,false);
-
-        }
         public List<BEpermiso> leer_permisos()
         {
            return dal.leer_permisos();

@@ -295,6 +295,11 @@ namespace sistema
                 MessageBox.Show("error, seleccione un usuario.");
             }
         }
+
+        private void usuarios_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            idioma.eliminar_observer(this);
+        }
     }
 
 }

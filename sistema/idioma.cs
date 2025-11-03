@@ -14,15 +14,15 @@ namespace sistema
 {
     public partial class idioma : Form,Iobservertraduccion
     {
-        public idioma(idiomas idioma)
+        public idioma(idiomas idiomas)
         {
             InitializeComponent();
-            idiomas = idioma;
-            idioma.guardar_observer(this);
+            idioma1 = idiomas;
+            idiomas.guardar_observer(this);
             actualizar_idioma();
         }
 
-        idiomas idiomas;
+        idiomas idioma1;
         BEtraducciones traduccion = new BEtraducciones();
         idiomas idiomas1 = new idiomas();
         private void label2_Click(object sender, EventArgs e)
@@ -117,6 +117,11 @@ namespace sistema
                 dataGridView2.DataSource = null;
             }
             else { MessageBox.Show("error, seleccione un idioma."); }
+        }
+
+        private void idioma_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            idioma1.eliminar_observer(this);
         }
     }
 }

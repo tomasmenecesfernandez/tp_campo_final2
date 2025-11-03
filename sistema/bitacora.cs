@@ -17,9 +17,11 @@ namespace sistema
         {
             InitializeComponent();
             BLLtraducciones.cargar_listatraducciones(idiomas.Idioma);
+            idioma = idiomas;
             idiomas.guardar_observer(this);
             actualizar_idioma();
         }
+        idiomas idioma;
         bllregistro bllregistro = new bllregistro();
         private void bitacora_Load(object sender, EventArgs e)
         {
@@ -35,6 +37,11 @@ namespace sistema
         {
             bitacora_label_bitacora.Text = BLLtraducciones.traducir(bitacora_label_bitacora.Name);
 
+        }
+
+        private void bitacora_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            idioma.eliminar_observer(this);
         }
     }
 }

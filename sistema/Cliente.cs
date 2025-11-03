@@ -18,6 +18,7 @@ namespace sistema
         public Cliente(idiomas idiomas)
         {
             InitializeComponent();
+            idioma = idiomas;
             BLLtraducciones.cargar_listatraducciones(idiomas.Idioma);
             idiomas.guardar_observer(this);
             actualizar_idioma();
@@ -26,10 +27,12 @@ namespace sistema
         {
             InitializeComponent();
             form_padre = s;
+            idioma = idiomas;
             BLLtraducciones.cargar_listatraducciones(idiomas.Idioma);
             idiomas.guardar_observer(this);
             actualizar_idioma();
         }
+        idiomas idioma;
         sistema1 form_padre;
         BLL_Localidad bll_localidad = new BLL_Localidad();
         BEcliente cliente = new BEcliente();
@@ -109,7 +112,7 @@ namespace sistema
 
         private void button2_Click(object sender, EventArgs e)
         {
-            localidad l = new localidad(this);
+            localidad l = new localidad(this,idioma);
             l.MdiParent = this.MdiParent;
             l.Show();
         }
@@ -143,7 +146,8 @@ namespace sistema
         private void Cliente_FormClosing(object sender, FormClosingEventArgs e)
         {
                 if(form_padre!=null)form_padre.cargar_grilla();
-           }
+            idioma.eliminar_observer(this);
+        }
 
         public void actualizar_idioma()
         {

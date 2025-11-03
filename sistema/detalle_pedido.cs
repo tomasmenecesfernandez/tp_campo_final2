@@ -20,7 +20,9 @@ namespace sistema
             InitializeComponent();
             BLLtraducciones.cargar_listatraducciones(idiomas.Idioma);
             idiomas.guardar_observer(this);
-            actualizar_idioma();
+            actualizar_idioma(); 
+            idioma = idiomas;
+
         }
         public detalle_pedido(sistema1 s,idiomas idiomas)
         {
@@ -29,9 +31,10 @@ namespace sistema
             BLLtraducciones.cargar_listatraducciones(idiomas.Idioma);
             idiomas.guardar_observer(this);
             actualizar_idioma();
+            idioma = idiomas;
         }
+        idiomas idioma;
         sistema1 sistema_padre;
-
         BEpedidos_detalle pedido_select = new BEpedidos_detalle();
         BLLPedido bllpedido = new BLLPedido();
         enum si_no
@@ -212,6 +215,8 @@ namespace sistema
         {
             sistema_padre.cargar_grilla();
             sistema_padre.limpiar_pedido();
+            idioma.eliminar_observer(this);
+
         }
 
         public object get_iteam_marcado(string caso)

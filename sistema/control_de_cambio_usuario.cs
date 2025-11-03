@@ -19,10 +19,12 @@ namespace sistema
             InitializeComponent();
             form_padre = form1;
             usuario=usuario1;
+            idioma = idiomas;
             BLLtraducciones.cargar_listatraducciones(idiomas.Idioma);
             idiomas.guardar_observer(this);
             actualizar_idioma();
         }
+        idiomas idioma;
         usuarios form_padre;
         BEusuario usuario;
         BLLusuario bllusuario = new BLLusuario();
@@ -62,6 +64,7 @@ namespace sistema
         private void control_de_cambio_usuario_FormClosing(object sender, FormClosingEventArgs e)
         {
             form_padre.mostrar_data();
+            idioma.eliminar_observer(this);
         }
 
         public void actualizar_idioma()

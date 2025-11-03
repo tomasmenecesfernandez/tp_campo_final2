@@ -63,6 +63,7 @@ namespace sistema
             this.Controls.Add(this.dataGridView1);
             this.Name = "bitacora";
             this.Text = "bitacora";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.bitacora_FormClosing);
             this.Load += new System.EventHandler(this.bitacora_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

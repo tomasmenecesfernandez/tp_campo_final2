@@ -73,9 +73,7 @@ namespace DAL
                     {
                         BEpedidos pedido = new BEpedidos();
                         pedido.codigo = Convert.ToInt32(fila1["codigo"]);
-                        pedido.cantidad_ropa = Convert.ToInt32(fila1["cantidad_ropa"]);
                         pedido.fecha = (DateTime)fila1["fecha"];
-                        pedido.total= Convert.ToInt32(fila1["total"]);
                         pedido.descuento = Convert.ToInt32(fila1["descuento"]);
                         consulta = "leer_pedidos_detalles";
                         Hashtable hdatos1 = new Hashtable();

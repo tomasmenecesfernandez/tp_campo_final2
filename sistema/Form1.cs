@@ -96,6 +96,7 @@ namespace sistema
             {
                 if (sesion.instancia.usuario.permisos != null)
                 {
+                    permisos_menu.Enabled = true;
                     foreach (BEpermiso permiso in sesion.instancia.usuario.permisos)
                     {
                         switch (permiso.nombre)
@@ -121,7 +122,11 @@ namespace sistema
                                 menu_clientes.Enabled = true;
                                 permisos_menu.DropDownItems.Add("ABM_clientes");
                                 break;
-                            case "Ver_Bitacora":
+                            case "ABM_permisos":
+                                menu_ABMPermisos.Enabled = true;
+                                permisos_menu.DropDownItems.Add("ABM_permisos");
+                                break;
+                            case "Ver_bitacora":
                                 menu_bitacora.Enabled = true;
                                 permisos_menu.DropDownItems.Add("Ver_Bitacora");
                                 break;
@@ -153,6 +158,8 @@ namespace sistema
             idioma2_menu.Text = BLLtraducciones.traducir(idioma2_menu.Name);
             menu_label_usuario.Text = BLLtraducciones.traducir(menu_label_usuario.Name);
             menu_clientes.Text = BLLtraducciones.traducir(menu_clientes.Name);
+            menu_bitacora.Text = BLLtraducciones.traducir(menu_bitacora.Name);
+
         }
         private void españolToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -181,6 +188,7 @@ namespace sistema
                 sesion.Logout();
                 cerrar_formularios();
                 login_menu.Enabled = true;
+                label2.Text = "";
                 CERRAR_SESION_MENU.Enabled = false;
                 desactivar_form();
                 menu_label_usuario.Text = "";// label de usuario
@@ -199,6 +207,8 @@ namespace sistema
         }
         public void desactivar_form()
         {
+            permisos_menu.Enabled = false;
+            menu_ABMPermisos.Enabled = false;
             menu_bitacora.Enabled = false;
             reportes_menu.Enabled = false;
             idioma2_menu.Enabled = false;

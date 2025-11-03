@@ -18,19 +18,32 @@ namespace sistema
         {
             InitializeComponent();
             BLLtraducciones.cargar_listatraducciones(idiomas.Idioma);
+            idioma = idiomas;
             idiomas.guardar_observer(this);
             actualizar_idioma();
         }
+        idiomas idioma;
         List<BEpermiso> lista_permisos = new List<BEpermiso>();
         BLLrol bllrol = new BLLrol();
         BEpermisoComponente nodo_seleccionado;
         BLLpermiso bllpermiso = new BLLpermiso();
         private void composite_Load(object sender, EventArgs e)
         {
-            mostrar_treeview(bllrol.traer_nodos_hijos(0)[0], treeView1.Nodes);
+            mostrar_composite();
             treeView1.ExpandAll();
+            lista_permisos = bllpermiso.leer_permisos();
         }
-        public void mostrar_treeview(BEpermisoComponente componenteraiz, TreeNodeCollection nodos)
+        public void mostrar_composite()
+        {
+            int i = (-1);
+            foreach (BEpermisoComponente compo in bllrol.traer_nodos_hijos(6))
+            {
+                i++;
+                mostrar_treeview(bllrol.traer_nodos_hijos(6)[i], treeView1.Nodes);
+            }
+
+        }
+        public  void mostrar_treeview(BEpermisoComponente componenteraiz, TreeNodeCollection nodos)
         {
             TreeNode nodo1 = new TreeNode(componenteraiz.nombre);
             nodo1.Tag = componenteraiz;
@@ -47,12 +60,17 @@ namespace sistema
             if (treeView1.SelectedNode != null)
             {
                 nodo_seleccionado = (BEpermisoComponente)treeView1.SelectedNode.Tag;
+                label2.Text = nodo_seleccionado.nombre;
                 if (nodo_seleccionado is BEpermiso)
                 {
+                    comboBox2.Enabled = false;
+                    btm_modificar.Enabled = false;
                     composite_rbtm_permiso.Checked = true;
                 }
                 else if (nodo_seleccionado is BErol)
                 {
+                    comboBox2.Enabled = true;
+                    btm_modificar.Enabled = true;
                     composite_rbtm_rol.Checked = true;
                 }
             }
@@ -69,17 +87,12 @@ namespace sistema
                     {
                         if (composite_rbtm_rol.Checked)//rol
                         {
-                            if (bllrol.esUnRolNuevo(comboBox2.Text))
-                            {
-                                BErol rol = new BErol(comboBox2.Text);
-                                bllrol.agregar_rol(rol, nodo_seleccionado.codigo);
-                            }
-                            else
+                            if (!bllrol.esUnRolNuevo(comboBox2.Text))
                             {
                                 BErol rol = new BErol("");
                                 rol = (BErol)comboBox2.SelectedItem;
                                 bllrol.verificar_rol_bucle(rol, nodo_seleccionado.nombre);
-                                bllrol.agregar_rol(rol, nodo_seleccionado.codigo);
+                                    bllrol.agregar_rol(rol, nodo_seleccionado.codigo);
                             }
 
                         }
@@ -91,7 +104,7 @@ namespace sistema
                             bllpermiso.agregar_permiso(permiso, nodo_seleccionado.codigo);
                         }
                         treeView1.Nodes.Clear();
-                        mostrar_treeview(bllrol.traer_nodos_hijos(0)[0], treeView1.Nodes);
+                        mostrar_composite();
                         treeView1.ExpandAll();
 
                     }
@@ -109,39 +122,19 @@ namespace sistema
 
             if (nodo_seleccionado != null)
             {
-                if (nodo_seleccionado.nombre == "sistema") throw new Exception("no se puede borrar el nodo sistema");
-                if (composite_rbtm_rol.Checked)//rol
-                {
-                    bllrol.borrar_rol((BErol)nodo_seleccionado);
-                }
-                else if (composite_rbtm_permiso.Checked)
-                {
-                    bllpermiso.borrar_permiso((BEpermiso)nodo_seleccionado);
-                }
+                bllrol.borrar_nodo(nodo_seleccionado);
+                lista_permisos = bllpermiso.leer_permisos();
                 treeView1.Nodes.Clear();
-                mostrar_treeview(bllrol.traer_nodos_hijos(0)[0], treeView1.Nodes);
+                mostrar_composite();
                 treeView1.ExpandAll();
-
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            formulario_datos_compostite fdc = new formulario_datos_compostite(this,"modificar",idioma);
+            fdc.ShowDialog();
 
-            if (nodo_seleccionado != null)
-            {
-                if (composite_rbtm_rol.Checked)//rol
-                {
-                    bllrol.modificar_rol((BErol)nodo_seleccionado);
-                }
-                else if (composite_rbtm_permiso.Checked)
-                {
-                    bllpermiso.modificar_permiso((BEpermiso)nodo_seleccionado);
-                }
-                treeView1.Nodes.Clear();
-                mostrar_treeview(bllrol.traer_nodos_hijos(0)[0], treeView1.Nodes);
-                treeView1.ExpandAll();
-            }
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -163,6 +156,72 @@ namespace sistema
             btm_modificar.Text = BLLtraducciones.traducir(btm_modificar.Name);
             btm_borrar.Text = BLLtraducciones.traducir(btm_borrar.Name);
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            formulario_datos_compostite fdc = new formulario_datos_compostite(this,"agregar_nodo",idioma);
+            fdc.ShowDialog();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+        public void modificar_rol_formulario(string nombre)
+        {
+            if (nodo_seleccionado != null)
+            {
+                if (nodo_seleccionado is BErol)//rol
+                {
+                    nodo_seleccionado.nombre = nombre;
+                    bllrol.modificar_rol((BErol)nodo_seleccionado);
+                    lista_permisos = bllpermiso.leer_permisos();
+                    treeView1.Nodes.Clear();
+                    mostrar_composite();
+                    treeView1.ExpandAll();
+                    comboBox2.DataSource = bllrol.traer_todos_los_roles();
+                    comboBox2.DisplayMember = "nombre";
+                }
+            }
+            else { MessageBox.Show("error, seleccione un nodo."); }
+        }
+        public void agregar_rol_formulario(string nombre)
+        {
+            try
+            {if (bllrol.esUnRolNuevo(nombre))
+                {
+                    BErol rol = new BErol(nombre);
+                    bllrol.agregar_rol(rol, 6);
+                    treeView1.Nodes.Clear();
+                    mostrar_composite();
+                    treeView1.ExpandAll();
+                    groupBox2.Enabled = true;
+                    lista_permisos = bllpermiso.leer_permisos();
+                    comboBox2.DataSource = bllrol.traer_todos_los_roles();
+                    comboBox2.DisplayMember = "nombre";
+                }
+                else
+                {
+                    throw new Exception("Error, ese rol ya existe.");
+                }
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            groupBox2.Enabled = true;
+
+        }
+
+        private void composite_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            idioma.eliminar_observer(this);
         }
     }
 }

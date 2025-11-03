@@ -18,14 +18,19 @@ namespace sistema
         {
             InitializeComponent();
             BLLtraducciones.cargar_listatraducciones(idiomas.Idioma);
+            idioma = idiomas;
             idiomas.guardar_observer(this);
             actualizar_idioma();
         }
-        public localidad(Cliente form_cliente)
+        public localidad(Cliente form_cliente,idiomas idiomas)
         {
             InitializeComponent();
+            BLLtraducciones.cargar_listatraducciones(idiomas.Idioma);
+            idioma = idiomas;
+            idiomas.guardar_observer(this);
             form_padre = form_cliente;
         }
+        idiomas idioma;
         Cliente form_padre;
         BElocalidad localidad_select = new BElocalidad();
         BLL_Localidad bll_loc = new BLL_Localidad();
@@ -75,6 +80,8 @@ namespace sistema
         private void localidad_FormClosing(object sender, FormClosingEventArgs e)
         {
             form_padre.cargar_localidades();
+            idioma.eliminar_observer(this);
+
         }
 
         public void actualizar_idioma()

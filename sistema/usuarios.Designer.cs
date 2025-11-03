@@ -217,6 +217,7 @@ namespace sistema
             this.Controls.Add(this.btm_agregar);
             this.Name = "usuarios";
             this.Text = "usuario";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.usuarios_FormClosing);
             this.Load += new System.EventHandler(this.usuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

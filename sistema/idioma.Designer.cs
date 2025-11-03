@@ -151,6 +151,7 @@ namespace sistema
             this.Controls.Add(this.btm_agregar);
             this.Name = "idioma";
             this.Text = "idioma";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.idioma_FormClosing);
             this.Load += new System.EventHandler(this.idioma_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

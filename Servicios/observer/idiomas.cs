@@ -86,7 +86,18 @@ namespace Servicios.observer
             }
             else
             {
-                throw new Exception("ya la traduccion esta en el sistema");
+                throw new Exception("el observer ya esta en la lista");
+            }
+        }
+        public void eliminar_observer(Iobservertraduccion observer)
+        {
+            if (lista_observer.Contains(observer))
+            {
+                lista_observer.Remove(observer);
+            }
+            else
+            {
+                throw new Exception("el observer no esta en la lista");
             }
         }
         public override string ToString()

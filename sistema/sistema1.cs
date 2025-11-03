@@ -122,10 +122,10 @@ namespace sistema_de_ropa
                 pedido_select = (BEpedidos)listBox1.SelectedItem;
                 TEXTO_TOTAL_ROPA.Text = pedido_select.total.ToString();
                 TEXTO_FECHA_PEDIDO.Text = pedido_select.fecha.ToString("yyyy-MM-dd");
-                TEXTO_DESCUENTO.Text = pedido_select.descuento.ToString();
+                TEXTO_DESCUENTO.Text = pedido_select.descuento.ToString() + "%";
                 textBox1.Text= pedido_select.total.ToString();
                 textBox3.Text= pedido_select.fecha.ToString("yyyy-MM-dd");
-                textBox4.Text= pedido_select.descuento.ToString();
+                textBox4.Text= pedido_select.descuento.ToString()+"%";
                 textBox5.Text = pedido_select.cantidad_ropa.ToString();
 
             }
@@ -158,7 +158,11 @@ namespace sistema_de_ropa
             textBox4.Text = "";
             textBox5.Text = "";
             traer_pedidos_cliente();
-            
+            if (cliente != null)
+            {
+                this.Enabled = true;
+            }
+            else { this.Enabled = false; }
         }
 
         private void checkedListBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -278,6 +282,15 @@ namespace sistema_de_ropa
             btm_borrar.Text = BLLtraducciones.traducir(btm_borrar.Name);
             sistema_btm_personalizar_pedido.Text = BLLtraducciones.traducir(sistema_btm_personalizar_pedido.Name);
 
+        }
+
+        private void sistema_groupbox_pedidos_Enter(object sender, EventArgs e)
+        {
+        }
+
+        private void sistema1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            idioma.eliminar_observer(this);
         }
     }
 }

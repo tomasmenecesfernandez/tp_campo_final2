@@ -62,7 +62,7 @@ namespace DAL
             hash.Add("@tipocompuesto", compuesto);
             acceso.escribir(comando,hash);
         }
-        public void borrar_rol(BEpermisoComponente rol,bool compuesto)
+        public void borrar_nodo(BEpermisoComponente rol,bool compuesto)
         {
             string comando = "borrar_elemento_composite";
             Hashtable hash = new Hashtable();

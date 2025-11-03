@@ -11,7 +11,7 @@ namespace BLL
     public class BLLrol
     {
         DALrolpermiso dal = new DALrolpermiso();
-        public List<BEpermisoComponente> traer_nodos_hijos(int cod)
+         public List<BEpermisoComponente> traer_nodos_hijos(int cod)
         {
             List<BEpermisoComponente> lista = new List<BEpermisoComponente>();
             lista = (dal.TraerArbolPermisos(cod));
@@ -26,9 +26,17 @@ namespace BLL
             dal.modificar_nodo(rol, true);
 
         }
-        public void borrar_rol(BErol rol)
+        public void borrar_nodo(BEpermisoComponente componente)
         {
-            dal.borrar_rol(rol, true);
+            if (componente is BErol)
+            {
+                dal.borrar_nodo(componente, true);
+            }
+            else
+            {
+                dal.borrar_nodo(componente, false);
+
+            }
 
         }
         public List<BEpermisoComponente> traer_todos_los_roles()
@@ -107,6 +115,9 @@ namespace BLL
         }
         public void verificar_rol_bucle(BErol rol_padre,string nombre_rol_hijo)
         {
+            if(rol_padre.nombre == nombre_rol_hijo){
+                throw new Exception("error, al agregar el rol seleccionado genera un bucle infinito.");
+            }
             foreach (BEpermisoComponente hijo in rol_padre.hijos)
             {
                 if (hijo is BErol)

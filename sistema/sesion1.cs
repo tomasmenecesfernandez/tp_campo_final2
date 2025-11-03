@@ -24,9 +24,11 @@ namespace sistema
             InitializeComponent();
             form_padre = form;
             idiomas = idiomas1;
+            idioma = idiomas;
             idiomas.guardar_observer(this);
             actualizar_idioma();
         }
+        idiomas idioma;
         Form1 form_padre;
         public static BEusuario usuario;
         BLLusuario bllusuario = new BLLusuario();
@@ -91,6 +93,9 @@ namespace sistema
             textBox2.Text = "1234";
         }
 
-
+        private void sesion1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            idioma.eliminar_observer(this);
+        }
     }
 }
