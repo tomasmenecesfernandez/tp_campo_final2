@@ -137,12 +137,12 @@ namespace sistema
                 BEpedidos_detalle pedido_detalle = new BEpedidos_detalle();
                 if (detalle_rbtm_buzos.Checked) 
                 {
-                    BEbuzos buzos = new BEbuzos(get_iteam_marcado("caso1").ToString(), get_iteam_marcado("caso2").ToString(),comboBox1.Text);
+                    BEbuzos buzos = new BEbuzos(checkedListBox2.CheckedItems[0].ToString(), checkedListBox1.CheckedItems[0].ToString(),comboBox1.Text);
                     pedido_detalle.ropa = buzos;
                 }
                 else if(detalle_rbtm_jogging.Checked)
                 {
-                    BEjogging jogging = new BEjogging(get_iteam_marcado("caso1").ToString(), get_iteam_marcado("caso2").ToString());
+                    BEjogging jogging = new BEjogging(checkedListBox2.CheckedItems[0].ToString(), checkedListBox1.CheckedItems[0].ToString());
                     pedido_detalle.ropa = jogging;
                 }
                 pedido_detalle.cantidad = Convert.ToInt32(textBox1.Text);
@@ -161,16 +161,17 @@ namespace sistema
                 BEpedidos_detalle pedido_detalle = new BEpedidos_detalle();
                 if (listBox1.SelectedItem != null)
                 {
-                    if (detalle_rbtm_buzos.Checked)
+                    if (detalle_rbtm_buzos.Checked && pedido_select.ropa is BEbuzos)
                     {
-                        BEbuzos buzos = new BEbuzos(checkedListBox2.SelectedItem.ToString(), checkedListBox1.SelectedItem.ToString(), comboBox1.Text);
+                        BEbuzos buzos = new BEbuzos(checkedListBox2.CheckedItems[0].ToString(), checkedListBox1.CheckedItems[0].ToString(), comboBox1.Text);
                         pedido_detalle.ropa = buzos;
                     }
-                    else if (detalle_rbtm_jogging.Checked)
+                    else if (detalle_rbtm_jogging.Checked && pedido_select.ropa is BEjogging)
                     {
-                        BEjogging jogging = new BEjogging(checkedListBox2.SelectedItem.ToString(), checkedListBox1.SelectedItem.ToString());
+                        BEjogging jogging = new BEjogging(checkedListBox2.CheckedItems[0].ToString(), checkedListBox1.CheckedItems[0].ToString());
                         pedido_detalle.ropa = jogging;
                     }
+                    else{ throw new Exception("error, no se puede modificar la misma prenda cambiado el tipo de ropa."); }
                     pedido_detalle.cantidad = Convert.ToInt32(textBox1.Text);
                     pedido_detalle.codigo_pedido = sistema1.pedido_select.codigo;
                     pedido_detalle.codigo = pedido_select.codigo;
@@ -178,8 +179,9 @@ namespace sistema
                     bllpedido.modificar(pedido_detalle);
                     cargar_pedidos_detalles();
                 }
+                else { throw new Exception("error, seleccione un detalle de pedido"); }
             }
-            catch { MessageBox.Show("error, vuelva a intentarlo."); }
+            catch(Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -219,30 +221,6 @@ namespace sistema
 
         }
 
-        public object get_iteam_marcado(string caso)
-        {
-            if (caso=="caso2") {
-                if (checkedListBox1.CheckedItems.Count == 0)
-                {
-                    return null;
-                }
-                else
-                {
-                    return checkedListBox1.CheckedItems[0];
-                } 
-            }else if (caso == "caso1")
-            {
-                if (checkedListBox2.CheckedItems.Count == 0)
-                {
-                    return null;
-                }
-                else
-                {
-                    return checkedListBox2.CheckedItems[0];
-                }
-            }
-            return null;
-        }
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 

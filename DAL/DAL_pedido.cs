@@ -103,7 +103,7 @@ public void borrar_pedido_detalle(BEpedidos_detalle pedido_detalle)
                 else //buzo
                 {
                     BEbuzos buzos = new BEbuzos();
-                    buzos.codigo = Convert.ToInt32(fila["codigo"]);
+                    buzos.codigo = Convert.ToInt32(fila["codigo_r"]);
                     buzos.talles = fila["talle"].ToString();
                     buzos.colores = fila["color"].ToString();
                     buzos.capucha = fila["capucha"].ToString();

@@ -14,14 +14,15 @@ namespace sistema
 {
     public partial class idioma : Form,Iobservertraduccion
     {
-        public idioma(idiomas idiomas)
+        public idioma(Form1 form_pa,idiomas idiomas)
         {
             InitializeComponent();
             idioma1 = idiomas;
+            form_padre = form_pa;
             idiomas.guardar_observer(this);
             actualizar_idioma();
         }
-
+        Form1 form_padre;
         idiomas idioma1;
         BEtraducciones traduccion = new BEtraducciones();
         idiomas idiomas1 = new idiomas();
@@ -39,6 +40,7 @@ namespace sistema
                     idiomas1 = new idiomas(textBox1.Text);
                     idiomas1.agregar_idioma(idiomas1);
                     cargar_data1();
+                    form_padre.cargar_idiomas_combobox(idioma1.Idioma);
                 }
                 else
                 {
@@ -115,6 +117,7 @@ namespace sistema
                 idiomas1.borrar_idioma(idiomas1.codigo);
                 cargar_data1();
                 dataGridView2.DataSource = null;
+                form_padre.cargar_idiomas_combobox(idioma1.Idioma);
             }
             else { MessageBox.Show("error, seleccione un idioma."); }
         }

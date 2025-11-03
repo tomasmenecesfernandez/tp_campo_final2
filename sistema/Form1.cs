@@ -56,7 +56,7 @@ namespace sistema
         private void idiomaToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            idi = new idioma(idioma);
+            idi = new idioma(this,idioma);
             cerrar_formularios();
             idi.MdiParent = this;
             idi.Dock = DockStyle.Fill;
