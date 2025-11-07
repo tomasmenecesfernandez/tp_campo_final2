@@ -15,7 +15,6 @@ namespace DAL
         {
             string consulta = "agregar_registro_usuario";
             Hashtable hash = new Hashtable();
-            hash.Add("@codigo", controlUsuario.codigo_usuario);
             hash.Add("@usuario", controlUsuario.usuario);
             hash.Add("@contraseña", controlUsuario.contraseña);
             hash.Add("@fecha", controlUsuario.fecha);

@@ -61,22 +61,24 @@ namespace BLL
             foreach(BEpermisoComponente nodo in traer_permisos_usuario(usuario))
             {
                 if (nodo is BErol) {
-                    lista.AddRange(traer_todos_los_permisos((BErol)nodo));
+                    traer_todos_los_permisos((BErol)nodo,lista);
                 }else
                 {
-                    lista.Add((BEpermiso)nodo);
+                    if ( !lista.Any(p=>p.codigo==nodo.codigo))
+                    {
+                        lista.Add((BEpermiso)nodo);
+                    }
                 }
             }
             return lista;
         }
-            public List<BEpermiso> traer_todos_los_permisos(BErol rol, List<BEpermiso>lista=null )
+            public List<BEpermiso> traer_todos_los_permisos(BErol rol, List<BEpermiso>lista )
         {
-            if (lista == null) lista = new List<BEpermiso>();
             foreach (BEpermisoComponente hijo in rol.hijos)
             {
                 if (hijo is BEpermiso)
                 {
-                    if(!lista.Contains((BEpermiso)hijo)) lista.Add((BEpermiso)hijo);
+                    if (!lista.Any(e=>e.codigo == hijo.codigo)) { lista.Add((BEpermiso)hijo); }
                 }
                 else
                 {

@@ -95,7 +95,7 @@ namespace sistema
 
         private void sesion1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            idioma.eliminar_observer(this);
+                if(form_padre!=null)idioma.eliminar_observer(this);
         }
     }
 }

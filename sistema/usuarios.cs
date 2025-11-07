@@ -166,9 +166,9 @@ namespace sistema
                     bllusuario.borrar(usuario);
                     mostrar_data();
                 }
-                catch
+                catch(Exception ex)
                 {
-                    MessageBox.Show("error");
+                    MessageBox.Show(ex.Message);
                 }
             }
             else
