@@ -86,8 +86,7 @@ namespace sistema
         }
         
         private void sesion1_Load(object sender, EventArgs e)
-        {
-            comboBox1.DataSource = null;
+        {comboBox1.DataSource = null;
             comboBox1.DataSource= idiomas.leer_idiomas();
             textBox1.Text = "tomi";
             textBox2.Text = "1234";

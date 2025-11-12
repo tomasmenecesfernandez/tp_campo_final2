@@ -44,47 +44,49 @@ namespace sistema
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(659, 193);
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(658, 289);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(211, 22);
+            this.textBox2.Size = new System.Drawing.Size(211, 28);
             this.textBox2.TabIndex = 11;
             // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(13, 189);
+            this.dataGridView2.Location = new System.Drawing.Point(13, 186);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(638, 257);
+            this.dataGridView2.Size = new System.Drawing.Size(636, 257);
             this.dataGridView2.TabIndex = 10;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(-3, 3);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 13);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(563, 165);
+            this.dataGridView1.Size = new System.Drawing.Size(636, 165);
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(568, 40);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(659, 39);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(169, 22);
+            this.textBox1.Size = new System.Drawing.Size(210, 28);
             this.textBox1.TabIndex = 8;
             // 
             // btm_modificar
             // 
-            this.btm_modificar.Location = new System.Drawing.Point(659, 225);
+            this.btm_modificar.Location = new System.Drawing.Point(658, 321);
             this.btm_modificar.Margin = new System.Windows.Forms.Padding(4);
             this.btm_modificar.Name = "btm_modificar";
             this.btm_modificar.Size = new System.Drawing.Size(212, 42);
@@ -96,10 +98,10 @@ namespace sistema
             // 
             // btm_agregar
             // 
-            this.btm_agregar.Location = new System.Drawing.Point(568, 72);
+            this.btm_agregar.Location = new System.Drawing.Point(659, 71);
             this.btm_agregar.Margin = new System.Windows.Forms.Padding(4);
             this.btm_agregar.Name = "btm_agregar";
-            this.btm_agregar.Size = new System.Drawing.Size(171, 42);
+            this.btm_agregar.Size = new System.Drawing.Size(212, 42);
             this.btm_agregar.TabIndex = 6;
             this.btm_agregar.Tag = "btnAdd";
             this.btm_agregar.Text = "Agregar";
@@ -109,28 +111,30 @@ namespace sistema
             // label_idioma_idioma
             // 
             this.label_idioma_idioma.AutoSize = true;
-            this.label_idioma_idioma.Location = new System.Drawing.Point(568, 13);
+            this.label_idioma_idioma.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_idioma_idioma.Location = new System.Drawing.Point(659, 13);
             this.label_idioma_idioma.Name = "label_idioma_idioma";
-            this.label_idioma_idioma.Size = new System.Drawing.Size(55, 17);
+            this.label_idioma_idioma.Size = new System.Drawing.Size(75, 24);
             this.label_idioma_idioma.TabIndex = 12;
             this.label_idioma_idioma.Text = "IDIOMA";
             // 
             // label_traduccion_idioma
             // 
             this.label_traduccion_idioma.AutoSize = true;
-            this.label_traduccion_idioma.Location = new System.Drawing.Point(656, 172);
+            this.label_traduccion_idioma.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_traduccion_idioma.Location = new System.Drawing.Point(654, 261);
             this.label_traduccion_idioma.Name = "label_traduccion_idioma";
-            this.label_traduccion_idioma.Size = new System.Drawing.Size(98, 17);
+            this.label_traduccion_idioma.Size = new System.Drawing.Size(133, 24);
             this.label_traduccion_idioma.TabIndex = 13;
             this.label_traduccion_idioma.Text = "TRADUCCION";
             this.label_traduccion_idioma.Click += new System.EventHandler(this.label2_Click);
             // 
             // btm_borrar
             // 
-            this.btm_borrar.Location = new System.Drawing.Point(568, 122);
+            this.btm_borrar.Location = new System.Drawing.Point(659, 121);
             this.btm_borrar.Margin = new System.Windows.Forms.Padding(4);
             this.btm_borrar.Name = "btm_borrar";
-            this.btm_borrar.Size = new System.Drawing.Size(171, 42);
+            this.btm_borrar.Size = new System.Drawing.Size(212, 42);
             this.btm_borrar.TabIndex = 14;
             this.btm_borrar.Tag = "btnAdd";
             this.btm_borrar.Text = "Borrar";

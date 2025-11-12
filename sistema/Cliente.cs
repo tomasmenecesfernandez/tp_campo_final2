@@ -162,5 +162,25 @@ namespace sistema
             btm_borrar.Text = BLLtraducciones.traducir(btm_borrar.Name);
 
         }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_localidad_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void clientes_provincia_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

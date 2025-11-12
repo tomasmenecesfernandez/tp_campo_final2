@@ -69,18 +69,23 @@ namespace sistema_de_ropa
             TEXTO_FECHA_PEDIDO.Text = "";
             listBox1.DataSource = null;
         }
-       
+
         private void button3_Click(object sender, EventArgs e)
         {
-            
-            if (listBox1.SelectedItems!=null) {
-                bllpedido.borrar(pedido_select);
-                cargar_grilla();
-                limpiar_pedido();
+            try
+            {
+                if (cliente == null) throw new Exception("error, seleccione un cliente.");
+                if (listBox1.SelectedItems.Count >0)
+                {
+                    bllpedido.borrar(pedido_select);
+                    cargar_grilla();
+                    limpiar_pedido();
 
+                }
+                else { throw new Exception("seleccione alguna prenda"); }
             }
-            else { MessageBox.Show("seleccione alguna prenda"); }
-        }
+            catch (Exception ex){ MessageBox.Show(ex.Message); }
+            }
 
         private void button4_Click(object sender, EventArgs e)
         {

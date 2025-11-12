@@ -59,7 +59,7 @@ namespace sistema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(734, 317);
             this.Controls.Add(this.control_btm_revertir);
             this.Controls.Add(this.dataGridView2);
             this.Name = "control_de_cambio_usuario";

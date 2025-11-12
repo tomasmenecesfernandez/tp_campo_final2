@@ -228,10 +228,10 @@ namespace sistema
             this.listBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(419, 60);
+            this.listBox1.Location = new System.Drawing.Point(330, 60);
             this.listBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(659, 308);
+            this.listBox1.Size = new System.Drawing.Size(749, 420);
             this.listBox1.TabIndex = 5;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 

@@ -75,9 +75,9 @@ namespace sistema
             // 
             // sesion_ingresar
             // 
-            this.sesion_ingresar.Location = new System.Drawing.Point(35, 153);
+            this.sesion_ingresar.Location = new System.Drawing.Point(12, 146);
             this.sesion_ingresar.Name = "sesion_ingresar";
-            this.sesion_ingresar.Size = new System.Drawing.Size(116, 40);
+            this.sesion_ingresar.Size = new System.Drawing.Size(184, 40);
             this.sesion_ingresar.TabIndex = 8;
             this.sesion_ingresar.Text = "INGRESAR";
             this.sesion_ingresar.UseVisualStyleBackColor = true;
@@ -87,7 +87,7 @@ namespace sistema
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(285, 35);
+            this.comboBox1.Location = new System.Drawing.Point(243, 35);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(146, 24);
             this.comboBox1.TabIndex = 13;
@@ -95,7 +95,7 @@ namespace sistema
             // label_idioma
             // 
             this.label_idioma.AutoSize = true;
-            this.label_idioma.Location = new System.Drawing.Point(282, 12);
+            this.label_idioma.Location = new System.Drawing.Point(240, 12);
             this.label_idioma.Name = "label_idioma";
             this.label_idioma.Size = new System.Drawing.Size(55, 17);
             this.label_idioma.TabIndex = 14;

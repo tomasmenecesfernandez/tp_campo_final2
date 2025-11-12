@@ -37,16 +37,17 @@ namespace sistema
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(78, 54);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(78, 49);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(162, 22);
+            this.textBox1.Size = new System.Drawing.Size(162, 27);
             this.textBox1.TabIndex = 29;
             // 
             // btm_guardar
             // 
             this.btm_guardar.Location = new System.Drawing.Point(78, 82);
             this.btm_guardar.Name = "btm_guardar";
-            this.btm_guardar.Size = new System.Drawing.Size(116, 40);
+            this.btm_guardar.Size = new System.Drawing.Size(162, 40);
             this.btm_guardar.TabIndex = 31;
             this.btm_guardar.Text = "GUARDAR";
             this.btm_guardar.UseVisualStyleBackColor = true;
@@ -56,7 +57,7 @@ namespace sistema
             // 
             this.btm_cancelar.Location = new System.Drawing.Point(78, 128);
             this.btm_cancelar.Name = "btm_cancelar";
-            this.btm_cancelar.Size = new System.Drawing.Size(116, 40);
+            this.btm_cancelar.Size = new System.Drawing.Size(162, 40);
             this.btm_cancelar.TabIndex = 30;
             this.btm_cancelar.Text = "CANCELAR";
             this.btm_cancelar.UseVisualStyleBackColor = true;
@@ -65,9 +66,10 @@ namespace sistema
             // form_extra_label_nombre_rol
             // 
             this.form_extra_label_nombre_rol.AutoSize = true;
-            this.form_extra_label_nombre_rol.Location = new System.Drawing.Point(78, 31);
+            this.form_extra_label_nombre_rol.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.form_extra_label_nombre_rol.Location = new System.Drawing.Point(78, 26);
             this.form_extra_label_nombre_rol.Name = "form_extra_label_nombre_rol";
-            this.form_extra_label_nombre_rol.Size = new System.Drawing.Size(78, 17);
+            this.form_extra_label_nombre_rol.Size = new System.Drawing.Size(92, 20);
             this.form_extra_label_nombre_rol.TabIndex = 32;
             this.form_extra_label_nombre_rol.Text = "Nombre rol";
             // 

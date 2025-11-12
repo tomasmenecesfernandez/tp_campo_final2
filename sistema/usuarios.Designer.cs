@@ -44,14 +44,16 @@ namespace sistema
             this.usuario_rbtm_permiso = new System.Windows.Forms.RadioButton();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.usuario_btm_ir_historlal = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btm_agregar
             // 
-            this.btm_agregar.Location = new System.Drawing.Point(15, 202);
+            this.btm_agregar.Location = new System.Drawing.Point(107, 164);
             this.btm_agregar.Name = "btm_agregar";
-            this.btm_agregar.Size = new System.Drawing.Size(116, 40);
+            this.btm_agregar.Size = new System.Drawing.Size(184, 40);
             this.btm_agregar.TabIndex = 0;
             this.btm_agregar.Text = "AGREGAR";
             this.btm_agregar.UseVisualStyleBackColor = true;
@@ -60,7 +62,7 @@ namespace sistema
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(12, 46);
+            this.textBox1.Location = new System.Drawing.Point(107, 59);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(184, 28);
             this.textBox1.TabIndex = 1;
@@ -68,7 +70,7 @@ namespace sistema
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(215, 23);
+            this.dataGridView1.Location = new System.Drawing.Point(310, 36);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -79,9 +81,9 @@ namespace sistema
             // 
             // btm_modificar
             // 
-            this.btm_modificar.Location = new System.Drawing.Point(15, 248);
+            this.btm_modificar.Location = new System.Drawing.Point(107, 210);
             this.btm_modificar.Name = "btm_modificar";
-            this.btm_modificar.Size = new System.Drawing.Size(116, 40);
+            this.btm_modificar.Size = new System.Drawing.Size(184, 40);
             this.btm_modificar.TabIndex = 3;
             this.btm_modificar.Text = "MODIFICAR";
             this.btm_modificar.UseVisualStyleBackColor = true;
@@ -89,9 +91,9 @@ namespace sistema
             // 
             // btm_borrar
             // 
-            this.btm_borrar.Location = new System.Drawing.Point(15, 294);
+            this.btm_borrar.Location = new System.Drawing.Point(107, 256);
             this.btm_borrar.Name = "btm_borrar";
-            this.btm_borrar.Size = new System.Drawing.Size(116, 40);
+            this.btm_borrar.Size = new System.Drawing.Size(184, 40);
             this.btm_borrar.TabIndex = 4;
             this.btm_borrar.Text = "BORRAR";
             this.btm_borrar.UseVisualStyleBackColor = true;
@@ -100,7 +102,7 @@ namespace sistema
             // usuario_label1
             // 
             this.usuario_label1.AutoSize = true;
-            this.usuario_label1.Location = new System.Drawing.Point(12, 23);
+            this.usuario_label1.Location = new System.Drawing.Point(107, 36);
             this.usuario_label1.Name = "usuario_label1";
             this.usuario_label1.Size = new System.Drawing.Size(70, 17);
             this.usuario_label1.TabIndex = 5;
@@ -109,7 +111,7 @@ namespace sistema
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(12, 108);
+            this.textBox2.Location = new System.Drawing.Point(107, 121);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(184, 28);
             this.textBox2.TabIndex = 6;
@@ -117,7 +119,7 @@ namespace sistema
             // contraceña_label1
             // 
             this.contraceña_label1.AutoSize = true;
-            this.contraceña_label1.Location = new System.Drawing.Point(12, 88);
+            this.contraceña_label1.Location = new System.Drawing.Point(107, 101);
             this.contraceña_label1.Name = "contraceña_label1";
             this.contraceña_label1.Size = new System.Drawing.Size(103, 17);
             this.contraceña_label1.TabIndex = 7;
@@ -125,9 +127,9 @@ namespace sistema
             // 
             // btm_agregar1
             // 
-            this.btm_agregar1.Location = new System.Drawing.Point(804, 120);
+            this.btm_agregar1.Location = new System.Drawing.Point(0, 118);
             this.btm_agregar1.Name = "btm_agregar1";
-            this.btm_agregar1.Size = new System.Drawing.Size(116, 40);
+            this.btm_agregar1.Size = new System.Drawing.Size(184, 40);
             this.btm_agregar1.TabIndex = 14;
             this.btm_agregar1.Text = "AGREGAR";
             this.btm_agregar1.UseVisualStyleBackColor = true;
@@ -135,9 +137,9 @@ namespace sistema
             // 
             // btm_borrar1
             // 
-            this.btm_borrar1.Location = new System.Drawing.Point(804, 175);
+            this.btm_borrar1.Location = new System.Drawing.Point(0, 173);
             this.btm_borrar1.Name = "btm_borrar1";
-            this.btm_borrar1.Size = new System.Drawing.Size(116, 40);
+            this.btm_borrar1.Size = new System.Drawing.Size(184, 40);
             this.btm_borrar1.TabIndex = 12;
             this.btm_borrar1.Text = "BORRAR";
             this.btm_borrar1.UseVisualStyleBackColor = true;
@@ -147,16 +149,16 @@ namespace sistema
             // 
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(804, 84);
+            this.comboBox2.Location = new System.Drawing.Point(0, 82);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(162, 24);
+            this.comboBox2.Size = new System.Drawing.Size(184, 24);
             this.comboBox2.TabIndex = 15;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // usuario_rbtm_rol
             // 
             this.usuario_rbtm_rol.AutoSize = true;
-            this.usuario_rbtm_rol.Location = new System.Drawing.Point(804, 30);
+            this.usuario_rbtm_rol.Location = new System.Drawing.Point(0, 28);
             this.usuario_rbtm_rol.Name = "usuario_rbtm_rol";
             this.usuario_rbtm_rol.Size = new System.Drawing.Size(50, 21);
             this.usuario_rbtm_rol.TabIndex = 16;
@@ -168,7 +170,7 @@ namespace sistema
             // usuario_rbtm_permiso
             // 
             this.usuario_rbtm_permiso.AutoSize = true;
-            this.usuario_rbtm_permiso.Location = new System.Drawing.Point(804, 57);
+            this.usuario_rbtm_permiso.Location = new System.Drawing.Point(0, 55);
             this.usuario_rbtm_permiso.Name = "usuario_rbtm_permiso";
             this.usuario_rbtm_permiso.Size = new System.Drawing.Size(80, 21);
             this.usuario_rbtm_permiso.TabIndex = 17;
@@ -179,15 +181,15 @@ namespace sistema
             // 
             // treeView1
             // 
-            this.treeView1.Location = new System.Drawing.Point(985, 23);
+            this.treeView1.Location = new System.Drawing.Point(203, 21);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(545, 234);
+            this.treeView1.Size = new System.Drawing.Size(560, 234);
             this.treeView1.TabIndex = 18;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
             // usuario_btm_ir_historlal
             // 
-            this.usuario_btm_ir_historlal.Location = new System.Drawing.Point(301, 260);
+            this.usuario_btm_ir_historlal.Location = new System.Drawing.Point(432, 261);
             this.usuario_btm_ir_historlal.Name = "usuario_btm_ir_historlal";
             this.usuario_btm_ir_historlal.Size = new System.Drawing.Size(284, 40);
             this.usuario_btm_ir_historlal.TabIndex = 19;
@@ -195,18 +197,29 @@ namespace sistema
             this.usuario_btm_ir_historlal.UseVisualStyleBackColor = true;
             this.usuario_btm_ir_historlal.Click += new System.EventHandler(this.button2_Click_1);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.treeView1);
+            this.groupBox1.Controls.Add(this.btm_borrar1);
+            this.groupBox1.Controls.Add(this.btm_agregar1);
+            this.groupBox1.Controls.Add(this.usuario_rbtm_permiso);
+            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.usuario_rbtm_rol);
+            this.groupBox1.Location = new System.Drawing.Point(107, 307);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(763, 278);
+            this.groupBox1.TabIndex = 20;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = ".";
+            this.groupBox1.Visible = false;
+            // 
             // usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1583, 812);
+            this.ClientSize = new System.Drawing.Size(1010, 751);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.usuario_btm_ir_historlal);
-            this.Controls.Add(this.treeView1);
-            this.Controls.Add(this.usuario_rbtm_permiso);
-            this.Controls.Add(this.usuario_rbtm_rol);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.btm_agregar1);
-            this.Controls.Add(this.btm_borrar1);
             this.Controls.Add(this.contraceña_label1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.usuario_label1);
@@ -220,13 +233,20 @@ namespace sistema
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.usuarios_FormClosing);
             this.Load += new System.EventHandler(this.usuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
+        private System.Windows.Forms.Button btm_agregar1;
+        private System.Windows.Forms.Button btm_borrar1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.RadioButton usuario_rbtm_rol;
+        private System.Windows.Forms.RadioButton usuario_rbtm_permiso;
+        private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.Button btm_agregar;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -235,12 +255,7 @@ namespace sistema
         private System.Windows.Forms.Label usuario_label1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label contraceña_label1;
-        private System.Windows.Forms.Button btm_agregar1;
-        private System.Windows.Forms.Button btm_borrar1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.RadioButton usuario_rbtm_rol;
-        private System.Windows.Forms.RadioButton usuario_rbtm_permiso;
-        private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.Button usuario_btm_ir_historlal;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

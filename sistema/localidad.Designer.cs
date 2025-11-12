@@ -54,7 +54,7 @@ namespace sistema
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(21, 55);
+            this.textBox1.Location = new System.Drawing.Point(41, 39);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(163, 22);
@@ -62,7 +62,7 @@ namespace sistema
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(21, 123);
+            this.textBox2.Location = new System.Drawing.Point(41, 93);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(163, 22);
@@ -71,7 +71,7 @@ namespace sistema
             // localidad_codigo
             // 
             this.localidad_codigo.AutoSize = true;
-            this.localidad_codigo.Location = new System.Drawing.Point(21, 32);
+            this.localidad_codigo.Location = new System.Drawing.Point(41, 16);
             this.localidad_codigo.Name = "localidad_codigo";
             this.localidad_codigo.Size = new System.Drawing.Size(63, 17);
             this.localidad_codigo.TabIndex = 3;
@@ -80,7 +80,7 @@ namespace sistema
             // label_localidad
             // 
             this.label_localidad.AutoSize = true;
-            this.label_localidad.Location = new System.Drawing.Point(21, 103);
+            this.label_localidad.Location = new System.Drawing.Point(41, 73);
             this.label_localidad.Name = "label_localidad";
             this.label_localidad.Size = new System.Drawing.Size(85, 17);
             this.label_localidad.TabIndex = 4;
@@ -88,10 +88,10 @@ namespace sistema
             // 
             // btm_agregar
             // 
-            this.btm_agregar.Location = new System.Drawing.Point(55, 174);
+            this.btm_agregar.Location = new System.Drawing.Point(41, 152);
             this.btm_agregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btm_agregar.Name = "btm_agregar";
-            this.btm_agregar.Size = new System.Drawing.Size(107, 37);
+            this.btm_agregar.Size = new System.Drawing.Size(163, 37);
             this.btm_agregar.TabIndex = 5;
             this.btm_agregar.Text = "AGREGAR";
             this.btm_agregar.UseVisualStyleBackColor = true;
@@ -99,10 +99,10 @@ namespace sistema
             // 
             // btm_borrar
             // 
-            this.btm_borrar.Location = new System.Drawing.Point(55, 224);
+            this.btm_borrar.Location = new System.Drawing.Point(41, 202);
             this.btm_borrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btm_borrar.Name = "btm_borrar";
-            this.btm_borrar.Size = new System.Drawing.Size(107, 37);
+            this.btm_borrar.Size = new System.Drawing.Size(163, 37);
             this.btm_borrar.TabIndex = 6;
             this.btm_borrar.Text = "ELIMINAR";
             this.btm_borrar.UseVisualStyleBackColor = true;

@@ -53,10 +53,10 @@ namespace Servicios.observer
             int v = 0;
             foreach (char c in texto)
             {
-                v += 2;
-                suma += (int)c*c * 17*v;
+                v += 1;
+                suma += (int)c*c * 17 + c/v ;
             }
-            suma=suma % 10007;
+            suma=suma % 197317;
             return suma;
         }
         public static List<idiomas> leer_idiomas()
@@ -73,7 +73,7 @@ namespace Servicios.observer
                         idioma.digito_varificador = (int)fila["digito_verificador"];
                         lista.Add(idioma);
                 }
-                else { throw new Exception($"error en codigo verificador en el idioma { idioma.idioma }."); }
+                else {throw new Exception($"error en codigo verificador en el idioma { idioma.idioma }."); }
                 }
             
             return lista;

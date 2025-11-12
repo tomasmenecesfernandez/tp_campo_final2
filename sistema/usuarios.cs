@@ -68,6 +68,7 @@ namespace sistema
             try {
                 lista_usuarios = bllusuario.leer_usuario();
                 dataGridView1.DataSource = lista_usuarios;
+                groupBox1.Visible = false;
             }
             catch { }
         }
@@ -102,6 +103,7 @@ namespace sistema
             usuario = (BEusuario)dataGridView1.CurrentRow.DataBoundItem;
             textBox1.Text = usuario.nombre;
             textBox2.Text = string.Empty;
+            groupBox1.Visible = true;
             treeView1.Nodes.Clear();
             mostrar_treeview(bllrol.traer_permisos_usuario(usuario), treeView1.Nodes);
             treeView1.ExpandAll();

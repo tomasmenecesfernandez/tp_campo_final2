@@ -159,6 +159,7 @@ namespace sistema
             menu_label_usuario.Text = BLLtraducciones.traducir(menu_label_usuario.Name);
             menu_clientes.Text = BLLtraducciones.traducir(menu_clientes.Name);
             menu_bitacora.Text = BLLtraducciones.traducir(menu_bitacora.Name);
+            menu_ABMPermisos.Text = BLLtraducciones.traducir(menu_ABMPermisos.Name);
 
         }
         private void españolToolStripMenuItem_Click(object sender, EventArgs e)
