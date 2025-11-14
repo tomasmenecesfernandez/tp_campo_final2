@@ -49,7 +49,6 @@
     <Compile Include="BEpedidos_detalle.cs" />
     <Compile Include="BEpermiso.cs" />
     <Compile Include="BEpermisoComponente.cs" />
-    <Compile Include="BEproducto.cs" />
     <Compile Include="BEregistro.cs" />
     <Compile Include="BErol.cs" />
     <Compile Include="BEropa.cs" />

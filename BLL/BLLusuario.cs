@@ -47,7 +47,7 @@ namespace BLL
         public void login(BEusuario usuario)
         {
             usuario = encrytar_usuario(usuario);
-            usuario = verificar_usuario(usuario);
+            usuario = dal_usuario.verificar_usuario(usuario);
             usuario.permisos = bllrol.traer_todos_los_permisos_usuario(usuario);
 
             sesion.Login(usuario);
@@ -76,10 +76,6 @@ namespace BLL
         public string desencrytar_nombre(string nombre)
         {
             return encryptacion.desencryptar(nombre);
-        }
-        public BEusuario verificar_usuario(BEusuario usuario)
-        {
-            return dal_usuario.verificar_usuario(usuario);
         }
 
 
