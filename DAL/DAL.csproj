@@ -47,6 +47,7 @@
     <Compile Include="DALrolpermiso.cs" />
     <Compile Include="DALtraducciones.cs" />
     <Compile Include="DAL_cliente.cs" />
+    <Compile Include="DAL_talles_colores.cs" />
     <Compile Include="DAL_localidad.cs" />
     <Compile Include="DAL_pedido.cs" />
     <Compile Include="DAL_ropa.cs" />

@@ -47,14 +47,17 @@ namespace Servicios.observer
         {
             DALidioma.borrar_idioma(cod_idioma);
         }
+        //\f?u?????1???iw&a
+        //??_???/?:?\u001cwu1W?
         public static int CalcularDigitoVerificadorDesdeTexto(string texto)
         {
+            texto = encryptacion.Hash(texto);
             int suma = 0;
             int v = 0;
             foreach (char c in texto)
             {
-                v += 1;
-                suma += (int)c*c * 17 + c/v ;
+                v++;
+                suma += c*v;
             }
             suma=suma % 197317;
             return suma;

@@ -126,5 +126,10 @@ namespace sistema
         {
             idioma1.eliminar_observer(this);
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

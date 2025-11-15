@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,6 +35,17 @@ namespace DAL
                 hdatos.Add("@codigo_usuario", codigo_cliente);
                 acceso.escribir(comando, hdatos);
             }
+        }
+        public Dictionary<int, string> leer_tipo_ropa()
+        {
+            Dictionary<int, string> diccionario = new Dictionary<int, string>();
+            string comando = "leer_tipo_de_ropa";
+            DataTable tabla = acceso.leer_tabla(comando, null);
+            foreach (DataRow fila in tabla.Rows)
+            {
+                diccionario.Add((int)fila["codigo"], fila["prenda"].ToString()) ;
+            }
+            return diccionario;
         }
         public void modificar(BEropa ropa)
         {

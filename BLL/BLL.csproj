@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLLtalles_colores.cs" />
     <Compile Include="BLLtraducciones.cs" />
     <Compile Include="BLLcontrolUsuario.cs" />
     <Compile Include="BLLPedido.cs" />

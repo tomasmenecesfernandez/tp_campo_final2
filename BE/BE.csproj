@@ -52,6 +52,7 @@
     <Compile Include="BEregistro.cs" />
     <Compile Include="BErol.cs" />
     <Compile Include="BEropa.cs" />
+    <Compile Include="BEtalles_colores.cs" />
     <Compile Include="BEusuario.cs" />
     <Compile Include="BEpedidos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

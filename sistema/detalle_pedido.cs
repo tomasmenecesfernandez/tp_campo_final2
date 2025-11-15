@@ -37,56 +37,31 @@ namespace sistema
         sistema1 sistema_padre;
         BEpedidos_detalle pedido_select = new BEpedidos_detalle();
         BLLPedido bllpedido = new BLLPedido();
+        BLLtalles_colores blltalles_colores = new BLLtalles_colores();
+        
         enum si_no
         { SI, NO }
-        public void activar_checklistbox()
-        {
-            checkedListBox1.ClearSelected();
-            checkedListBox2.ClearSelected();
-            for (int i = 0; i < checkedListBox1.Items.Count; i++)
-            {
-                checkedListBox1.SetItemChecked(i, false);
-            }
-
-            for (int i = 0; i < checkedListBox2.Items.Count; i++)
-            {
-                checkedListBox2.SetItemChecked(i, false);
-            }
-            string[] lista;
-            lista = pedido_select.ropa.talles.Split(',');
-            foreach (string talle in lista)
-            {
-                string talle1 = talle.Trim().ToUpper();
-                switch (talle1)
-                {
-                    case "M": checkedListBox1.SetItemChecked(0, true); break;
-                    case "L": checkedListBox1.SetItemChecked(1, true); break;
-                    case "XL": checkedListBox1.SetItemChecked(2, true); break;
-                    case "XXL": checkedListBox1.SetItemChecked(3, true); break;
-                    case "XXXL": checkedListBox1.SetItemChecked(4, true); break;
-                }
-            }
-            string[] lista1;
-            lista1 = pedido_select.ropa.colores.Split(',');
-            foreach (string color in lista1)
-            {
-                string color1 = color.Trim().ToUpper();
-                switch (color1)
-                {
-                    case "NEGRO": checkedListBox2.SetItemChecked(0, true); break;
-                    case "BLANCO": checkedListBox2.SetItemChecked(1, true); break;
-                    case "BORDO": checkedListBox2.SetItemChecked(2, true); break;
-                    case "MARRON": checkedListBox2.SetItemChecked(3, true); break;
-                    case "VERDE": checkedListBox2.SetItemChecked(4, true); break;
-                    case "BEIGE": checkedListBox2.SetItemChecked(5, true); break;
-                }
-
-            }
-        }
         private void detalle_pedido_Load(object sender, EventArgs e)
         {
             cargar_pedidos_detalles();
+            cargar_combobox_tipo_prenda();
+            cargar_combobox_talles_colores();
             comboBox1.DataSource = Enum.GetValues(typeof(si_no));
+        }
+        public void cargar_combobox_tipo_prenda()
+        {
+            comboBox4.DataSource = null;
+            comboBox4.DisplayMember = "value";
+            comboBox4.ValueMember = "key";
+            comboBox4.DataSource = BLL_ropa.leer_tipo_de_ropa().ToList();
+        }
+        public void  cargar_combobox_talles_colores()
+        {
+            comboBox2.DataSource = null;
+            comboBox2.DataSource = blltalles_colores.leer_colores_ropa(((KeyValuePair<int, string>)comboBox4.SelectedItem).Key);
+            comboBox3.DataSource = null;
+            comboBox3.DataSource = blltalles_colores.leer_talles_ropa(((KeyValuePair<int, string>)comboBox4.SelectedItem).Key);
+
         }
         public void cargar_pedidos_detalles()
         {
@@ -100,14 +75,14 @@ namespace sistema
             {
                 pedido_select = (BEpedidos_detalle)listBox1.SelectedItem;
                 textBox1.Text = pedido_select.cantidad.ToString();
-                activar_checklistbox();
+                Dictionary<string, int> elemento = new Dictionary<string, int>();
                 if (pedido_select.ropa is BEbuzos)
                 {
-                    detalle_rbtm_buzos.Checked = true;
+                    comboBox4.SelectedValue = 1; 
                 }
                 else if (pedido_select.ropa is BEjogging)
                 {
-                    detalle_rbtm_jogging.Checked = true;
+                    comboBox4.SelectedValue = 2;
                 }
             }
         }
@@ -117,32 +92,20 @@ namespace sistema
 
         }
 
-        private void checkedListBox2_ItemCheck(object sender, ItemCheckEventArgs e)
-        {
-            checkedListBox2.ItemCheck -= checkedListBox2_ItemCheck;
-
-            for (int i = 0; i < checkedListBox2.Items.Count; i++)
-            {
-                if (i != e.Index)
-                    checkedListBox2.SetItemChecked(i, false);
-            }
-
-            checkedListBox2.ItemCheck += checkedListBox2_ItemCheck;
-        }
-
+     
         private void button4_Click(object sender, EventArgs e)
         {
             try
             {
                 BEpedidos_detalle pedido_detalle = new BEpedidos_detalle();
-                if (detalle_rbtm_buzos.Checked) 
+                if (comboBox4.Text == "Buzos" )
                 {
-                    BEbuzos buzos = new BEbuzos(checkedListBox2.CheckedItems[0].ToString(), checkedListBox1.CheckedItems[0].ToString(),comboBox1.Text);
+                    BEbuzos buzos = new BEbuzos(comboBox2.Text, comboBox3.Text, comboBox1.Text);
                     pedido_detalle.ropa = buzos;
                 }
-                else if(detalle_rbtm_jogging.Checked)
+                else if (comboBox4.Text == "Jogging")
                 {
-                    BEjogging jogging = new BEjogging(checkedListBox2.CheckedItems[0].ToString(), checkedListBox1.CheckedItems[0].ToString());
+                    BEjogging jogging = new BEjogging(comboBox2.Text.ToString(), comboBox3.Text);
                     pedido_detalle.ropa = jogging;
                 }
                 pedido_detalle.cantidad = Convert.ToInt32(textBox1.Text);
@@ -161,14 +124,14 @@ namespace sistema
                 BEpedidos_detalle pedido_detalle = new BEpedidos_detalle();
                 if (listBox1.SelectedItem != null)
                 {
-                    if (detalle_rbtm_buzos.Checked && pedido_select.ropa is BEbuzos)
+                    if (comboBox4.Text=="Buzos" && pedido_select.ropa is BEbuzos)
                     {
-                        BEbuzos buzos = new BEbuzos(checkedListBox2.CheckedItems[0].ToString(), checkedListBox1.CheckedItems[0].ToString(), comboBox1.Text);
+                        BEbuzos buzos = new BEbuzos(comboBox2.Text,comboBox3.Text, comboBox1.Text);
                         pedido_detalle.ropa = buzos;
                     }
-                    else if (detalle_rbtm_jogging.Checked && pedido_select.ropa is BEjogging)
+                    else if (comboBox4.Text == "Jogging" && pedido_select.ropa is BEjogging)
                     {
-                        BEjogging jogging = new BEjogging(checkedListBox2.CheckedItems[0].ToString(), checkedListBox1.CheckedItems[0].ToString());
+                        BEjogging jogging = new BEjogging(comboBox2.Text.ToString(), comboBox3.Text);
                         pedido_detalle.ropa = jogging;
                     }
                     else{ throw new Exception("error, no se puede modificar la misma prenda cambiado el tipo de ropa."); }
@@ -201,18 +164,6 @@ namespace sistema
 
         }
 
-        private void checkedListBox1_ItemCheck(object sender, ItemCheckEventArgs e)
-        {
-            checkedListBox1.ItemCheck -= checkedListBox1_ItemCheck;
-
-            for (int i = 0; i < checkedListBox1.Items.Count; i++)
-            {
-                if (i != e.Index)
-                    checkedListBox1.SetItemChecked(i, false);
-            }
-
-            checkedListBox1.ItemCheck += checkedListBox1_ItemCheck;
-        }
 
         private void detalle_pedido_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -227,12 +178,6 @@ namespace sistema
 
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            detalle_capucha.Visible = true;
-                comboBox1.Visible= true;
-
-        }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
@@ -242,8 +187,6 @@ namespace sistema
 
         public void actualizar_idioma()
         {
-            detalle_rbtm_buzos.Text = BLLtraducciones.traducir(detalle_rbtm_buzos.Name);
-            detalle_rbtm_jogging.Text = BLLtraducciones.traducir(detalle_rbtm_jogging.Name);
             detalle_colores.Text = BLLtraducciones.traducir(detalle_colores.Name);
             detalle_talles.Text = BLLtraducciones.traducir(detalle_talles.Name);
             detalle_cantidad.Text = BLLtraducciones.traducir(detalle_cantidad.Name);
@@ -251,6 +194,23 @@ namespace sistema
             btm_agregar.Text = BLLtraducciones.traducir(btm_agregar.Name);
             btm_modificar.Text = BLLtraducciones.traducir(btm_modificar.Name);
             btm_borrar.Text = BLLtraducciones.traducir(btm_borrar.Name);
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (comboBox4.Text == "Buzos") 
+            {
+                detalle_capucha.Visible = true;
+                comboBox1.Visible = true;
+                cargar_combobox_talles_colores();
+            }
+            else if(comboBox4.Text == "Jogging")
+            {
+                detalle_capucha.Visible = false;
+                comboBox1.Visible = false;
+                cargar_combobox_talles_colores();
+            }
         }
     }
 }

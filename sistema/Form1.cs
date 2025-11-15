@@ -281,5 +281,15 @@ namespace sistema
             BLLtraducciones.cargar_listatraducciones(comboBox1.Text);
             idioma.Idioma=comboBox1.Text;
         }
+
+        private void personalizarRopaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            personalizar_ropa_talle_color p = new personalizar_ropa_talle_color(idioma);
+            cerrar_formularios();
+            p.MdiParent = this;
+            p.Dock = DockStyle.Fill;
+            p.FormBorderStyle = FormBorderStyle.None;
+            p.Show();
+        }
     }
 }

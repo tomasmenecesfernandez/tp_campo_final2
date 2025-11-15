@@ -93,7 +93,7 @@ namespace sistema_de_ropa
         {
             try
             {
-                if (dataGridView1.SelectedRows.Count > 0)
+                if (dataGridView1.SelectedCells.Count > 0)
                 {
                     BEpedidos pedido = new BEpedidos();
                     pedido.descuento = bllpedido.calcular_descuento_pedido(cliente.tipo);
@@ -297,6 +297,11 @@ namespace sistema_de_ropa
         private void sistema1_FormClosing(object sender, FormClosingEventArgs e)
         {
             idioma.eliminar_observer(this);
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

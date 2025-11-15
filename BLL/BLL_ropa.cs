@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BE;
+using DAL;
 namespace BLL
 
 {
@@ -16,5 +17,10 @@ namespace BLL
         public abstract void borrar(BEropa r, int codigo_cliente);
 
         public abstract int obtener_codigo();
+        public static Dictionary<int, string> leer_tipo_de_ropa() 
+        {
+            DAL_ropa dal = new DAL_ropa();
+
+            return dal.leer_tipo_ropa(); }
     }
 }

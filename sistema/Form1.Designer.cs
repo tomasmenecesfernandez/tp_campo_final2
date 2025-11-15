@@ -43,6 +43,7 @@ namespace sistema
             this.menu_label_usuario = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.personalizarRopaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +60,7 @@ namespace sistema
             this.menu_bitacora,
             this.menu_ABMPermisos,
             this.permisos_menu,
+            this.personalizarRopaToolStripMenuItem,
             this.CERRAR_SESION_MENU});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -175,6 +177,13 @@ namespace sistema
             this.label2.TabIndex = 7;
             this.label2.Text = "label2";
             // 
+            // personalizarRopaToolStripMenuItem
+            // 
+            this.personalizarRopaToolStripMenuItem.Name = "personalizarRopaToolStripMenuItem";
+            this.personalizarRopaToolStripMenuItem.Size = new System.Drawing.Size(139, 24);
+            this.personalizarRopaToolStripMenuItem.Text = "personalizar ropa";
+            this.personalizarRopaToolStripMenuItem.Click += new System.EventHandler(this.personalizarRopaToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -213,6 +222,7 @@ namespace sistema
         private System.Windows.Forms.ToolStripMenuItem menu_bitacora;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripMenuItem personalizarRopaToolStripMenuItem;
     }
 }
 

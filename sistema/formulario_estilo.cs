@@ -52,7 +52,7 @@ namespace sistema
                 {
                     lbl.Font = new Font("Segoe UI", 10F);
                     lbl.Font = new Font(lbl.Font,FontStyle.Italic);
-                    lbl.ForeColor = ColorTranslator.FromHtml("#333333");
+                    lbl.ForeColor = ColorTranslator.FromHtml("#000000");
                 }
 
                 if (c is DataGridView dgv)
