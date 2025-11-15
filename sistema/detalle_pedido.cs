@@ -13,7 +13,7 @@ using sistema_de_ropa;
 using Servicios.observer;
 namespace sistema
 {
-    public partial class detalle_pedido : Form,Iobservertraduccion
+    public partial class detalle_pedido : formulario_estilo, Iobservertraduccion
     {
         public detalle_pedido(idiomas idiomas)
         {
@@ -189,6 +189,7 @@ namespace sistema
 
             if (listBox1.SelectedItems != null)
             {
+                DialogResult = MessageBox.Show("esta seguro que desea eliminar ese elemento del pedido","confirmar eliminación",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
                 bllpedido.borrar_pedido_detalle(pedido_select);
                 cargar_pedidos_detalles();
             }

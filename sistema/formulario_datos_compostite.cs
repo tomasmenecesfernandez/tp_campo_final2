@@ -11,7 +11,7 @@ using Servicios.observer;
 using BLL;
 namespace sistema
 {
-    public partial class formulario_datos_compostite : Form,Iobservertraduccion
+    public partial class formulario_datos_compostite : formulario_estilo, Iobservertraduccion
     {
         public formulario_datos_compostite(composite form_papa,  string caso, idiomas idiomas)
         {

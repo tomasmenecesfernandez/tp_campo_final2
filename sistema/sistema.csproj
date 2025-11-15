@@ -88,6 +88,12 @@
     <Compile Include="formulario_datos_compostite.Designer.cs">
       <DependentUpon>formulario_datos_compostite.cs</DependentUpon>
     </Compile>
+    <Compile Include="formulario_estilo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulario_estilo.Designer.cs">
+      <DependentUpon>formulario_estilo.cs</DependentUpon>
+    </Compile>
     <Compile Include="idioma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formulario_datos_compostite.resx">
       <DependentUpon>formulario_datos_compostite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulario_estilo.resx">
+      <DependentUpon>formulario_estilo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="idioma.resx">
       <DependentUpon>idioma.cs</DependentUpon>

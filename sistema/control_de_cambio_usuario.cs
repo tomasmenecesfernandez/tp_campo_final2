@@ -12,7 +12,7 @@ using BLL;
 using Servicios.observer;
 namespace sistema
 {
-    public partial class control_de_cambio_usuario : Form,Iobservertraduccion
+    public partial class control_de_cambio_usuario : formulario_estilo, Iobservertraduccion
     {
         public control_de_cambio_usuario(BEusuario usuario1, usuarios form1,idiomas idiomas)
         {

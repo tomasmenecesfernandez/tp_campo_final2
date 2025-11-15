@@ -13,7 +13,7 @@ using sistema_de_ropa;
 using Servicios.observer;
 namespace sistema
 {
-    public partial class Cliente : Form,Iobservertraduccion
+    public partial class Cliente : formulario_estilo, Iobservertraduccion
     {
         public Cliente(idiomas idiomas)
         {

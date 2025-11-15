@@ -17,7 +17,7 @@ using Servicios;
 using Servicios.observer;
 namespace sistema_de_ropa
 {
-    public partial class sistema1 : Form,Iobservertraduccion
+    public partial class sistema1 : formulario_estilo,Iobservertraduccion
     {
         public sistema1(idiomas idiomas)
         {
@@ -77,10 +77,12 @@ namespace sistema_de_ropa
                 if (cliente == null) throw new Exception("error, seleccione un cliente.");
                 if (listBox1.SelectedItems.Count >0)
                 {
-                    bllpedido.borrar(pedido_select);
-                    cargar_grilla();
-                    limpiar_pedido();
-
+                    DialogResult = MessageBox.Show("esta seguro que quiere borrar el pedido?","confirmar eliminación",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+                    if (DialogResult==DialogResult.Yes) {
+                        bllpedido.borrar(pedido_select);
+                        cargar_grilla();
+                        limpiar_pedido();
+                    }
                 }
                 else { throw new Exception("seleccione alguna prenda"); }
             }
@@ -108,9 +110,8 @@ namespace sistema_de_ropa
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
-            catch { MessageBox.Show("error, vuelva a intentarlo."); 
-        }
+            } 
+        
     }
         public void mostrar_pedidos()
         {

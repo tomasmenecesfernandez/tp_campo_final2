@@ -12,7 +12,7 @@ using BLL;
 using Servicios.observer;
 namespace sistema
 {
-    public partial class composite : Form,Iobservertraduccion
+    public partial class composite : formulario_estilo, Iobservertraduccion
     {
         public composite(idiomas idiomas)
         {
@@ -119,16 +119,22 @@ namespace sistema
 
         private void button3_Click(object sender, EventArgs e)
         {
-
-            if (nodo_seleccionado != null)
-            {
-                bllrol.borrar_nodo(nodo_seleccionado);
-                lista_permisos = bllpermiso.leer_permisos();
-                treeView1.Nodes.Clear();
-                mostrar_composite();
-                treeView1.ExpandAll();
+            try {
+                if (nodo_seleccionado != null)
+                {
+                    DialogResult = MessageBox.Show("esta seguro de borrar rol/permiso?", "confirmación de error", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (DialogResult == DialogResult.Yes) {
+                        bllrol.borrar_nodo(nodo_seleccionado);
+                        lista_permisos = bllpermiso.leer_permisos();
+                        treeView1.Nodes.Clear();
+                        mostrar_composite();
+                        treeView1.ExpandAll();
+                    }
+                }
+                else { throw new Exception("error, no selecciono un rol/permiso."); }
             }
-        }
+            catch (Exception ex){ MessageBox.Show(ex.Message); }
+            }
 
         private void button2_Click(object sender, EventArgs e)
         {

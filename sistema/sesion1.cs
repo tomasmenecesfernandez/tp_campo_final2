@@ -13,7 +13,7 @@ using BLL;
 using Servicios.observer;
 namespace sistema
 {
-    public partial class sesion1 : Form,Iobservertraduccion
+    public partial class sesion1 : formulario_estilo,Iobservertraduccion
     {
         public sesion1()
         {

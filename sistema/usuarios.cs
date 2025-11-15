@@ -13,7 +13,7 @@ using Servicios;
 using Servicios.observer;
 namespace sistema
 {
-    public partial class usuarios : Form,Iobservertraduccion
+    public partial class usuarios : formulario_estilo,Iobservertraduccion
     {
         public usuarios()
         {
@@ -57,7 +57,7 @@ namespace sistema
 
                 catch(Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message,"mensaje de error",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 }
             }
             else { MessageBox.Show("complete los cuadros de texto."); }
@@ -165,8 +165,10 @@ namespace sistema
             {
                 try
                 {
-                    bllusuario.borrar(usuario);
-                    mostrar_data();
+                    DialogResult = MessageBox.Show("esta seguro que quiere borrar el usuario?", "confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (DialogResult == DialogResult.Yes) {
+                        bllusuario.borrar(usuario);
+                        mostrar_data(); }
                 }
                 catch(Exception ex)
                 {

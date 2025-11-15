@@ -12,7 +12,7 @@ using BLL;
 using Servicios.observer;
 namespace sistema
 {
-    public partial class localidad : Form,Iobservertraduccion
+    public partial class localidad : formulario_estilo,Iobservertraduccion
     {
         public localidad(idiomas idiomas)
         {

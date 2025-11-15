@@ -7,11 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BE;
 using BLL;
 using Servicios.observer;
 namespace sistema
 {
-    public partial class bitacora : Form,Iobservertraduccion
+    public partial class bitacora : formulario_estilo, Iobservertraduccion
     {
         public bitacora(idiomas idiomas)
         {
@@ -23,14 +24,36 @@ namespace sistema
         }
         idiomas idioma;
         bllregistro bllregistro = new bllregistro();
+        List<BEregistro> lista_de_registro = new List<BEregistro>();
         private void bitacora_Load(object sender, EventArgs e)
         {
             cargar_grilla();
+            comboBox2.Text = "Nombre";
+        }
+
+        public void buscar_bitacora(string texto, string filtro)
+        {
+            if (filtro == "Nombre")
+            {
+                var filtrados = lista_de_registro
+                    .Where(c => c.nombre.ToLower().Contains(texto))
+                   .ToList();
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = filtrados;
+            }
+            else if (filtro == "Fecha")
+            {
+                var filtrados = lista_de_registro.Where(c => c.fecha.ToString().Contains(texto))
+                    .ToList();
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = filtrados;
+            }
         }
         public void cargar_grilla()
         {
             dataGridView1.DataSource = null;
-            dataGridView1.DataSource = bllregistro.leer_registros();
+            lista_de_registro= bllregistro.leer_registros();
+            dataGridView1.DataSource = lista_de_registro;
         }
 
         public void actualizar_idioma()
@@ -42,6 +65,16 @@ namespace sistema
         private void bitacora_FormClosing(object sender, FormClosingEventArgs e)
         {
             idioma.eliminar_observer(this);
+        }
+
+        private void bitacora_label_bitacora_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            buscar_bitacora(textBox2.Text, comboBox2.Text);
         }
     }
 }
