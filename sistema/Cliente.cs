@@ -79,7 +79,7 @@ namespace sistema
             {
                 try
                 {
-                    if (textBox2.Text != "" && textBox3.Text != "")
+                    if (textBox2.Text != "" && textBox3.Text != "" && comboBox2.Text!="" && comboBox3.Text!="")
                     {
                         int codigo_actual = cliente.codigo;
                     cliente = new BEcliente(textBox2.Text, Convert.ToInt32(textBox3.Text), comboBox3.Text, (BElocalidad)comboBox2.SelectedItem);

@@ -15,12 +15,12 @@ namespace Servicios.observer
         public int digito_varificador { get; set; }
 
          string idioma{get;set;}
+        public static List<Iobservertraduccion> lista_observer = new List<Iobservertraduccion>();
 
         public idiomas() { }
         public idiomas(string idioma1) { idioma = idioma1; }
         DALidioma DALidioma = new DALidioma();
         static acceso acceso = new acceso();
-        public static List<Iobservertraduccion> lista_observer = new List<Iobservertraduccion>();
 
         public string Idioma
         {

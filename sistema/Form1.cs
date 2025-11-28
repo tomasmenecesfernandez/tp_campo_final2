@@ -130,6 +130,10 @@ namespace sistema
                                 menu_bitacora.Enabled = true;
                                 permisos_menu.DropDownItems.Add("Ver_Bitacora");
                                 break;
+                            case "Personalizar_ropa":
+                                personalizarRopa_menu.Enabled = true;
+                                permisos_menu.DropDownItems.Add("Personalizar_ropa");
+                                break;
                             default:
                                 break;
                         }
@@ -193,7 +197,7 @@ namespace sistema
                 CERRAR_SESION_MENU.Enabled = false;
                 desactivar_form();
                 menu_label_usuario.Text = "";// label de usuario
-                MessageBox.Show("Se cerro sesion con exito.");
+                MessageBox.Show("Se cerro sesión con éxito.");
                 
             }
             else 
@@ -208,6 +212,7 @@ namespace sistema
         }
         public void desactivar_form()
         {
+            personalizarRopa_menu.Enabled = false;
             permisos_menu.Enabled = false;
             menu_ABMPermisos.Enabled = false;
             menu_bitacora.Enabled = false;

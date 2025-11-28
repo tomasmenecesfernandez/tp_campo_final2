@@ -43,7 +43,6 @@ namespace sistema
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            //SFSSSD
             if (textBox1.Text != "" && textBox2.Text != "")
             {
                 try

@@ -39,11 +39,11 @@ namespace sistema
             this.menu_bitacora = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_ABMPermisos = new System.Windows.Forms.ToolStripMenuItem();
             this.permisos_menu = new System.Windows.Forms.ToolStripMenuItem();
+            this.personalizarRopa_menu = new System.Windows.Forms.ToolStripMenuItem();
             this.CERRAR_SESION_MENU = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_label_usuario = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.personalizarRopaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +60,7 @@ namespace sistema
             this.menu_bitacora,
             this.menu_ABMPermisos,
             this.permisos_menu,
-            this.personalizarRopaToolStripMenuItem,
+            this.personalizarRopa_menu,
             this.CERRAR_SESION_MENU});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -138,6 +138,13 @@ namespace sistema
             this.permisos_menu.Size = new System.Drawing.Size(83, 24);
             this.permisos_menu.Text = "permisos";
             // 
+            // personalizarRopa_menu
+            // 
+            this.personalizarRopa_menu.Name = "personalizarRopa_menu";
+            this.personalizarRopa_menu.Size = new System.Drawing.Size(139, 24);
+            this.personalizarRopa_menu.Text = "personalizar ropa";
+            this.personalizarRopa_menu.Click += new System.EventHandler(this.personalizarRopaToolStripMenuItem_Click);
+            // 
             // CERRAR_SESION_MENU
             // 
             this.CERRAR_SESION_MENU.Name = "CERRAR_SESION_MENU";
@@ -177,13 +184,6 @@ namespace sistema
             this.label2.TabIndex = 7;
             this.label2.Text = "label2";
             // 
-            // personalizarRopaToolStripMenuItem
-            // 
-            this.personalizarRopaToolStripMenuItem.Name = "personalizarRopaToolStripMenuItem";
-            this.personalizarRopaToolStripMenuItem.Size = new System.Drawing.Size(139, 24);
-            this.personalizarRopaToolStripMenuItem.Text = "personalizar ropa";
-            this.personalizarRopaToolStripMenuItem.Click += new System.EventHandler(this.personalizarRopaToolStripMenuItem_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -222,7 +222,7 @@ namespace sistema
         private System.Windows.Forms.ToolStripMenuItem menu_bitacora;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ToolStripMenuItem personalizarRopaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem personalizarRopa_menu;
     }
 }
 

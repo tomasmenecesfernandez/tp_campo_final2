@@ -92,7 +92,7 @@ namespace sistema
                                 BErol rol = new BErol("");
                                 rol = (BErol)comboBox2.SelectedItem;
                                 bllrol.verificar_rol_bucle(rol, nodo_seleccionado.nombre);
-                                    bllrol.agregar_rol(rol, nodo_seleccionado.codigo);
+                                bllrol.agregar_rol(rol, nodo_seleccionado.codigo);
                             }
 
                         }
@@ -125,10 +125,12 @@ namespace sistema
                     DialogResult = MessageBox.Show("esta seguro de borrar rol/permiso?", "confirmación de error", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (DialogResult == DialogResult.Yes) {
                         bllrol.borrar_nodo(nodo_seleccionado);
-                        lista_permisos = bllpermiso.leer_permisos();
+                        comboBox2.DataSource = bllrol.traer_todos_los_roles();
+                        comboBox2.DisplayMember = "nombre";
                         treeView1.Nodes.Clear();
                         mostrar_composite();
                         treeView1.ExpandAll();
+
                     }
                 }
                 else { throw new Exception("error, no selecciono un rol/permiso."); }
@@ -187,7 +189,6 @@ namespace sistema
                 {
                     nodo_seleccionado.nombre = nombre;
                     bllrol.modificar_rol((BErol)nodo_seleccionado);
-                    lista_permisos = bllpermiso.leer_permisos();
                     treeView1.Nodes.Clear();
                     mostrar_composite();
                     treeView1.ExpandAll();

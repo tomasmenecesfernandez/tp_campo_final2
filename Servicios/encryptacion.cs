@@ -56,20 +56,6 @@ namespace Servicios
 
             return plaintext;
         }
-        public string generar_hash(string texto)
-        {
-            using (SHA256 sha256 = SHA256.Create())
-            {
-                byte[] textoI = Encoding.UTF8.GetBytes(texto);
-                byte[] hash = sha256.ComputeHash(textoI);
-
-                StringBuilder sb = new StringBuilder();
-                foreach (var b in hash)
-                    sb.Append(b.ToString("x2"));
-
-                return sb.ToString();
-            }
-        }
 
     }
 }
