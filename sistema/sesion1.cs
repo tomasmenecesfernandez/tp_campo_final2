@@ -24,15 +24,14 @@ namespace sistema
             InitializeComponent();
             form_padre = form;
             idiomas = idiomas1;
-            idioma = idiomas;
             idiomas.guardar_observer(this);
             actualizar_idioma();
         }
-        idiomas idioma;
+        BLL_idioma bll_idioma = new BLL_idioma();
+        idiomas idiomas;
         Form1 form_padre;
         public static BEusuario usuario;
         BLLusuario bllusuario = new BLLusuario();
-        idiomas idiomas;
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -87,14 +86,14 @@ namespace sistema
         
         private void sesion1_Load(object sender, EventArgs e)
         {comboBox1.DataSource = null;
-            comboBox1.DataSource= idiomas.leer_idiomas();
+            comboBox1.DataSource= bll_idioma.leer_idiomas();
             textBox1.Text = "tomi";
             textBox2.Text = "1234";
         }
 
         private void sesion1_FormClosing(object sender, FormClosingEventArgs e)
         {
-                if(form_padre!=null)idioma.eliminar_observer(this);
+                if(form_padre!=null)idiomas.eliminar_observer(this);
         }
     }
 }

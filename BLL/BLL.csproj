@@ -46,11 +46,11 @@
     <Compile Include="BLLcontrolUsuario.cs" />
     <Compile Include="BLLPedido.cs" />
     <Compile Include="BLLpermiso.cs" />
-    <Compile Include="bllregistro.cs" />
     <Compile Include="BLLrol.cs" />
     <Compile Include="BLLusuario.cs" />
     <Compile Include="BLL_buzos.cs" />
     <Compile Include="BLL_cliente.cs" />
+    <Compile Include="BLL_idioma.cs" />
     <Compile Include="BLL_jogging.cs" />
     <Compile Include="BLL_Localidad.cs" />
     <Compile Include="BLL_ropa.cs" />

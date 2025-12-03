@@ -148,6 +148,18 @@ namespace sistema
 
         public void actualizar_idioma()
         {
+            group_box_administrador_variables.Text = BLLtraducciones.traducir(group_box_administrador_variables.Name);
+            button1.Text = BLLtraducciones.traducir(btm_borrar.Name);
+            button2.Text = BLLtraducciones.traducir(btm_agregar.Name);
+            btm_borrar.Text = BLLtraducciones.traducir(btm_borrar.Name);
+            btm_agregar.Text = BLLtraducciones.traducir(btm_agregar.Name);
+            groupBox_vinculacion_variable.Text = BLLtraducciones.traducir(groupBox_vinculacion_variable.Name);
+            combobox_tipo_ropa.Text = BLLtraducciones.traducir(combobox_tipo_ropa.Name);
+            detalle_rbtm_talles.Text = BLLtraducciones.traducir(detalle_rbtm_talles.Name);
+            detalle_rbtm_color.Text = BLLtraducciones.traducir(detalle_rbtm_color.Name);
+            detalle_rbtm_talles1.Text = BLLtraducciones.traducir(detalle_rbtm_talles1.Name);
+            detalle_rbtm_color1.Text = BLLtraducciones.traducir(detalle_rbtm_color1.Name);
+
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

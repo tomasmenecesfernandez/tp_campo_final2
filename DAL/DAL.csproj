@@ -43,7 +43,6 @@
   <ItemGroup>
     <Compile Include="acceso.cs" />
     <Compile Include="DALControlUsuario.cs" />
-    <Compile Include="DALregistro.cs" />
     <Compile Include="DALrolpermiso.cs" />
     <Compile Include="DALtraducciones.cs" />
     <Compile Include="DAL_cliente.cs" />

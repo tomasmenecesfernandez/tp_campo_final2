@@ -27,7 +27,7 @@ namespace sistema_de_ropa
             actualizar_idioma();
         }
         public static BEpedidos pedido_select { get; set; }
-        public static List<BEcliente> lista_cliente { get; set; }
+        public List<BEcliente> lista_cliente = new List<BEcliente>();
         BLL_cliente bll_cliente = new BLL_cliente();
         BEcliente cliente = new BEcliente();
         BLLPedido bllpedido = new BLLPedido();

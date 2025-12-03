@@ -8,7 +8,6 @@ namespace BE
 {
     public class BEregistro
     {
-        public int codigo { get; set; }
         public string nombre { get; set; }
         public string accion { get; set; }
         public DateTime fecha { get; set; }

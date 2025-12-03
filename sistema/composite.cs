@@ -163,6 +163,8 @@ namespace sistema
             btm_agregar.Text = BLLtraducciones.traducir(btm_agregar.Name);
             btm_modificar.Text = BLLtraducciones.traducir(btm_modificar.Name);
             btm_borrar.Text = BLLtraducciones.traducir(btm_borrar.Name);
+            btm_crear_rol.Text = BLLtraducciones.traducir(btm_crear_rol.Name);
+            composite_seleccionado.Text = BLLtraducciones.traducir(composite_seleccionado.Name);
 
         }
 

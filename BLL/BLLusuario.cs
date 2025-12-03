@@ -15,7 +15,6 @@ namespace BLL
     {
         DAL_usuario dal_usuario=new DAL_usuario();
         BLLrol bllrol = new BLLrol();
-        bllregistro bllregistro = new bllregistro();
         public string get_nombre(BEusuario usuario)
         {
             return encryptacion.desencryptar(usuario.nombre);
@@ -52,7 +51,7 @@ namespace BLL
 
             sesion.Login(usuario);
             BEregistro registro = new BEregistro(get_nombre(usuario), "inicio de sesion");
-            bllregistro.guardar_registro(registro);
+            serializacion.serializar(registro);
         }
         public BEusuario encrytar_usuario(BEusuario usuario)
         {

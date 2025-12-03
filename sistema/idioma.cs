@@ -17,15 +17,16 @@ namespace sistema
         public idioma(Form1 form_pa,idiomas idiomas)
         {
             InitializeComponent();
-            idioma1 = idiomas;
+            Idioma = idiomas;
             form_padre = form_pa;
             idiomas.guardar_observer(this);
             actualizar_idioma();
         }
+        BLL_idioma bll_idioma = new BLL_idioma();
         Form1 form_padre;
-        idiomas idioma1;
+        idiomas Idioma;
+        BE_Idioma idioma1 = new BE_Idioma();
         BEtraducciones traduccion = new BEtraducciones();
-        idiomas idiomas1 = new idiomas();
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -37,10 +38,10 @@ namespace sistema
             {
                 if (textBox1.Text != "")
                 {
-                    idiomas1 = new idiomas(textBox1.Text);
-                    idiomas1.agregar_idioma(idiomas1);
+                    idioma1 = new BE_Idioma(textBox1.Text);
+                    bll_idioma.agregar_idioma(idioma1);
                     cargar_data1();
-                    form_padre.cargar_idiomas_combobox(idioma1.Idioma);
+                    form_padre.cargar_idiomas_combobox(idioma1.idioma);
                 }
                 else
                 {
@@ -57,7 +58,7 @@ namespace sistema
             try
             {
                 dataGridView1.DataSource = null;
-                dataGridView1.DataSource = idiomas.leer_idiomas();
+                dataGridView1.DataSource = bll_idioma.leer_idiomas();
             }
             catch(Exception ex)
             {
@@ -66,21 +67,20 @@ namespace sistema
             }
         private void idioma_Load(object sender, EventArgs e)
         {
-            idiomas1 = new idiomas();
             cargar_data1();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            idiomas1 = (idiomas)dataGridView1.CurrentRow.DataBoundItem;
-            textBox1.Text = idiomas1.Idioma;
+            idioma1 = (BE_Idioma)dataGridView1.CurrentRow.DataBoundItem;
+            textBox1.Text = idioma1.idioma;
             mostrar_data2();
         }
         
         public void mostrar_data2()
         {
             dataGridView2.DataSource = null;
-            dataGridView2.DataSource = BLLtraducciones.leer_traducciones(idiomas1.Idioma);
+            dataGridView2.DataSource = BLLtraducciones.leer_traducciones(idioma1.idioma);
 
         }
 
@@ -112,19 +112,19 @@ namespace sistema
 
         private void btm_borrar_Click(object sender, EventArgs e)
         {
-            if (idiomas1!=null)
+            if (idioma1!=null)
             {
-                idiomas1.borrar_idioma(idiomas1.codigo);
+                bll_idioma.borrar_idioma(idioma1.codigo);
                 cargar_data1();
                 dataGridView2.DataSource = null;
-                form_padre.cargar_idiomas_combobox(idioma1.Idioma);
+                form_padre.cargar_idiomas_combobox();
             }
             else { MessageBox.Show("error, seleccione un idioma."); }
         }
 
         private void idioma_FormClosing(object sender, FormClosingEventArgs e)
         {
-            idioma1.eliminar_observer(this);
+            Idioma.eliminar_observer(this);     
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

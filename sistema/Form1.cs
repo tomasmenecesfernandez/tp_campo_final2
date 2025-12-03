@@ -25,14 +25,17 @@ namespace sistema
             actualizar_idioma();
         }
         idiomas idioma;
+        BLL_idioma bll_idioma = new BLL_idioma();
         BLLusuario bllusuario = new BLLusuario();
-        bllregistro bllregistro = new bllregistro();
         usuarios u;
         sesion1 s;
         idioma idi;
         sistema1 sist;
         Cliente c;
-        
+        reportes r;
+        Manual m;
+
+
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -78,11 +81,12 @@ namespace sistema
                 activar_y_desactivar_login_logout();
             }
         }
-        public void cargar_idiomas_combobox(string idioma_actual)
+        public void cargar_idiomas_combobox(string idioma_actual="")
         {
             comboBox1.DataSource = null;
-            comboBox1.DataSource = idiomas.leer_idiomas();
-            comboBox1.Text = idioma_actual;
+            comboBox1.DataSource = bll_idioma.leer_idiomas();
+            if(idioma_actual!="") comboBox1.Text = idioma_actual;
+
         }
         public void poner_nombre_usuario_label()
         {
@@ -164,6 +168,8 @@ namespace sistema
             menu_clientes.Text = BLLtraducciones.traducir(menu_clientes.Name);
             menu_bitacora.Text = BLLtraducciones.traducir(menu_bitacora.Name);
             menu_ABMPermisos.Text = BLLtraducciones.traducir(menu_ABMPermisos.Name);
+            personalizarRopa_menu.Text = BLLtraducciones.traducir(personalizarRopa_menu.Name);
+            manual_menu.Text = BLLtraducciones.traducir(manual_menu.Name);
 
         }
         private void españolToolStripMenuItem_Click(object sender, EventArgs e)
@@ -176,7 +182,12 @@ namespace sistema
 
         private void reportes_menu_Click(object sender, EventArgs e)
         {
-
+            r = new reportes(idioma);
+            cerrar_formularios();
+            r.MdiParent = this;
+            r.Dock = DockStyle.Fill;
+            r.FormBorderStyle = FormBorderStyle.None;
+            r.Show();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -189,7 +200,7 @@ namespace sistema
             if (sesion.instancia != null)
             {
                 BEregistro registro = new BEregistro(bllusuario.get_nombre(sesion.instancia.usuario), "cerrar sesion");
-                bllregistro.guardar_registro(registro);
+                serializacion.serializar(registro);
                 sesion.Logout();
                 cerrar_formularios();
                 login_menu.Enabled = true;
@@ -295,6 +306,16 @@ namespace sistema
             p.Dock = DockStyle.Fill;
             p.FormBorderStyle = FormBorderStyle.None;
             p.Show();
+        }
+
+        private void manualToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Manual m = new Manual();
+            cerrar_formularios();
+            m.MdiParent = this;
+           m.Dock = DockStyle.Fill;
+            m.FormBorderStyle = FormBorderStyle.None;
+            m.Show();
         }
     }
 }

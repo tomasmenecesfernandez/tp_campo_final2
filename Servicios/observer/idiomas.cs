@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DAL;
 using BE;
 using System.Data;
 
@@ -19,8 +18,6 @@ namespace Servicios.observer
 
         public idiomas() { }
         public idiomas(string idioma1) { idioma = idioma1; }
-        DALidioma DALidioma = new DALidioma();
-        static acceso acceso = new acceso();
 
         public string Idioma
         {
@@ -38,48 +35,6 @@ namespace Servicios.observer
             {
                 observer.actualizar_idioma();
             }
-        }
-        public void agregar_idioma(idiomas idioma)
-        {
-            DALidioma.agregar_idioma(idioma.idioma,CalcularDigitoVerificadorDesdeTexto(idioma.idioma));
-        }
-        public void borrar_idioma(int cod_idioma)
-        {
-            DALidioma.borrar_idioma(cod_idioma);
-        }
-        //\f?u?????1???iw&a
-        //??_???/?:?\u001cwu1W?
-        public static int CalcularDigitoVerificadorDesdeTexto(string texto)
-        {
-            texto = encryptacion.Hash(texto);
-            int suma = 0;
-            int v = 0;
-            foreach (char c in texto)
-            {
-                v++;
-                suma += c*v;
-            }
-            suma=suma % 197317;
-            return suma;
-        }
-        public static List<idiomas> leer_idiomas()
-        {
-                string comando = "leer_idiomas";
-                DataTable tabla = acceso.leer_tabla(comando, null);
-                List<idiomas> lista = new List<idiomas>();
-                foreach (DataRow fila in tabla.Rows)
-                {
-                    idiomas idioma = new idiomas(fila["Nombre"].ToString());
-                    idioma.codigo = (int)fila["codigo"];
-                    if (CalcularDigitoVerificadorDesdeTexto(idioma.idioma) == (int)fila["digito_verificador"])
-                    {
-                        idioma.digito_varificador = (int)fila["digito_verificador"];
-                        lista.Add(idioma);
-                }
-                else {throw new Exception($"error en codigo verificador en el idioma { idioma.idioma }."); }
-                }
-            
-            return lista;
         }
         public void guardar_observer(Iobservertraduccion observer)
         {

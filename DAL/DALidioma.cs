@@ -26,5 +26,20 @@ namespace DAL
             hash.Add("@codigo_idioma", codigo);
             acceso.escribir(comando, hash);
         }
+        public List<BE_Idioma> leer_idiomas()
+        {
+            string comando = "leer_idiomas";
+            DataTable tabla = acceso.leer_tabla(comando, null);
+            List<BE_Idioma> lista = new List<BE_Idioma>();
+            foreach (DataRow fila in tabla.Rows)
+            {
+                BE_Idioma idioma = new BE_Idioma(fila["Nombre"].ToString());
+                idioma.codigo = (int)fila["codigo"];
+                idioma.digito_verificador = (int)fila["digito_verificador"];
+                lista.Add(idioma);
+ }
+
+            return lista;
+        }
     }
 }

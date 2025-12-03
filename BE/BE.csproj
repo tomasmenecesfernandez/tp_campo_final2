@@ -55,6 +55,7 @@
     <Compile Include="BEtalles_colores.cs" />
     <Compile Include="BEusuario.cs" />
     <Compile Include="BEpedidos.cs" />
+    <Compile Include="BE_Idioma.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BEtraducciones.cs" />
   </ItemGroup>

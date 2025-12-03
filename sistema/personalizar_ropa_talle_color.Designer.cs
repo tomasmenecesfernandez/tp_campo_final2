@@ -29,7 +29,7 @@ namespace sistema
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.group_box_administrador_variables = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.detalle_capucha = new System.Windows.Forms.Label();
@@ -40,7 +40,7 @@ namespace sistema
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.combobox_tipo_ropa = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox_vinculacion_variable = new System.Windows.Forms.GroupBox();
             this.detalle_rbtm_color1 = new System.Windows.Forms.RadioButton();
             this.detalle_rbtm_talles1 = new System.Windows.Forms.RadioButton();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
@@ -49,28 +49,28 @@ namespace sistema
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.groupBox2.SuspendLayout();
+            this.group_box_administrador_variables.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.groupBox_vinculacion_variable.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox2
+            // group_box_administrador_variables
             // 
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.detalle_capucha);
-            this.groupBox2.Controls.Add(this.detalle_rbtm_color);
-            this.groupBox2.Controls.Add(this.btm_borrar);
-            this.groupBox2.Controls.Add(this.btm_agregar);
-            this.groupBox2.Controls.Add(this.detalle_rbtm_talles);
-            this.groupBox2.Location = new System.Drawing.Point(19, 53);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Size = new System.Drawing.Size(379, 315);
-            this.groupBox2.TabIndex = 8;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "ADMINISTRADOR DE VARIABLES";
+            this.group_box_administrador_variables.Controls.Add(this.textBox1);
+            this.group_box_administrador_variables.Controls.Add(this.comboBox1);
+            this.group_box_administrador_variables.Controls.Add(this.detalle_capucha);
+            this.group_box_administrador_variables.Controls.Add(this.detalle_rbtm_color);
+            this.group_box_administrador_variables.Controls.Add(this.btm_borrar);
+            this.group_box_administrador_variables.Controls.Add(this.btm_agregar);
+            this.group_box_administrador_variables.Controls.Add(this.detalle_rbtm_talles);
+            this.group_box_administrador_variables.Location = new System.Drawing.Point(19, 53);
+            this.group_box_administrador_variables.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.group_box_administrador_variables.Name = "group_box_administrador_variables";
+            this.group_box_administrador_variables.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.group_box_administrador_variables.Size = new System.Drawing.Size(379, 315);
+            this.group_box_administrador_variables.TabIndex = 8;
+            this.group_box_administrador_variables.TabStop = false;
+            this.group_box_administrador_variables.Text = "ADMINISTRADOR DE VARIABLES";
             // 
             // textBox1
             // 
@@ -180,27 +180,27 @@ namespace sistema
             this.combobox_tipo_ropa.TabIndex = 11;
             this.combobox_tipo_ropa.Text = "TIPO DE PRENDA";
             // 
-            // groupBox1
+            // groupBox_vinculacion_variable
             // 
-            this.groupBox1.Controls.Add(this.detalle_rbtm_color1);
-            this.groupBox1.Controls.Add(this.detalle_rbtm_talles1);
-            this.groupBox1.Controls.Add(this.comboBox4);
-            this.groupBox1.Controls.Add(this.combobox_tipo_ropa);
-            this.groupBox1.Controls.Add(this.comboBox3);
-            this.groupBox1.Controls.Add(this.comboBox5);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Location = new System.Drawing.Point(19, 398);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(379, 352);
-            this.groupBox1.TabIndex = 31;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "VINCULACIÓN ROPA";
-            this.groupBox1.UseCompatibleTextRendering = true;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.groupBox_vinculacion_variable.Controls.Add(this.detalle_rbtm_color1);
+            this.groupBox_vinculacion_variable.Controls.Add(this.detalle_rbtm_talles1);
+            this.groupBox_vinculacion_variable.Controls.Add(this.comboBox4);
+            this.groupBox_vinculacion_variable.Controls.Add(this.combobox_tipo_ropa);
+            this.groupBox_vinculacion_variable.Controls.Add(this.comboBox3);
+            this.groupBox_vinculacion_variable.Controls.Add(this.comboBox5);
+            this.groupBox_vinculacion_variable.Controls.Add(this.label1);
+            this.groupBox_vinculacion_variable.Controls.Add(this.button1);
+            this.groupBox_vinculacion_variable.Controls.Add(this.button2);
+            this.groupBox_vinculacion_variable.Location = new System.Drawing.Point(19, 398);
+            this.groupBox_vinculacion_variable.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox_vinculacion_variable.Name = "groupBox_vinculacion_variable";
+            this.groupBox_vinculacion_variable.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox_vinculacion_variable.Size = new System.Drawing.Size(379, 352);
+            this.groupBox_vinculacion_variable.TabIndex = 31;
+            this.groupBox_vinculacion_variable.TabStop = false;
+            this.groupBox_vinculacion_variable.Text = "VINCULACIÓN ROPA";
+            this.groupBox_vinculacion_variable.UseCompatibleTextRendering = true;
+            this.groupBox_vinculacion_variable.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // detalle_rbtm_color1
             // 
@@ -297,26 +297,26 @@ namespace sistema
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1278, 783);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox_vinculacion_variable);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.group_box_administrador_variables);
             this.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.Margin = new System.Windows.Forms.Padding(4, 9, 4, 9);
             this.Name = "personalizar_ropa_talle_color";
             this.Text = "personalizar_ropa_talle_color";
             this.Load += new System.EventHandler(this.personalizar_ropa_talle_color_Load);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.group_box_administrador_variables.ResumeLayout(false);
+            this.group_box_administrador_variables.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBox_vinculacion_variable.ResumeLayout(false);
+            this.groupBox_vinculacion_variable.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox group_box_administrador_variables;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label detalle_capucha;
         private System.Windows.Forms.RadioButton detalle_rbtm_color;
@@ -326,7 +326,7 @@ namespace sistema
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label combobox_tipo_ropa;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox_vinculacion_variable;
         private System.Windows.Forms.RadioButton detalle_rbtm_color1;
         private System.Windows.Forms.RadioButton detalle_rbtm_talles1;
         private System.Windows.Forms.ComboBox comboBox4;

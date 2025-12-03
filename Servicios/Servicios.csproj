@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,6 +49,7 @@
     <Compile Include="observer\Iidiomas.cs" />
     <Compile Include="observer\Iobservertraduccion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="serializacion.cs" />
     <Compile Include="sesion.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -53,10 +57,9 @@
       <Project>{fd53a16e-dd8e-49b2-a600-5084299984ff}</Project>
       <Name>BE</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{a5c430e3-8099-4d24-92c5-0c3606d72318}</Project>
-      <Name>DAL</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

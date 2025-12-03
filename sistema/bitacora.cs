@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using BE;
 using BLL;
 using Servicios.observer;
+using Servicios;
+
 namespace sistema
 {
     public partial class bitacora : formulario_estilo, Iobservertraduccion
@@ -23,11 +25,10 @@ namespace sistema
             actualizar_idioma();
         }
         idiomas idioma;
-        bllregistro bllregistro = new bllregistro();
         List<BEregistro> lista_de_registro = new List<BEregistro>();
         private void bitacora_Load(object sender, EventArgs e)
         {
-            cargar_grilla();
+            cargar_grilla1();
             comboBox2.Text = "Nombre";
         }
 
@@ -49,16 +50,17 @@ namespace sistema
                 dataGridView1.DataSource = filtrados;
             }
         }
-        public void cargar_grilla()
+        public void cargar_grilla1()
         {
             dataGridView1.DataSource = null;
-            lista_de_registro= bllregistro.leer_registros();
+            lista_de_registro = serializacion.LeerObjetos<BEregistro>();
             dataGridView1.DataSource = lista_de_registro;
         }
 
         public void actualizar_idioma()
         {
-            bitacora_label_bitacora.Text = BLLtraducciones.traducir(bitacora_label_bitacora.Name);
+            lbl_buscar_bitacora.Text = BLLtraducciones.traducir(lbl_buscar_bitacora.Name);
+            sistema_filtro.Text = BLLtraducciones.traducir(sistema_filtro.Name);
 
         }
 

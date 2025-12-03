@@ -49,7 +49,6 @@ namespace sistema
             // 
             // clientes_groupbox_cliente
             // 
-            this.clientes_groupbox_cliente.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.clientes_groupbox_cliente.Controls.Add(this.comboBox3);
             this.clientes_groupbox_cliente.Controls.Add(this.btm_agregar);
             this.clientes_groupbox_cliente.Controls.Add(this.btm_borrar);
@@ -62,11 +61,9 @@ namespace sistema
             this.clientes_groupbox_cliente.Controls.Add(this.clientes_nombre_completo);
             this.clientes_groupbox_cliente.Controls.Add(this.clientes_DNI);
             this.clientes_groupbox_cliente.Controls.Add(this.textBox3);
-            this.clientes_groupbox_cliente.Location = new System.Drawing.Point(36, 28);
-            this.clientes_groupbox_cliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.clientes_groupbox_cliente.Location = new System.Drawing.Point(40, 40);
             this.clientes_groupbox_cliente.Name = "clientes_groupbox_cliente";
-            this.clientes_groupbox_cliente.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.clientes_groupbox_cliente.Size = new System.Drawing.Size(376, 414);
+            this.clientes_groupbox_cliente.Size = new System.Drawing.Size(423, 595);
             this.clientes_groupbox_cliente.TabIndex = 24;
             this.clientes_groupbox_cliente.TabStop = false;
             this.clientes_groupbox_cliente.Text = "CLIENTE";
@@ -76,19 +73,17 @@ namespace sistema
             // 
             this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(20, 148);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox3.Location = new System.Drawing.Point(22, 213);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(351, 28);
+            this.comboBox3.Size = new System.Drawing.Size(394, 28);
             this.comboBox3.TabIndex = 16;
             this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // btm_agregar
             // 
-            this.btm_agregar.Location = new System.Drawing.Point(19, 246);
-            this.btm_agregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btm_agregar.Location = new System.Drawing.Point(21, 354);
             this.btm_agregar.Name = "btm_agregar";
-            this.btm_agregar.Size = new System.Drawing.Size(351, 34);
+            this.btm_agregar.Size = new System.Drawing.Size(395, 49);
             this.btm_agregar.TabIndex = 19;
             this.btm_agregar.Text = "AGREGAR";
             this.btm_agregar.UseVisualStyleBackColor = true;
@@ -96,10 +91,9 @@ namespace sistema
             // 
             // btm_borrar
             // 
-            this.btm_borrar.Location = new System.Drawing.Point(19, 322);
-            this.btm_borrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btm_borrar.Location = new System.Drawing.Point(21, 463);
             this.btm_borrar.Name = "btm_borrar";
-            this.btm_borrar.Size = new System.Drawing.Size(351, 34);
+            this.btm_borrar.Size = new System.Drawing.Size(395, 49);
             this.btm_borrar.TabIndex = 21;
             this.btm_borrar.Text = "BORRAR";
             this.btm_borrar.UseVisualStyleBackColor = true;
@@ -112,19 +106,17 @@ namespace sistema
             this.comboBox2.Items.AddRange(new object[] {
             "fgdgf",
             "fggf"});
-            this.comboBox2.Location = new System.Drawing.Point(20, 203);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox2.Location = new System.Drawing.Point(22, 292);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(351, 28);
+            this.comboBox2.Size = new System.Drawing.Size(394, 28);
             this.comboBox2.TabIndex = 18;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // btm_modificar
             // 
-            this.btm_modificar.Location = new System.Drawing.Point(19, 284);
-            this.btm_modificar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btm_modificar.Location = new System.Drawing.Point(21, 408);
             this.btm_modificar.Name = "btm_modificar";
-            this.btm_modificar.Size = new System.Drawing.Size(351, 34);
+            this.btm_modificar.Size = new System.Drawing.Size(395, 49);
             this.btm_modificar.TabIndex = 20;
             this.btm_modificar.Text = "MODIFICAR";
             this.btm_modificar.UseVisualStyleBackColor = true;
@@ -132,10 +124,9 @@ namespace sistema
             // 
             // clientes_btm_form_localidad
             // 
-            this.clientes_btm_form_localidad.Location = new System.Drawing.Point(19, 360);
-            this.clientes_btm_form_localidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.clientes_btm_form_localidad.Location = new System.Drawing.Point(21, 518);
             this.clientes_btm_form_localidad.Name = "clientes_btm_form_localidad";
-            this.clientes_btm_form_localidad.Size = new System.Drawing.Size(351, 45);
+            this.clientes_btm_form_localidad.Size = new System.Drawing.Size(395, 65);
             this.clientes_btm_form_localidad.TabIndex = 11;
             this.clientes_btm_form_localidad.Text = "formulario localidad";
             this.clientes_btm_form_localidad.UseVisualStyleBackColor = true;
@@ -144,9 +135,9 @@ namespace sistema
             // label_localidad
             // 
             this.label_localidad.AutoSize = true;
-            this.label_localidad.Location = new System.Drawing.Point(20, 181);
+            this.label_localidad.Location = new System.Drawing.Point(22, 260);
             this.label_localidad.Name = "label_localidad";
-            this.label_localidad.Size = new System.Drawing.Size(85, 17);
+            this.label_localidad.Size = new System.Drawing.Size(100, 23);
             this.label_localidad.TabIndex = 12;
             this.label_localidad.Text = "LOCALIDAD";
             this.label_localidad.Click += new System.EventHandler(this.label_localidad_Click);
@@ -154,9 +145,9 @@ namespace sistema
             // clientes_provincia
             // 
             this.clientes_provincia.AutoSize = true;
-            this.clientes_provincia.Location = new System.Drawing.Point(20, 129);
+            this.clientes_provincia.Location = new System.Drawing.Point(22, 185);
             this.clientes_provincia.Name = "clientes_provincia";
-            this.clientes_provincia.Size = new System.Drawing.Size(81, 17);
+            this.clientes_provincia.Size = new System.Drawing.Size(99, 23);
             this.clientes_provincia.TabIndex = 18;
             this.clientes_provincia.Text = "PROVINCIA";
             this.clientes_provincia.Click += new System.EventHandler(this.clientes_provincia_Click);
@@ -164,62 +155,61 @@ namespace sistema
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(19, 43);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox2.Location = new System.Drawing.Point(21, 62);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(351, 27);
+            this.textBox2.Size = new System.Drawing.Size(394, 27);
             this.textBox2.TabIndex = 13;
             // 
             // clientes_nombre_completo
             // 
             this.clientes_nombre_completo.AutoSize = true;
-            this.clientes_nombre_completo.Location = new System.Drawing.Point(19, 21);
+            this.clientes_nombre_completo.Location = new System.Drawing.Point(21, 30);
             this.clientes_nombre_completo.Name = "clientes_nombre_completo";
-            this.clientes_nombre_completo.Size = new System.Drawing.Size(149, 17);
+            this.clientes_nombre_completo.Size = new System.Drawing.Size(172, 23);
             this.clientes_nombre_completo.TabIndex = 14;
             this.clientes_nombre_completo.Text = "NOMBRE COMPLETO";
             // 
             // clientes_DNI
             // 
             this.clientes_DNI.AutoSize = true;
-            this.clientes_DNI.Location = new System.Drawing.Point(20, 77);
+            this.clientes_DNI.Location = new System.Drawing.Point(22, 111);
             this.clientes_DNI.Name = "clientes_DNI";
-            this.clientes_DNI.Size = new System.Drawing.Size(31, 17);
+            this.clientes_DNI.Size = new System.Drawing.Size(40, 23);
             this.clientes_DNI.TabIndex = 16;
             this.clientes_DNI.Text = "DNI";
             // 
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(20, 96);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox3.Location = new System.Drawing.Point(22, 138);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(351, 27);
+            this.textBox3.Size = new System.Drawing.Size(394, 27);
             this.textBox3.TabIndex = 15;
             // 
             // dataGridView1
             // 
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeight = 29;
-            this.dataGridView1.Location = new System.Drawing.Point(427, 28);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(480, 40);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(725, 414);
+            this.dataGridView1.Size = new System.Drawing.Size(658, 595);
             this.dataGridView1.TabIndex = 23;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Cliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1164, 476);
+            this.ClientSize = new System.Drawing.Size(1150, 684);
             this.Controls.Add(this.clientes_groupbox_cliente);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "Cliente";
             this.Text = "Cliente";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Cliente_FormClosing);
