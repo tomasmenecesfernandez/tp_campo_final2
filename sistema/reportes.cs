@@ -254,8 +254,12 @@ namespace sistema
                 contador++;
                 ruta = @"C:\Users\user\Desktop\universidad\introducion a la programacion\3 año\wwwww\trabajo practico\reportes" +contador+ ".pdf";
             }
-
             return ruta;
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

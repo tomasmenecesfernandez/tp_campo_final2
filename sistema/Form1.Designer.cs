@@ -60,10 +60,10 @@ namespace sistema
             this.sistema_menu,
             this.menu_bitacora,
             this.menu_ABMPermisos,
-            this.permisos_menu,
             this.personalizarRopa_menu,
-            this.CERRAR_SESION_MENU,
-            this.manual_menu});
+            this.manual_menu,
+            this.permisos_menu,
+            this.CERRAR_SESION_MENU});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
