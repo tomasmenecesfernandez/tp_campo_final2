@@ -22,9 +22,7 @@ namespace sistema_de_ropa
         public sistema1(idiomas idiomas)
         {
             InitializeComponent();
-            idioma = idiomas;
-            idiomas.guardar_observer(this);
-            actualizar_idioma();
+
         }
         public static BEpedidos pedido_select { get; set; }
         public List<BEcliente> lista_cliente = new List<BEcliente>();
