@@ -12,15 +12,15 @@ using BLL;
 using Servicios.observer;
 namespace sistema
 {
-    public partial class composite : formulario_estilo, Iobservertraduccion
+    public partial class composite : Form, Iobservertraduccion
     {
         public composite(idiomas idiomas)
         {
             InitializeComponent();
-            BLLtraducciones.cargar_listatraducciones(idiomas.Idioma);
-            idioma = idiomas;
-            idiomas.guardar_observer(this);
-            actualizar_idioma();
+            //BLLtraducciones.cargar_listatraducciones(idiomas.Idioma);
+            //idioma = idiomas;
+            //idiomas.guardar_observer(this);
+            //actualizar_idioma();
         }
         idiomas idioma;
         List<BEpermiso> lista_permisos = new List<BEpermiso>();
@@ -231,6 +231,11 @@ namespace sistema
         private void composite_FormClosing(object sender, FormClosingEventArgs e)
         {
             idioma.eliminar_observer(this);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

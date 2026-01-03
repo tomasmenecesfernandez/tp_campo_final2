@@ -29,7 +29,6 @@ namespace sistema_de_ropa
         /// </summary>
         private void InitializeComponent()
         {
-            this.btm_borrar = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.sistema_groupbox_pedidos = new System.Windows.Forms.GroupBox();
             this.sistema_cantidad_ropa = new System.Windows.Forms.Label();
@@ -40,7 +39,6 @@ namespace sistema_de_ropa
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.sistema_total = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.sistema_btm_personalizar_pedido = new System.Windows.Forms.Button();
             this.sistema_total1 = new System.Windows.Forms.Label();
             this.TEXTO_TOTAL_ROPA = new System.Windows.Forms.Label();
             this.sistema_descuento1 = new System.Windows.Forms.Label();
@@ -54,22 +52,13 @@ namespace sistema_de_ropa
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.TEXTO_FECHA_PEDIDO = new System.Windows.Forms.Label();
             this.sistema_fecha1 = new System.Windows.Forms.Label();
+            this.sistema_btm_personalizar_pedido = new System.Windows.Forms.Button();
+            this.btm_borrar = new System.Windows.Forms.Button();
             this.btm_agregar = new System.Windows.Forms.Button();
             this.sistema_groupbox_pedidos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btm_borrar
-            // 
-            this.btm_borrar.Location = new System.Drawing.Point(176, 103);
-            this.btm_borrar.Margin = new System.Windows.Forms.Padding(2);
-            this.btm_borrar.Name = "btm_borrar";
-            this.btm_borrar.Size = new System.Drawing.Size(184, 44);
-            this.btm_borrar.TabIndex = 12;
-            this.btm_borrar.Text = "BORRAR";
-            this.btm_borrar.UseVisualStyleBackColor = true;
-            this.btm_borrar.Click += new System.EventHandler(this.button3_Click);
             // 
             // listBox1
             // 
@@ -186,17 +175,6 @@ namespace sistema_de_ropa
             this.textBox1.Size = new System.Drawing.Size(161, 25);
             this.textBox1.TabIndex = 26;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // sistema_btm_personalizar_pedido
-            // 
-            this.sistema_btm_personalizar_pedido.Location = new System.Drawing.Point(176, 162);
-            this.sistema_btm_personalizar_pedido.Margin = new System.Windows.Forms.Padding(2);
-            this.sistema_btm_personalizar_pedido.Name = "sistema_btm_personalizar_pedido";
-            this.sistema_btm_personalizar_pedido.Size = new System.Drawing.Size(184, 77);
-            this.sistema_btm_personalizar_pedido.TabIndex = 25;
-            this.sistema_btm_personalizar_pedido.Text = "Personalizar Pedido";
-            this.sistema_btm_personalizar_pedido.UseVisualStyleBackColor = true;
-            this.sistema_btm_personalizar_pedido.Click += new System.EventHandler(this.button6_Click);
             // 
             // sistema_total1
             // 
@@ -342,6 +320,32 @@ namespace sistema_de_ropa
             this.sistema_fecha1.Size = new System.Drawing.Size(54, 19);
             this.sistema_fecha1.TabIndex = 23;
             this.sistema_fecha1.Text = "FECHA:";
+            // 
+            // sistema_btm_personalizar_pedido
+            // 
+            this.sistema_btm_personalizar_pedido.Image = global::sistema.Properties.Resources.edit_modify_icon_149488;
+            this.sistema_btm_personalizar_pedido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.sistema_btm_personalizar_pedido.Location = new System.Drawing.Point(176, 162);
+            this.sistema_btm_personalizar_pedido.Margin = new System.Windows.Forms.Padding(2);
+            this.sistema_btm_personalizar_pedido.Name = "sistema_btm_personalizar_pedido";
+            this.sistema_btm_personalizar_pedido.Size = new System.Drawing.Size(184, 77);
+            this.sistema_btm_personalizar_pedido.TabIndex = 25;
+            this.sistema_btm_personalizar_pedido.Text = "Personalizar Pedido";
+            this.sistema_btm_personalizar_pedido.UseVisualStyleBackColor = true;
+            this.sistema_btm_personalizar_pedido.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // btm_borrar
+            // 
+            this.btm_borrar.Image = global::sistema.Properties.Resources.cart_minus_icon_137799__1_;
+            this.btm_borrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btm_borrar.Location = new System.Drawing.Point(176, 103);
+            this.btm_borrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btm_borrar.Name = "btm_borrar";
+            this.btm_borrar.Size = new System.Drawing.Size(184, 44);
+            this.btm_borrar.TabIndex = 12;
+            this.btm_borrar.Text = "BORRAR";
+            this.btm_borrar.UseVisualStyleBackColor = true;
+            this.btm_borrar.Click += new System.EventHandler(this.button3_Click);
             // 
             // btm_agregar
             // 

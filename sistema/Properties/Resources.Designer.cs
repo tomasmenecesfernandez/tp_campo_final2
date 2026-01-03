@@ -63,9 +63,9 @@ namespace sistema.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap add_77928 {
+        internal static System.Drawing.Bitmap _1486485588_add_create_new_math_sign_cross_plus_81186 {
             get {
-                object obj = ResourceManager.GetObject("add_77928", resourceCulture);
+                object obj = ResourceManager.GetObject("1486485588-add-create-new-math-sign-cross-plus_81186", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,19 @@ namespace sistema.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap carrito__1 {
+        internal static System.Drawing.Bitmap add_button_icon_icons_com_58943 {
             get {
-                object obj = ResourceManager.GetObject("carrito +1", resourceCulture);
+                object obj = ResourceManager.GetObject("add-button_icon-icons.com_58943", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cart_minus_icon_137799__1_ {
+            get {
+                object obj = ResourceManager.GetObject("cart_minus_icon_137799 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +113,209 @@ namespace sistema.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap clothes_pants_icon_155630 {
+        internal static System.Drawing.Bitmap clothing_shop_icon_192653 {
             get {
-                object obj = ResourceManager.GetObject("clothes_pants_icon_155630", resourceCulture);
+                object obj = ResourceManager.GetObject("clothing_shop_icon_192653", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_4219 {
+            get {
+                object obj = ResourceManager.GetObject("delete_4219", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_delete_exit_1577 {
+            get {
+                object obj = ResourceManager.GetObject("delete_delete_exit_1577", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_modify_icon_149488 {
+            get {
+                object obj = ResourceManager.GetObject("edit_modify_icon_149488", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_modify_icon_1494881 {
+            get {
+                object obj = ResourceManager.GetObject("edit_modify_icon_1494881", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_pencil_modify_write_icon_179065 {
+            get {
+                object obj = ResourceManager.GetObject("edit_pencil_modify_write_icon_179065", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_security_128_28721 {
+            get {
+                object obj = ResourceManager.GetObject("ic_security_128_28721", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_security_128_28721__1_ {
+            get {
+                object obj = ResourceManager.GetObject("ic_security_128_28721 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap language_icon_144262 {
+            get {
+                object obj = ResourceManager.GetObject("language_icon_144262", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap login_80010 {
+            get {
+                object obj = ResourceManager.GetObject("login_80010", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap permissions_icon_149902 {
+            get {
+                object obj = ResourceManager.GetObject("permissions_icon_149902", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap permissions_icon_1499021 {
+            get {
+                object obj = ResourceManager.GetObject("permissions_icon_1499021", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap permissions_icon_1499022 {
+            get {
+                object obj = ResourceManager.GetObject("permissions_icon_1499022", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap permissions_icon_1499023 {
+            get {
+                object obj = ResourceManager.GetObject("permissions_icon_1499023", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap records_notes_journal_edited_9479 {
+            get {
+                object obj = ResourceManager.GetObject("records_notes_journal_edited_9479", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap report_icon_216913 {
+            get {
+                object obj = ResourceManager.GetObject("report_icon_216913", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap security_protection_protect_key_password_login_108554 {
+            get {
+                object obj = ResourceManager.GetObject("security-protection-protect-key-password-login_108554", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Things_34164 {
+            get {
+                object obj = ResourceManager.GetObject("Things_34164", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap undo_arrow_icon_icons_com_73353 {
+            get {
+                object obj = ResourceManager.GetObject("undo-arrow_icon-icons.com_73353", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_add_12818 {
+            get {
+                object obj = ResourceManager.GetObject("user_add_12818", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap users_icon_icons_com_57999 {
+            get {
+                object obj = ResourceManager.GetObject("users_icon-icons.com_57999", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
