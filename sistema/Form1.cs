@@ -33,7 +33,6 @@ namespace sistema
         sistema1 sist;
         Cliente c;
         reportes r;
-        Manual m;
 
 
 

@@ -5,13 +5,11 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-
 namespace Servicios
 {
     public class serializacion
     {
-        static string rutaArchivo = @"C:\Users\user\Desktop\universidad\introducion a la programacion\3 año\wwwww\trabajo practico\bitacora.json";
+        static string rutaArchivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"bitacora.json");
         public static void serializar(object objeto)
         {
             string json = JsonConvert.SerializeObject(objeto);

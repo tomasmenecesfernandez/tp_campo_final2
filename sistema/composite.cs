@@ -17,10 +17,10 @@ namespace sistema
         public composite(idiomas idiomas)
         {
             InitializeComponent();
-            //BLLtraducciones.cargar_listatraducciones(idiomas.Idioma);
-            //idioma = idiomas;
-            //idiomas.guardar_observer(this);
-            //actualizar_idioma();
+            BLLtraducciones.cargar_listatraducciones(idiomas.Idioma);
+            idioma = idiomas;
+            idiomas.guardar_observer(this);
+            actualizar_idioma();
         }
         idiomas idioma;
         List<BEpermiso> lista_permisos = new List<BEpermiso>();

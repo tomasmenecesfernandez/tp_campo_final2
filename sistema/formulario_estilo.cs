@@ -31,21 +31,22 @@ namespace sistema
 
         protected virtual void AplicarEstilo(Control control)
         {
-            this.BackColor = ColorTranslator.FromHtml("#F4F4F4");
+            this.BackColor = ColorTranslator.FromHtml("#F2F8FB");
             this.Font = new Font("Segoe UI", 10F);
 
             foreach (Control c in control.Controls)
             {
                 if (c is Button btn)
                 {
-                    btn.BackColor = ColorTranslator.FromHtml("#252850");
+                    btn.BackColor = ColorTranslator.FromHtml("#0787d2");
                     btn.ForeColor = Color.White;
                     btn.FlatStyle = FlatStyle.Flat;
+                    btn.FlatAppearance.BorderColor = ColorTranslator.FromHtml("#0671A1");
                     btn.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
                     btn.Height = 35;
                     btn.Cursor = Cursors.Hand;
-                    btn.MouseEnter += (s, e) => btn.BackColor = ColorTranslator.FromHtml("#252850");
-                    btn.MouseLeave += (s, e) => btn.BackColor = ColorTranslator.FromHtml("#252850");
+                    btn.MouseEnter += (s, e) => btn.BackColor = ColorTranslator.FromHtml("#0787d2");
+                    btn.MouseLeave += (s, e) => btn.BackColor = ColorTranslator.FromHtml("#0787d2");
                 }
 
                 if (c is Label lbl)

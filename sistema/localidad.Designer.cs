@@ -42,56 +42,54 @@ namespace sistema
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(243, 12);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(273, 17);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(293, 426);
+            this.dataGridView1.Size = new System.Drawing.Size(330, 612);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(41, 39);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Location = new System.Drawing.Point(12, 55);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(163, 22);
+            this.textBox1.Size = new System.Drawing.Size(255, 30);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(41, 93);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox2.Location = new System.Drawing.Point(12, 133);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(163, 22);
+            this.textBox2.Size = new System.Drawing.Size(255, 30);
             this.textBox2.TabIndex = 2;
             // 
             // localidad_codigo
             // 
             this.localidad_codigo.AutoSize = true;
-            this.localidad_codigo.Location = new System.Drawing.Point(41, 16);
+            this.localidad_codigo.Location = new System.Drawing.Point(12, 22);
             this.localidad_codigo.Name = "localidad_codigo";
-            this.localidad_codigo.Size = new System.Drawing.Size(63, 17);
+            this.localidad_codigo.Size = new System.Drawing.Size(76, 23);
             this.localidad_codigo.TabIndex = 3;
             this.localidad_codigo.Text = "CODIGO";
             // 
             // label_localidad
             // 
             this.label_localidad.AutoSize = true;
-            this.label_localidad.Location = new System.Drawing.Point(41, 73);
+            this.label_localidad.Location = new System.Drawing.Point(12, 104);
             this.label_localidad.Name = "label_localidad";
-            this.label_localidad.Size = new System.Drawing.Size(85, 17);
+            this.label_localidad.Size = new System.Drawing.Size(100, 23);
             this.label_localidad.TabIndex = 4;
             this.label_localidad.Text = "LOCALIDAD";
             // 
             // btm_agregar
             // 
-            this.btm_agregar.Location = new System.Drawing.Point(41, 152);
-            this.btm_agregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btm_agregar.Image = global::sistema.Properties.Resources.add_button_icon_icons_com_58943;
+            this.btm_agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btm_agregar.Location = new System.Drawing.Point(12, 217);
             this.btm_agregar.Name = "btm_agregar";
-            this.btm_agregar.Size = new System.Drawing.Size(163, 37);
+            this.btm_agregar.Size = new System.Drawing.Size(255, 53);
             this.btm_agregar.TabIndex = 5;
             this.btm_agregar.Text = "AGREGAR";
             this.btm_agregar.UseVisualStyleBackColor = true;
@@ -99,10 +97,11 @@ namespace sistema
             // 
             // btm_borrar
             // 
-            this.btm_borrar.Location = new System.Drawing.Point(41, 202);
-            this.btm_borrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btm_borrar.Image = global::sistema.Properties.Resources.delete_4219;
+            this.btm_borrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btm_borrar.Location = new System.Drawing.Point(12, 289);
             this.btm_borrar.Name = "btm_borrar";
-            this.btm_borrar.Size = new System.Drawing.Size(163, 37);
+            this.btm_borrar.Size = new System.Drawing.Size(255, 53);
             this.btm_borrar.TabIndex = 6;
             this.btm_borrar.Text = "ELIMINAR";
             this.btm_borrar.UseVisualStyleBackColor = true;
@@ -110,9 +109,9 @@ namespace sistema
             // 
             // localidad
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(571, 450);
+            this.ClientSize = new System.Drawing.Size(642, 647);
             this.Controls.Add(this.btm_borrar);
             this.Controls.Add(this.btm_agregar);
             this.Controls.Add(this.label_localidad);
@@ -120,7 +119,8 @@ namespace sistema
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.Name = "localidad";
             this.Text = "localidad";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.localidad_FormClosing);

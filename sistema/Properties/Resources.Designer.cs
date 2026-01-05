@@ -19,7 +19,7 @@ namespace sistema.Properties {
     // a través de una herramienta como ResGen o Visual Studio.
     // Para agregar o quitar un miembro, edite el archivo .ResX y, a continuación, vuelva a ejecutar ResGen
     // con la opción /str o recompile su proyecto de VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -66,6 +66,16 @@ namespace sistema.Properties {
         internal static System.Drawing.Bitmap _1486485588_add_create_new_math_sign_cross_plus_81186 {
             get {
                 object obj = ResourceManager.GetObject("1486485588-add-create-new-math-sign-cross-plus_81186", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4115235_exit_logout_sign_out_114030 {
+            get {
+                object obj = ResourceManager.GetObject("4115235-exit-logout-sign-out_114030", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -306,6 +316,16 @@ namespace sistema.Properties {
         internal static System.Drawing.Bitmap user_add_12818 {
             get {
                 object obj = ResourceManager.GetObject("user_add_12818", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_Manual_80_icon_icons_com_57245 {
+            get {
+                object obj = ResourceManager.GetObject("User_Manual-80_icon-icons.com_57245", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

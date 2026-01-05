@@ -45,8 +45,10 @@ namespace sistema
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btm_agregar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -57,7 +59,7 @@ namespace sistema
             this.groupBox1.Controls.Add(this.usuario_rbtm_permiso);
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.usuario_rbtm_rol);
-            this.groupBox1.Location = new System.Drawing.Point(44, 365);
+            this.groupBox1.Location = new System.Drawing.Point(44, 348);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
@@ -78,6 +80,8 @@ namespace sistema
             // 
             // btm_borrar1
             // 
+            this.btm_borrar1.Image = global::sistema.Properties.Resources.delete_4219;
+            this.btm_borrar1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btm_borrar1.Location = new System.Drawing.Point(0, 162);
             this.btm_borrar1.Margin = new System.Windows.Forms.Padding(4);
             this.btm_borrar1.Name = "btm_borrar1";
@@ -89,6 +93,8 @@ namespace sistema
             // 
             // btm_agregar1
             // 
+            this.btm_agregar1.Image = global::sistema.Properties.Resources.add_button_icon_icons_com_58943;
+            this.btm_agregar1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btm_agregar1.Location = new System.Drawing.Point(0, 123);
             this.btm_agregar1.Margin = new System.Windows.Forms.Padding(4);
             this.btm_agregar1.Name = "btm_agregar1";
@@ -137,7 +143,9 @@ namespace sistema
             // 
             // usuario_btm_ir_historlal
             // 
-            this.usuario_btm_ir_historlal.Location = new System.Drawing.Point(44, 322);
+            this.usuario_btm_ir_historlal.Image = global::sistema.Properties.Resources.report_icon_216913;
+            this.usuario_btm_ir_historlal.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.usuario_btm_ir_historlal.Location = new System.Drawing.Point(44, 305);
             this.usuario_btm_ir_historlal.Margin = new System.Windows.Forms.Padding(4);
             this.usuario_btm_ir_historlal.Name = "usuario_btm_ir_historlal";
             this.usuario_btm_ir_historlal.Size = new System.Drawing.Size(319, 35);
@@ -149,7 +157,7 @@ namespace sistema
             // contraceña_label1
             // 
             this.contraceña_label1.AutoSize = true;
-            this.contraceña_label1.Location = new System.Drawing.Point(44, 127);
+            this.contraceña_label1.Location = new System.Drawing.Point(44, 110);
             this.contraceña_label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.contraceña_label1.Name = "contraceña_label1";
             this.contraceña_label1.Size = new System.Drawing.Size(119, 23);
@@ -159,7 +167,7 @@ namespace sistema
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(44, 150);
+            this.textBox2.Location = new System.Drawing.Point(44, 133);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(319, 28);
@@ -168,7 +176,7 @@ namespace sistema
             // usuario_label1
             // 
             this.usuario_label1.AutoSize = true;
-            this.usuario_label1.Location = new System.Drawing.Point(44, 61);
+            this.usuario_label1.Location = new System.Drawing.Point(44, 44);
             this.usuario_label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.usuario_label1.Name = "usuario_label1";
             this.usuario_label1.Size = new System.Drawing.Size(82, 23);
@@ -177,7 +185,9 @@ namespace sistema
             // 
             // btm_borrar
             // 
-            this.btm_borrar.Location = new System.Drawing.Point(44, 280);
+            this.btm_borrar.Image = global::sistema.Properties.Resources.delete_4219;
+            this.btm_borrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btm_borrar.Location = new System.Drawing.Point(44, 263);
             this.btm_borrar.Margin = new System.Windows.Forms.Padding(4);
             this.btm_borrar.Name = "btm_borrar";
             this.btm_borrar.Size = new System.Drawing.Size(319, 34);
@@ -188,7 +198,9 @@ namespace sistema
             // 
             // btm_modificar
             // 
-            this.btm_modificar.Location = new System.Drawing.Point(44, 238);
+            this.btm_modificar.Image = global::sistema.Properties.Resources.edit_modify_icon_1494881;
+            this.btm_modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btm_modificar.Location = new System.Drawing.Point(44, 221);
             this.btm_modificar.Margin = new System.Windows.Forms.Padding(4);
             this.btm_modificar.Name = "btm_modificar";
             this.btm_modificar.Size = new System.Drawing.Size(319, 34);
@@ -200,7 +212,7 @@ namespace sistema
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(386, 51);
+            this.dataGridView1.Location = new System.Drawing.Point(386, 34);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -213,7 +225,7 @@ namespace sistema
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(44, 88);
+            this.textBox1.Location = new System.Drawing.Point(44, 71);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(319, 28);
@@ -221,7 +233,9 @@ namespace sistema
             // 
             // btm_agregar
             // 
-            this.btm_agregar.Location = new System.Drawing.Point(44, 196);
+            this.btm_agregar.Image = global::sistema.Properties.Resources.add_button_icon_icons_com_58943;
+            this.btm_agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btm_agregar.Location = new System.Drawing.Point(44, 179);
             this.btm_agregar.Margin = new System.Windows.Forms.Padding(4);
             this.btm_agregar.Name = "btm_agregar";
             this.btm_agregar.Size = new System.Drawing.Size(319, 34);
@@ -230,11 +244,21 @@ namespace sistema
             this.btm_agregar.UseVisualStyleBackColor = true;
             this.btm_agregar.Click += new System.EventHandler(this.button1_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::sistema.Properties.Resources.users_icon_icons_com_57999;
+            this.pictureBox1.Location = new System.Drawing.Point(13, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(36, 25);
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
+            // 
             // usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1137, 1013);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.usuario_btm_ir_historlal);
             this.Controls.Add(this.contraceña_label1);
@@ -246,7 +270,7 @@ namespace sistema
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btm_agregar);
             this.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "usuarios";
             this.Text = "usuario";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.usuarios_FormClosing);
@@ -254,6 +278,7 @@ namespace sistema
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,5 +301,6 @@ namespace sistema
         private System.Windows.Forms.Button btm_borrar1;
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

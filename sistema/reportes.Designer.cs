@@ -42,7 +42,9 @@ namespace sistema
             this.lbl_monto_total = new System.Windows.Forms.Label();
             this.label_monto_total = new System.Windows.Forms.Label();
             this.boton_Exportar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // listView1
@@ -51,7 +53,7 @@ namespace sistema
             this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(23, 26);
+            this.listView1.Location = new System.Drawing.Point(12, 121);
             this.listView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(385, 349);
@@ -85,6 +87,7 @@ namespace sistema
             "ULTIMO MES",
             "ULTIMO AÑO",
             "DESDE EL INICIO"});
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "HOY",
@@ -154,7 +157,7 @@ namespace sistema
             // 
             // boton_Exportar
             // 
-            this.boton_Exportar.Location = new System.Drawing.Point(23, 382);
+            this.boton_Exportar.Location = new System.Drawing.Point(12, 477);
             this.boton_Exportar.Name = "boton_Exportar";
             this.boton_Exportar.Size = new System.Drawing.Size(385, 50);
             this.boton_Exportar.TabIndex = 9;
@@ -162,11 +165,21 @@ namespace sistema
             this.boton_Exportar.UseVisualStyleBackColor = true;
             this.boton_Exportar.Click += new System.EventHandler(this.boton_Exportar_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::sistema.Properties.Resources.report_icon_216913;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 45);
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
             // reportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1072, 703);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.boton_Exportar);
             this.Controls.Add(this.label_monto_total);
             this.Controls.Add(this.lbl_monto_total);
@@ -183,6 +196,7 @@ namespace sistema
             this.Text = "reportes";
             this.Load += new System.EventHandler(this.reportes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,5 +214,6 @@ namespace sistema
         private System.Windows.Forms.Label lbl_monto_total;
         private System.Windows.Forms.Label label_monto_total;
         private System.Windows.Forms.Button boton_Exportar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

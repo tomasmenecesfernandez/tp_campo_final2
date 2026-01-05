@@ -55,7 +55,7 @@
       <HintPath>..\packages\Microsoft.Web.WebView2.1.0.3595.46\lib\net462\Microsoft.Web.WebView2.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="System">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Buffers, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.6.1\lib\net462\System.Buffers.dll</HintPath>
@@ -192,6 +192,8 @@
     <Compile Include="usuarios.Designer.cs">
       <DependentUpon>usuarios.cs</DependentUpon>
     </Compile>
+    <None Include="Resources\4115235-exit-logout-sign-out_114030.ico" />
+    <None Include="Resources\User_Manual-80_icon-icons.com_57245.ico" />
     <EmbeddedResource Include="bitacora.resx">
       <DependentUpon>bitacora.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,6 +247,9 @@
     <EmbeddedResource Include="usuarios.resx">
       <DependentUpon>usuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <Content Include="manual de usuario pdf\MANUAL DE USUARIO.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

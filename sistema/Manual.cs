@@ -17,7 +17,7 @@ namespace sistema
         {
             InitializeComponent();
         }
-        string ruta= @"C:\Users\user\Desktop\universidad\introducion a la programacion\3 año\wwwww\trabajo practico\MANUAL DE USUARIO.pdf";
+        string ruta= Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "manual de usuario pdf", "MANUAL DE USUARIO.pdf");
         private void Manual_Load(object sender, EventArgs e)
         {
             mostrar_manual();
